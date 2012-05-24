@@ -1,0 +1,28 @@
+2011-11-13  Christopher <chrissitopher@gmx.de>
+
+	* Fixed task #31584: ID "title" is used twice
+
+2011-11-06  Christopher <chrissitopher@gmx.de>
+
+	* Fixed task #31597: Remove the marker PRINT
+	* Fixed task #31599: Commit the TypoScript code
+	* Fixed task #31605: Add a favicon
+	* Fixed task #31603: Position of marker TITLE is wrong
+	* Fixed task #31595: Meta navigation contains invisible links
+	* Fixed task #31601: SUBNAV only displays pages on level 1, but not below
+	* Fixed task #31620: Main navigation uses strange colors
+	* Fixed task #31623: Replace the headertitle with a marker
+	* Fixed task #31583: Use subparts instead of markers for the two content columns
+
+2011-11-04  Sabine  
+
+	* Fixed task #31585: HTML template has closing divs in excess
+
+2011-11-04  Christopher <chrissitopher@gmx.de>
+
+	* Updated the template
+	* Fixed task #31489: Template files: Translate German speaking comments to English
+
+2011-10-31  Sabine  
+
+	* Created the HTML template files

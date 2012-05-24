@@ -1,0 +1,550 @@
+/**
+ * Preparing things, reset
+/* Sets margins and paddings of all HTML elements to 0.
+ * This unifies the layout of the page in different browsers.
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Resetting margins and paddings causes select boxes to be to small. This is fixed here. */
+option {
+	padding-left: 0.4em;
+}
+
+/**
+ * The following definitions comes from the article 'Useful Code Snippets' by Mike Foskett
+ * See http://www.websemantics.co.uk/tutorials/useful_css_snippets/
+ */
+
+/**
+ * Always show vertical scrollbar also in Netscape & Firefox. Prevents centered layouts to jump
+ * 10 pixels to the side, when the page content get smaller than the height of the browser window.
+ */
+html {
+	height: 100%;
+}
+body {
+	min-height: 101%;
+	/* Removes the rounding error of font size in Opera and default formatting */
+	font-size: 100.01%;
+	/* Prevents positioned elements not to be moved when the size of the browser window is changed */
+	position: relative;
+
+	/* Default colors and text alignment */
+	color: #000;
+	background: #fff;
+	text-align: left;
+}
+	
+
+/* Reset default border */
+fieldset, img {
+	border: 0;
+}
+
+/* Adjustment for Safari Browser. font-size: 100%; is to big for Safari in forms */
+select, input, textarea {
+	font-size: 99%;
+}
+
+/* DIV container of the base layout */
+
+#header {
+	position: relative;
+}
+
+#topnav {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	background: transparent;
+	text-align: right; /* Needed to really be placed at the right in Opera 6! */
+}
+
+#nav {
+	clear: both;
+	width: auto;
+}
+#main {
+	clear: both;
+	width: auto;
+}
+
+
+#col1 {
+	float: left;
+	width: 200px; /* Default value if no other value is set */
+}
+
+#col2 {
+	float: right;
+	width: 200px; /* Default value if no other value is set */
+}
+
+#col3 {
+	width: auto;
+	margin-left: 200px; /* Default value if no other value is set */
+	margin-right: 200px; /* Default value if no other value is set */
+}
+
+#footer {
+	clear: both;
+}	/* Backup for IE clearing */
+/* Formatting of the footer */
+#footer {
+	color: #666;
+	background: #fff;
+	margin: 0 1em;
+	padding: 1em 0;
+	border-top: 1px dotted #999;
+	line-height: 2em;
+}
+
+/* If the IE bug is still there, the z-index prevents the texts to be displayed in front of column background. */
+#col1 {z-index: 3;}
+#col2 {z-index: 5;}
+#col3 {z-index: 1;}
+#col1_content {z-index: 4;}
+#col2_content {z-index: 6;}
+#col3_content {z-index: 2;}
+
+#col1_content, #col2_content, #col3_content {
+	position: relative;
+}
+
+/* Left column */
+#col1 {
+	width: 22.5%;
+}	
+#col1_content {
+	margin-left: 1em;
+	margin-right: 1em;
+	color: #333;
+	background: inherit;
+}
+
+/* Right column */
+#col2 {
+	width: 280px;
+}
+#col2_content {
+	margin: 2.2em 1em 01em;
+}
+
+/* Middle column */
+#col3 {
+	margin-left: 22.5%;
+	margin-right: 280px;
+	border-left: 1px dotted #999;
+	border-right: 1px dotted #999;
+}
+#col3_content {
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-top: 2.2em;
+	padding-top: 30px;
+}
+
+/*  Markup-free CSS float clearing solution */
+
+	/* Clearfix method for clearing the float environment */
+	.clearfix:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	/* Needed for Safari */
+	.clearfix { display: block; }
+
+	/* Overflow method for clearing the float environment */
+	.floatbox { overflow: hidden; }
+
+	/* IE-Clearing: Only needed for IE */
+	#ie_clearing { display: none; }
+
+	/* Clearing of the 3 Contentcolumns using this special hr tag */
+	hr.clear_columns {
+		clear: both;
+		float: left;
+		content: ".";
+		display: block;
+		height: 0;
+		line-height: 0px;
+		visibility: hidden;
+		border: 0;
+		padding: 0;
+		margin: -1.1em 0 0 0; /* needed to prevent space between columns and footer */
+	}
+
+/* Default formatting for lists and quotes */
+
+	ul, ol, dl { margin: 0 0 1em 1em }
+	li { margin-left: 1.5em; line-height: 1.5em; }
+
+	dt { font-weight: bold; }
+	dd { margin: 0 0 1em 2em; }
+
+	blockquote, cite { margin: 0 0 1em 1.5em; font-size: 0.93em; width: auto;}
+	
+	/* Unordered lists without bullets */
+	ul.linklist { list-style-type: none; margin: 0 0 1em 0; }
+	ul.linklist li { margin: 0 0 1em 0; }
+
+/* Formating of the head area */
+#header {
+	height: 140px;
+	color: #FF8700;
+	background: #fff;
+	border-bottom: 1px solid #EBEBEB;
+	}
+	
+#headertitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.8em;
+	padding: 1em 0em 0em 0.6em;}
+
+#header img {margin: 48px 0 0 40px; font-size: 208%;}
+
+/* Headlines, running text */
+
+body { color: #333; font-size: 81.25%; font-family: 'Helvetica', Verdana, Arial, sans-serif; } /* 13px */
+h1,h2,h3,h4 { font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; font-weight: normal;}
+
+/* h1: headline above the middle column */
+h1 {font-size: 1.8em; color: #006; margin: 0 0 0.25em 0; padding-top: 1.2em; font-weight: bold;}
+/* h2: headline of content elements */
+h2 {font-size: 1.4em; color: #006; margin: 0 0 0.25em 0; padding-top: 1.5em; border-bottom: 2px #ddd solid; }
+h3 {font-size: 1.2em; color: #006; margin: 0 0 0.25em 0; padding-top: 1.5em; font-weight: bold; }
+h4 {font-size: 1.0em; color: #888; margin: 0 0 0.30em 0; padding-top: 1em; font-weight: bold; border-bottom: 1px #ddd solid;}
+h5 {font-size: 1.0em; color: #888; margin: 0 0 0.30em 0; font-style: italic; }
+h6 {font-size: 1.0em; color: #888; margin: 0 0 0.30em 0; font-style: italic; }
+
+p,ul,dd,dt { line-height: 1.5em; }
+p { line-height: 1.5em; margin: 0 0 1em 0; }
+
+
+strong,b { font-weight: bold; }
+em,i { font-style: italic; }
+pre, code { font-family: "Courier New", Courier, monospace; }
+address { font-style: normal; line-height: 1.5em; margin: 0 0 1em 0; }
+
+hr {
+	color: #fff;
+	background: transparent;
+	margin: 0 0 0.5em 0;
+	padding: 0 0 0.5em 0;
+	border: 0;
+	border-bottom: 1px #eee solid;
+}
+
+acronym, abbr {
+	letter-spacing: .07em;
+	border-bottom: 1px dashed #c00;
+	cursor: help;
+}
+
+
+/* Positioning of pictures */
+
+img.float_left { float: left; margin-right: 1em; margin-bottom: 0.15em; border: 0; }
+img.float_right { float: right; margin-left: 1em; margin-bottom: 0.15em; border: 0; }
+img.center { text-align: center; background: #fff; padding: 4px; border: 1px #ddd solid; }
+img.framed { padding: 3px; border: 1px #ddd solid; background: #f4f4f4; }
+
+
+/* Display of local and external links */
+
+a, a em.file {color: #FF8700; text-decoration: none;}
+a:hover {background-color: #f4f4f4; text-decoration: underline;}
+a:focus {background-color: #f4f4f4; text-decoration: underline;}
+
+#footer a { color: #FF8700; }
+#footer a:hover {background-color: #f4f4f4; }
+#footer a:focus {background-color: #f4f4f4; }
+
+#main {
+	width: 100%;		/* Enclosing the floats in IE */
+	float: left;        /* Enclosing the floats in all other browsers */
+	font-family: 'Helvetica', Verdana, Arial, Sans-Serif;
+	font-size: 0.86em;
+	border-bottom: 1px #333 dotted;
+	line-height: 2.5em;
+}
+
+#date {
+}
+
+#printversion {
+	float: left;
+	padding-left: 10px;
+}
+
+#fontrezize {
+	float: left;
+	padding-left: 20px;
+}
+
+#breadcrumb {
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+#main a[href^="http:"], #main a[href^="https:"] {
+	padding-left: 12px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#main a.imagelink {
+	padding-left: 0;
+	background: transparent;
+}
+
+/* Forms & Tables */
+
+table { border-collapse: collapse; width: 100%; margin-bottom: 0.5em; }
+
+form {overflow: hidden;}
+
+input, textarea {
+	width: auto;
+	border: 1px #ccc solid;
+	background: #fafafa;
+	padding: 3px;
+	color: #777;
+}
+
+input[type=text]:focus, textarea:focus {
+	background: #f0f0f0;
+	color: #333;
+	border-color: #666;}
+
+/* Special styling of the default layout */
+
+/* Subtemplates */
+
+	.subcolumns {
+		width: 100%;
+		padding: 0 1px 0 1px;
+		margin: 0 -1px 0 -1px;
+		overflow: hidden;
+	}
+
+	.c50l, .c25l, .c33l, .c38l, .c66l, .c75l, .c62l {float: left; overflow: hidden;}
+	.c50r, .c25r, .c33r, .c38r, .c66r, .c75r, .c62r {float: right; overflow: hidden;}
+
+	.c25l, .c25r { width: 24.999%; }
+	.c33l, .c33r { width: 33.333%; }
+	.c50l, .c50r { width: 49.999%; }
+	.c66l, .c66r { width: 66.666%; }
+	.c75l, .c75r { width: 74.999%; }
+	.c38l, .c38r { width: 38.196%; } /* Golden ratio */
+	.c62l, .c62r { width: 61.803%; } /* Golden ratio */
+
+	.subc  { padding: 0 0.5em 0 0.5em; overflow: hidden; }
+	.subcl { padding: 0 1em 0 0; overflow: hidden; }
+	.subcr { padding: 0 0 0 1em; overflow: hidden; }
+	
+	
+/* Metanavigation */
+
+#metanav {
+	width: 100%;	      /* Enclosing the floats in IE */
+	float: right;         /* Enclosing the floats in all other browsers */
+}
+
+#metanav ul {
+	display: inline;      /* Fix for IE Doubled Float Margin Bug */
+	margin: 0;			  /* Reset standard list definition */
+	padding: 0;
+	margin-left: 0px;     /* Adjust distance of the first button from the left border (-2 pixels for 3D shadow) */
+}
+#metanav ul li {
+	float: right;
+	font-weight: bold;
+	display: inline;     /* Fix for IE Doubled Float Margin Bug */
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+	line-height: 1em;
+	list-style-type: none;
+}
+
+#metanav ul li a {
+	display: block;
+	width: auto;
+	background: transparent;
+	text-decoration: none;
+	color: #FF8700;
+	margin: 0;
+	padding: 0.5em 0.8em 0.5em 0.8em;
+}
+
+#metanav ul li a:hover {
+	color: #999;
+}
+
+
+
+/* Mainnavigation/Topnavigation */
+
+#nav_main a {
+	background: -moz-linear-gradient(center top, #FFA52D, #FF8700) repeat scroll 0 0 transparent;  /* for Mozilla Firefox */
+	background: -ms-linear-gradient(center top, #FFA52D, #FF8700) repeat scroll 0 0 transparent;  /* for IE */
+	background: -o-linear-gradient(center top, #FFA52D, #FF8700) repeat scroll 0 0 transparent;  /* for Opera */
+	background: linear-gradient(center top, #FFA52D, #FF8700) repeat scroll 0 0 transparent;
+	border-color: transparent #E97E0D transparent #FFC37D;
+	border-style: solid;
+	border-width: 0 1px;
+	box-shadow: inset 0 1px 0 #FFC37D;
+	color: #FFFFFF;
+	display: block;
+	line-height: 32px;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+#nav_main {
+	width: 100%;		/* Enclosing the floats in IE */
+	float: left;        /* Enclosing the floats in all other browsers */
+	border-bottom: 1px #666 solid;
+	line-height: 0px;
+	background: -moz-linear-gradient(center top,  #FFA52D, #FF8700);  /* for Mozilla Firefox */
+	background: -ms-linear-gradient(center top,  #FFA52D, #FF8700);  /* for IE */
+	background: -o-linear-gradient(center top, #FFA52D, #FF8700); /*for Opera */
+	background: linear-gradient(center top, #FFA52D, #FF8700);
+}
+
+#nav_main ul {
+	float: left;
+	display: inline;	/* Fix for IE Doubled Float Margin Bug */
+	margin: 0;			/* Reset standard list definition */
+	padding: 0;
+	margin-left: 0px;   /* Adjust distance of the first button from the left border (-2 pixels for 3D shadow) */
+}
+
+#nav_main ul li {
+	float: left;
+	display: inline;     /* Fix for IE Doubled Float Margin Bug */
+	margin: 0;
+	padding: 0;
+	font-size: 1.06em;
+	line-height: 1em;
+	list-style-type: none;
+}
+
+#nav_main ul li a {
+	display: block;
+	width: auto;
+	font-size: 1em;
+	background: transparent;
+	text-decoration: none;
+	color: #000;
+	margin: 0;
+	padding: 0 0.8em;
+}
+
+#nav_main ul li a:hover {
+	/**
+	 * The colors are the default colors of unhovered menu items: #FFA52D, #FF8700
+	 * Flipped to #FF8700, #FFA52D
+	 * Then in HSV scheme: Reduced the value H (= color, hue) by 7: #FF6B00, #FF8D2E
+	 */
+	background: -moz-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for Mozilla Firefox */
+	background: -ms-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for IE */
+	background: -o-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for Opera */
+	background: linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent;
+	color: #333;
+	text-decoration: none;
+}
+
+#nav_main ul li#current {
+	background: -moz-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for Mozilla Firefox */
+	background: -ms-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for IE */
+	background: -o-linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent; /* for Opera */
+	background: linear-gradient(center top, #FF6B00, #FF8D2E) repeat scroll 0 0 transparent;
+}
+
+#nav_main ul li#current a,
+#nav_main ul li#current a:hover {
+	color: #fff;
+	background: transparent;
+	text-decoration: none;
+}
+	
+/*Subnavigation*/
+	
+	#submenu {
+		width: 100%;
+		font-size: 0.96em;
+		overflow: hidden;
+		margin: 3em 0 1.5em 0;
+		list-style-type: none;
+	}
+
+	#submenu a { display: block; text-decoration: none; }
+	#submenu li {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 3px 0px 3px 0px;
+		list-style-type: none;
+		border-bottom: 1px #999 solid;
+		}
+	
+	#submenu li a {
+		width: 90%;
+		padding: 3px 0px 3px 10%;
+		background-color: #fff;
+		color: #333;
+	}
+	#submenu li a:hover { background-color:#FFA52D; color: #333; }
+	
+	#submenu li ul { list-style-type: none; margin: 0; padding: 0; }
+	#submenu li ul li { float:left; width: 100%; margin: 0; padding: 0; }
+	
+	/* Prevent the last li-Tag on the second level from having a duplicate border-bottom
+	   (one coming from the li on level one and one from the one on level two). */
+	#submenu li ul li:last-child {
+		border-bottom-width: 0px;
+	}
+	
+	#submenu li ul li a {
+		width: 80%;
+		padding: 3px 0px 3px 20%;
+		background-color: #fff;
+		color: #666;
+	}
+
+	#submenu li ul li a:hover { background-color: #FFA52D; color: #333; }
+
+	#submenu li#title {
+		width: 90%;
+		padding: 3px 0px 3px 10%;
+		font-weight: bold;
+		color: #333;
+		background-color: #fff;
+	}
+	
+	#submenu li#active {
+		width: 90%;
+		padding: 3px 0px 3px 10%;
+		font-weight: bold;
+		color: #fff;
+		background-color:#999;
+	}
+	
+	#submenu li ul li#active {
+		width: 80%;
+		padding: 3px 0px 3px 20%;
+		font-weight: bold;
+		color: #fff;
+		background-color: #999;
+	}

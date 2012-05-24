@@ -1,0 +1,285 @@
+######################################################
+#
+# Configuration of custom options
+#
+######################################################
+
+# Wrap the headers of content elements in h2 tags instead of
+# in h1 tags.
+# The variables are needed to still be able to align the
+# headlines with the options offered in the backend.
+lib.stdheader.10.1.dataWrap = <h2 {register:headerStyle}{register:headerClass}>|</h2>
+
+
+
+######################################################
+#
+# Configuration of the PAGE object
+#
+######################################################
+
+# Default PAGE object:
+page = PAGE
+
+# Define the template
+page.10 = TEMPLATE
+
+# Our template is a file
+page.10.template = FILE
+# Our template file is fileadmin/template/index.html
+page.10.template.file = fileadmin/template/index.html
+
+
+# Insert shortcut icon in the head of the website
+page.shortcutIcon = fileadmin/template/favicon.ico
+# Insert stylesheet in the head of the website
+page.stylesheet = fileadmin/template/style.css
+
+
+# Work with the subpart "DOCUMENT"
+page.10.workOnSubpart = DOCUMENT
+
+
+
+######################################################
+#
+# Configuration of SUBPARTS
+#
+######################################################
+
+# Define the subparts, which are inside the subpart DOCUMENT
+page.10.subparts {
+
+  ##############################################
+  #
+  # Subpart METANAV
+  #
+  ##############################################
+
+  # The subpart METANAV outputs the meta navigation
+  # at the top right corner of the page
+  METANAV = HMENU
+  METANAV.wrap = <ul>|</ul>
+
+  # Only display special pages here: Contact and Imprint
+  METANAV.special = list
+  # LIST NEEDS MODIFICATION:
+  # Take your page IDs!
+  # Change the values in the following list!
+  METANAV.special.value = 80, 81
+
+  # Definition for pages on the first level of the menu
+  METANAV.1 = TMENU
+  METANAV.1 {
+    # Do not blur links with onFocus.
+    noBlur = 1
+
+    # NO: default formatting
+    NO = 1
+    NO {
+      # Each entry is wrapped by
+      # <li> </li>
+      allWrap = <li>|</li>
+    }
+  }
+
+
+  ##############################################
+  #
+  # Subpart TOPNAV
+  #
+  ##############################################
+
+  # The subpart TOPNAV outputs the main navigation
+  TOPNAV = HMENU
+  TOPNAV.wrap = <ul>|</ul>
+  # "stdWrap" properties are applied after "wrap".
+  TOPNAV.stdWrap.wrap = <div id="nav_main">|</div>
+
+  # Definition for pages on the first level of the menu
+  TOPNAV.1 = TMENU
+  TOPNAV.1 {
+    noBlur = 1
+
+    # Definitions per page
+    # NO: default formatting
+    NO = 1
+    NO {
+      # Each entry is wrapped by
+      # <li> </li>
+      allWrap = <li>|</li>
+    }
+
+    # ACT: User is on this or below this page
+    # Activate this state for this menu
+    ACT = 1
+    ACT {
+      # Use another wrap
+      allWrap = <li id="current">|</li>
+    }
+  }
+
+
+  ##############################################
+  #
+  # Subpart SUBNAV
+  #
+  ##############################################
+
+  # The subpart SUBNAV outputs the sub navigation
+  SUBNAV = HMENU
+  SUBNAV {
+    # Only display subpages of the page from the main
+    # navigation, which is in the current rootline.
+    # Default value of entryLevel is 0, which are the
+    # pages on the first level.
+    # We want to begin with those subpages on level 2.
+    entryLevel = 1
+
+    # Definition for pages on the first level of the menu
+    1 = TMENU
+    1 {
+      wrap = <ul id="submenu">|</ul>
+      noBlur = 1
+      # Always expand all subpages.
+      expAll = 1
+
+      # Definitions per page
+      # NO: default formatting
+      NO = 1
+      NO {
+        # Each entry is wrapped by
+        # <li> </li>
+        wrapItemAndSub = <li>|</li>
+      }
+
+      # ACT: User is on this or below this page
+      # Activate this state for this menu
+      ACT = 1
+      ACT {
+        # Use another wrap
+        wrapItemAndSub = <li id="active">|</li>
+      }
+    }
+
+    # Definition for pages on the second level of the menu
+    # Copy the definitions from level 1,
+    # but use another wrap.
+    2 < .1
+    2.wrap = <ul>|</ul>
+  }
+
+
+  ##############################################
+  #
+  # Subpart CONTENTRIGHT
+  #
+  ##############################################
+
+  # The subpart CONTENTRIGHT outputs the content,
+  # which is saved in TYPO3 in the right column of a page
+  CONTENTRIGHT = CONTENT
+  # Needs the static template from css_styled_content
+  # to be included in this template record.
+  CONTENTRIGHT < styles.content.getRight
+
+
+  ##############################################
+  #
+  # Subpart CONTENTMIDDLE
+  #
+  ##############################################
+
+  # The subpart CONTENTMIDDLE outputs the content of the middle column
+  CONTENTMIDDLE = CONTENT
+  # Needs the static template from css_styled_content
+  # to be included in this template record.
+  CONTENTMIDDLE < styles.content.get
+}
+
+
+
+######################################################
+#
+# Configuration of MARKERS
+#
+######################################################
+
+# Define the markers inside the subpart DOCUMENT
+page.10.marks {
+
+  ##############################################
+  #
+  # Marker HEADERTITLE
+  #
+  ##############################################
+
+  # The marker HEADERTITLE outputs the site title
+  HEADERTITLE = TEXT
+  HEADERTITLE.value = TYPO3
+
+
+  ##############################################
+  #
+  # Marker DATE
+  #
+  ##############################################
+
+  # Outputs the current date in the defined format
+  DATE = TEXT
+  DATE.data = date : d.m.Y
+
+
+  ##############################################
+  #
+  # Marker BREADCRUMB
+  #
+  ##############################################
+
+  # Outputs a menu which shows a click path to
+  # the current page.
+  BREADCRUMB = HMENU
+
+  BREADCRUMB {
+    special = rootline
+    # Range: Syntax is "Start level|End level"
+    # Values for both:
+    # 0 stands for the root page, positive values go outwards.
+    # Negative values begin with the outermost level of the current 
+    # rootline and go inwards;
+    # e.g. -1 stands for the page on the outermost level of the 
+    # current rootline.
+    # Start level: 1 = The page one level below the root page.
+    # End level: -1 = The current page.
+    special.range = 1|-1
+
+    1 = TMENU
+    1 {
+      noBlur = 1
+
+      NO = 1
+      # We want greater-than signs between the menu items.
+      # Inside allWrap we use optionSplit to prepend the menu items
+      # with different values depending on their position in the menu:
+      # "||" divides different items.
+      # Nothing in front of "||" means the first menu item will be
+      # prepended with nothing.
+      # The second item will be prepended with ">".
+      # If our menu has more than two items, the definition of the
+      # second item is repeated for all following items prepending
+      # them with ">" as well.
+      NO.allWrap = ||&nbsp;>&nbsp;
+    }
+  }
+
+
+  ##############################################
+  #
+  # Marker TITLE
+  #
+  ##############################################
+
+  # The marker TITLE outputs the page headline
+  TITLE = TEXT
+  TITLE.field = title
+}
