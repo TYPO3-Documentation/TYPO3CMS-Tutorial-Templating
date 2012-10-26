@@ -71,8 +71,6 @@ page.10.subparts {
   # Definition for pages on the first level of the menu
   METANAV.1 = TMENU
   METANAV.1 {
-    # Do not blur links with onFocus.
-    noBlur = 1
 
     # NO: default formatting
     NO = 1
@@ -99,7 +97,6 @@ page.10.subparts {
   # Definition for pages on the first level of the menu
   TOPNAV.1 = TMENU
   TOPNAV.1 {
-    noBlur = 1
 
     # Definitions per page
     # NO: default formatting
@@ -140,7 +137,6 @@ page.10.subparts {
     1 = TMENU
     1 {
       wrap = <ul id="submenu">|</ul>
-      noBlur = 1
       # Always expand all subpages.
       expAll = 1
 
@@ -255,7 +251,6 @@ page.10.marks {
 
     1 = TMENU
     1 {
-      noBlur = 1
 
       NO = 1
       # We want greater-than signs between the menu items.
