@@ -77,4 +77,5 @@ future reference.
 
    Introduction\Index
    Preparation\Index
+   Tasks\Index
    Targets

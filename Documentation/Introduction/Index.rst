@@ -16,9 +16,4 @@ Introduction
    :titlesonly:
    :glob:
 
-   Introduction/Index
-   Preparation/Index
-   Task/Index
-
-
-   
+   AboutThisDocument/Index

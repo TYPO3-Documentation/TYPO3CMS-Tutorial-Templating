@@ -1620,7 +1620,7 @@ Next steps
 
 In this tutorial we built the website by adding markers and subparts to a HTML file, which is a very common way to do the job. Mention that with TYPO3 websites can also be built in three other ways:
 * Using the TYPO3 extension automaketemplate, which basically works the same way as we do in this tutorial, but which automatically wraps those sections of a HTML page, which have a certain class or id, in corresponding template subparts.
-* Using a special TYPO3 extension called TemplaVoil‡, which uses a technique called "mapping" to allow to create more flexible page structures.
+* Using a special TYPO3 extension called TemplaVoil√° which uses a technique called "mapping" to allow to create more flexible page structures.
 However, both are not part of the TYPO3 Core and need some additional configuration. For these reasons they are not used in this tutorial.
 * you can do without any HTML Template and build the website complete inside of Typoscript with nested COAs and wraps 
 
