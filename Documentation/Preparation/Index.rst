@@ -114,10 +114,3 @@ Back in the editing form from which you came, click "Save and close document".
 
 .. figure:: ../../Images/TBT-page-structure-new-14a.jpg
    :alt: A new structure
-
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
-
-   Preparation/Index
