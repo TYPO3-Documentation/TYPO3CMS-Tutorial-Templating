@@ -31,7 +31,7 @@ This section will tell you what markers and subparts are, how they look like and
 
 A marker is a word in your HTML template, which is wrapped by "###" on both sides. The marker "TITLE" would for example look like this: 
 
-.. code:: html
+::
 
   <h1>###TITLE###</h1>
 
@@ -43,7 +43,7 @@ In contrast a subpart is a pair of two markers in your HTML template, which have
 
 Example:
 
-.. code:: html
+::
 
   ###METANAV###
   <p>
@@ -56,7 +56,7 @@ Opposite to single markers (like "###TITLE###" from above) you may insert the su
 
 Example:
 
-.. code:: html
+::
 
   <!-- ###METANAV### Start -->
   <p>
@@ -98,7 +98,7 @@ Add the subpart "DOCUMENT"
 
 Add a subpart called "DOCUMENT" inside the body tag. The first marker of this subpart should be directly behind the opening body tag and the second one directly in front of the closing body tag so that everything in the body tag is inside that subpart. TYPO3 will later create its own HTML structure for us and we will configure TYPO3 to only put the HTML code inside that structure, which is inside this subpart (and not also the head tag or the html tags or so). That is the reason, why we need it here.
 
-.. code:: html
+::
 
     <!DOCTYPE html>
     <html>
@@ -144,7 +144,7 @@ Add the subpart "METANAV"
 
 * Inside the div box with the id "metanav" there is our metanavigation. Add a subpart called "METANAV", so that the whole content of that box is inside the subpart.
 
-.. code:: typoscript
+::
  
     <body>
         <!-- ###DOCUMENT### Start -->
@@ -169,7 +169,7 @@ Add the marker "HEADERTITLE"
 
 * Below the metanavigation there is a div with the id "headertitle". Replace its content with the marker "HEADERTITLE".
 
-.. code:: html 
+:: 
 
   <div id="headertitle">###HEADERTITLE###</div>
 
@@ -180,7 +180,7 @@ Add the subpart "TOPNAV"
 
 * Inside the div, which has the id "nav", we have our mainnavigation. Do the same as for "metanav" but call that subpart "TOPNAV".
 
-.. code:: typoscript
+::
 
     <div id="nav">
         <!-- ###TOPNAV### Start -->
@@ -204,7 +204,7 @@ As you might already have seen the template has three columns.
 * Let's begin with the left column, column 1, which has the id "col1".
 ** Inside of column 1 there is the div with the id "col1_content". It will hold the sub menu. Wrap the whole content of that div in the subpart "SUBNAV".
 
-.. code:: html  
+::  
 
     <!-- #col1: Left Column of the Content Area -->
     <div id="col1">
@@ -246,7 +246,7 @@ Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONT
 ** Next there is the page title. Replace the content of the h1 tag with the marker "TITLE".
 ** In the div below there will be the content of that column. Wrap the content of that div into the subpart "CONTENTMIDDLE".
 
-.. code:: html
+::
  
     <!-- #col2: Right Column of the Content Area -->
     <div id="col2">
@@ -304,7 +304,7 @@ The desired task result
 
 This is how our HTML template now looks like:
 
-.. code:: html 
+:: 
 
     <!DOCTYPE html>
     
@@ -483,7 +483,7 @@ Create a new TypoScript template
 Let's start building our TypoScript template. Go to the Template module by opening the section "Web" and clicking on "Template":
 
 
-.. figure:: Image:TBT-template-module.jpg
+.. figure:: ../../Images/Image:TBT-template-module.jpg
    :alt:
 
 You cannot see the Template module?
@@ -491,53 +491,53 @@ The Template module is only accessible for administrators in TYPO3. Login with a
 
 In the page tree activate the "Root" page, which you have created before you worked in the HTML template file. You will see this screen:
 
-.. figure:: Image:TBT-template-new.jpg
+.. figure:: ../../Images/Image:TBT-template-new.jpg
    :alt:
 
 As you can see, there currently is no TypoScript record on our root page. So we have to create one, so that TYPO3 knows, how it should dispay our root page - and also all its subpages - in our website. Note that the template record is inherited to all subpages. That means that the configuration, which we insert in the template record of our root page, will automatically be used for all subpages as well.
 To create a new template record click on "Create template for a new site".
 
-.. figure:: Image:TBT-template-new2.jpg
+.. figure:: ../../Images/Image:TBT-template-new2.jpg
    :alt:
 
 After you have done so, you will come to the same screen, but there will additionally be the information, that there now is a template record on the page "Root" (with the id, which this page has in your system. In my case it is 75, but the ID does not matter now.). Click the link "Click here to go."
 
-.. figure:: Image:TBT-template-new3.jpg
+.. figure:: ../../Images/Image:TBT-template-new3.jpg
    :alt:
 
 Now you see the "Info/Modify" screen. From here you can edit the whole template record or choose one single field of the record, which you want to view or change.
 
-.. figure:: Image:TBT-template-new4.jpg
+.. figure:: ../../Images/Image:TBT-template-new4.jpg
    :alt:
 
 First there is one important step, which we need to do: There is a so called "static template", which comes with TYPO3. This static template already contains some TypoScript code. If we include this static template in our template record, it will help us, as we do not have to write each line of the code we need ourselves. Instead we can use a short one-liner to copy parts from this static template. (This is done when we insert the actual content for the markers CONTENTRIGHT and CONTENTMIDDLE).
 
 Click the button "Edit whole template record".
 
-.. figure:: Image:TBT-template-include-static1.jpg
+.. figure:: ../../Images/Image:TBT-template-include-static1.jpg
    :alt:
 
 Click the tab "Includes" and in the palette "Include static (from extensions)" click the item "CSS Styled Content (css_styled_content)" as marked in the screenshot. Then it will be added to the list on the left. When that is done click the icon "Save and close document" at the top.
 
-.. figure:: Image:TBT-template-include-static2.jpg
+.. figure:: ../../Images/Image:TBT-template-include-static2.jpg
    :alt:
 
 You do not see the entry "CSS Styled Content (css_styled_content)" in the right list? Then you most probably have not installed the TYPO3 system extension "css_styled_content". Go to the Extension Manager, open the tab "Available extensions", watch out for the extension key "css_styled_content" and install the extension. Now include the static template as explained above.
 
 You now are back in the Info/Modify screen. Here you can see some sections of the TypoScript template. The most important sections in a TypoScript template are the ones called "Constants" and "Setup". 
 
-.. figure:: Image:TBT-template-new4a.jpg
+.. figure:: ../../Images/Image:TBT-template-new4a.jpg
    :alt:
 
 In the section "Constants" you can - you guess it - define constants. These constants can then be used in the setup field of the template. Doing so is a bit more advanced and we will not do that in this tutorial.
 The field labeled "Setup" is the one, in which we will enter all the TypoScript configuration. As you can see in the screenshot above, it already contains six lines of code. Click the small pencil next to the word "Setup".
 
-.. figure:: Image:TBT-template-new4b.jpg
+.. figure:: ../../Images/Image:TBT-template-new4b.jpg
    :alt:
 
 Now you can have a look at the content of the setup field. This is what you will see:
 
-.. figure:: Image:TBT-template-new5.jpg
+.. figure:: ../../Images/Image:TBT-template-new5.jpg
    :alt:
 
 You don't see the code in different colors, but just as black text? Then you most probably have not installed the TYPO3 system extension "t3editor". You can install this extension by going to the Extension Manager, having a look at the tab "Available extensions" and by clicking the small icon in front of the row where it says "t3editor". Afterwards you should be able to see the code colored as in the screenshot above. If you still do not see the code colored, make sure that you have not checked the checkbox "Deactivate t3editor", which you see at the bottom of the above screenshot.
@@ -552,7 +552,7 @@ How to use TSref
 
 Before we continue to write our own TypoScript, let us have a look at the lines, which already are there.
 
-.. code:: typoscript
+::
 
     # Default PAGE object:
     page = PAGE
@@ -574,12 +574,12 @@ What you should have learnt from this chapter is, how properties can be set in T
 By the way: Did you know, that these four lines already create an output? It is not much, but more than nothing.
 Click on the  "View webpage" icon at the top of the screen. 
 
-.. figure:: Image:TBT-template-new6.jpg
+.. figure:: ../../Images/Image:TBT-template-new6.jpg
    :alt:
 
 What you see is this:
 
-.. figure:: Image:TBT-template-new7.jpg
+.. figure:: ../../Images/Image:TBT-template-new7.jpg
    :alt:
 
 .. _load-html-template
@@ -597,7 +597,7 @@ So where a TEXT object was defined above, we need to define an object, which out
 
 So instead of the code above we write
 
-.. code:: typoscript 
+:: 
 
   # Default PAGE object:
   page = PAGE
@@ -609,7 +609,7 @@ By the way: When you are working with t3editor to edit the Setup field of your T
 
 As TSref tells us, the TEMPLATE cObject has the property "template", in which we can define a cObject, which must be loaded with the template code. This is exactly what we want to do! Since our template is a file, an HTML file, we choose the cObject FILE and add:
 
-.. code:: typoscript
+::
 
   # Our template is a file
   page.10.template = FILE
@@ -617,7 +617,7 @@ As TSref tells us, the TEMPLATE cObject has the property "template", in which we
 Did you look up the content object FILE in TSref? If not, do so now! 
 You will see that for this cObject there is the property "file". The cObject FILE returns the content of the file, which is set in this property. But how exactly do you have to link your file now? This is also answered in TSref. The data type of the property "file" is "resource". You find it in the "Data types reference". There you also find the information that you can link to a file in your TYPO3 installation using a relative path. See the example in TSref. So we add to our template:
 
-.. code:: typoscript 
+:: 
 
   # Our template file is fileadmin/template/index.html
   page.10.template.file = fileadmin/template/index.html
@@ -628,7 +628,7 @@ So obviously we still have to add a reference to our CSS file to our PAGE object
 
 The section on the "PAGE object" in TSref tells us how we can add tags to the head tag of the HTML output. There are the properties "stylesheet" and "shortcutIcon", which we want to use to include our stylesheet and our icon:
 
-.. code:: typoscript 
+:: 
 
   # Insert shortcut icon in the head of the website
   page.shortcutIcon = fileadmin/template/favicon.ico
@@ -649,7 +649,7 @@ Work with the subpart DOCUMENT
 Currently TYPO3 puts our whole HTML template file between body tags. To get a valid HTML page, we should only put *that* part of our template inside these body tags, which really belongs between body tags. Again having a look at the TEMPLATE cObject in TSref there is the property "workOnSubpart" which does exactly this. In this property you can name a subpart, which you want the TEMPLATE cObject to return. That way this subpart gets extracted from our HTML template file and is the only thing returned. Do you remember how we wrapped the whole content of the body tags of our HTML template in the subpart DOCUMENT? This was the reason to do that; here we use it.
 So we add to our template:
 
-.. code:: typoscript
+::
 
   # Work with the subpart "DOCUMENT"
   page.10.workOnSubpart = DOCUMENT
@@ -669,7 +669,7 @@ Inside the property "subparts" we can define the rendering instructions for our 
 
 Let us add them to the setup of our TEMPLATE object:
 
-.. code:: typoscript
+::
 
     ######################################################
     #
@@ -714,7 +714,7 @@ Now we will start with the first subpart. The meta navigation, which will be dis
 
 Since we basically want to output a menu, we define the subpart METANAV as
 
-.. code:: typoscript 
+:: 
 
   page.10.subparts {
   METANAV = HMENU
@@ -723,7 +723,7 @@ Now we can use the properties of the cObject HMENU. With these properties you ca
 
 Just for you to remember here again is the HTML code, which was in our template and which we have to replace:
 
-.. code:: html 
+:: 
 
     <body>
         <!-- ###DOCUMENT### Start -->
@@ -745,13 +745,13 @@ As you can see, we first have a ul tag, which stands for an unordered list. Insi
 
 Since the HMENU cObject has the property "wrap", we can create a ul tag around our menu by adding
 
-.. code:: typoscript 
+:: 
 
   METANAV.wrap = <ul>|</ul>
 
 Now we only want to have some special pages to be displayed in our menu. This can be done with the "special" property. As you see in TSref, this property supports several different values. We choose 
 
-.. code:: typoscript
+::
 
   METANAV.special = list
 
@@ -759,7 +759,7 @@ to create a list of selected pages.
 
 For the type "special = list" there again are some subproperties available, the most important one being "special.value". Inside that property you have to define the page IDs, which should be part of the menu. In my case the pages "Imprint" and "Contact" have the page IDs 80 and 81, so to get them displayed I have to add:
 
-.. code:: typoscript
+::
 
   METANAV.special.value = 80, 81
 
@@ -772,7 +772,7 @@ Have a look at the table of contents in TSref and look at the section "MENU Obje
 
 For METANAV.1 we want to have simple text and no graphics. So we define
 
-.. code:: typoscript
+::
 
   METANAV.1 = TMENU
 
@@ -788,7 +788,7 @@ For our menu we will only use the default state NO. That way the links will alwa
 
 Before you use an item state, you should always activate it by setting it to 1:
 
-.. code:: typoscript
+::
 
   METANAV.1 {
     NO = 1
@@ -798,7 +798,7 @@ While activating the item state is *not* needed for the item state NO, it *is* n
 
 Now we want the pages in our menu to be each wrapped in li tags. Have a look at the table "TMENUITEM" now. There you find the property "allWrap", which wraps the whole item. Exactly what we want, isn't it?
 
-.. code:: typoscript
+::
 
   METANAV.1 {
     NO = 1
@@ -812,7 +812,7 @@ Now we want the pages in our menu to be each wrapped in li tags. Have a look at 
 This completes the code we need for our meta navigation. I have rewritten it with brakets now and I have slightly restructured the properties.
 Here it is again:
 
-.. code:: typoscript
+::
 
     ######################################################
     #
@@ -861,7 +861,7 @@ Here it is again:
 
 And here is a screenshot of the HTML source code of the resulting output:
 
-.. figure:: Image:TBT-Conf_METANAV.jpg
+.. figure:: ../../Images/Image:TBT-Conf_METANAV.jpg
    :alt:
 
 .. _configure_headertitle
@@ -871,7 +871,7 @@ Configure the marker HEADERTITLE
 
 The marker HEADERTITLE should output something like a "site title". It is the title of your whole website. So what we want to output there basically are only some words of text. You already know how that is working; you removed such a definition when we started with the TEMPLATE cObject. There was a TEXT cObject, do you remember? This is how we can use a TEXT object to output our site title there:
 
-.. code:: typoscript
+::
 
     HEADERTITLE = TEXT
     HEADERTITLE.value = TYPO3
@@ -880,7 +880,7 @@ This is all it takes to put our header title in place. Btw this is the easiest w
 
 Have you noted that we just have defined a marker (and no subpart)? Check that you have put the definition into page.10.marks, not into page.10.subparts! I have added some comments (all lines starting with "#") to the code so that it is easily understandable. Remember that these comments don't do anything and could also be left out which would not change the functionality of the TypoScript template. The code in that section should now look like this:
 
-.. code:: typoscript
+::
     
     ######################################################
     #
@@ -912,7 +912,8 @@ Configure the subpart TOPNAV
 
 The subpart TOPNAV displays our main menu, which is located inside the orange bar at the top of the page. Here again is the structure of the HTML code, which we need to create:
 
-.. code:: html
+::
+
     <div id="nav">
         <!-- ###TOPNAV### Start -->
         <div id="nav_main">
@@ -928,19 +929,19 @@ The subpart TOPNAV displays our main menu, which is located inside the orange ba
 
 Since we want to display a menu we again begin defining an HMENU
 
-.. code:: typoscript
+::
 
    TOPNAV = HMENU
 
 This time we have to wrap the menu in a div tag and - inside the div tag - into ul tags. We could put both into the same property now, like
 
-.. code:: typoscript
+::
 
    TOPNAV.wrap = <div id="nav_main"><ul>|</ul></div>
 
 , but there also is a way, which makes our definitions look nicer to the eye: We define both wraps seperately. Like every cObject HMENU also provides a property named "stdWrap". TYPO3 applies this property after all other properties of the object have been computed. Behind stdWrap there is a very powerful function; it is a kind of "Swiss knife", which offers a big number of functionalities. This property has many subproperties (just look at the section "stdWrap" in TSref) with which you can do lots of different things: You can for example format the content of a cObject, you can change the case of the content, you can output the content based on a condition or you can add data from the database. However, this is just to give you a quick overview of what stdWrap can do for you. Here we only use the "wrap" property of stdWrap to add a normal wrap. Basically you already know how that is working. So we add this to our template:
 
-.. code:: typoscript
+::
 
     TOPNAV.wrap = <ul>|</ul>
     TOPNAV.stdWrap.wrap = <div id="nav_main">|</div>
@@ -951,7 +952,7 @@ When you had a look at our HTML template you might have noticed that there in fa
 
 So what we want to output in the menu is a list of the pages, which we have on level 1 of our page tree in TYPO3. Again we use a textual menu. So we need to define 
 
-.. code:: typoscript
+::
 
     TOPNAV.1 = TMENU
     TOPNAV.1 {
@@ -960,7 +961,7 @@ So what we want to output in the menu is a list of the pages, which we have on l
 
 As the normal rendering (the default rendering) we again need li tags:
 
-.. code:: typoscript
+::
 
     TOPNAV.1 {
     
@@ -976,7 +977,7 @@ But did you see that there is one page in the main menu, which has the CSS ID "c
 
 So this time we also have to define another item state besides "NO". You have already learnt that for our case we need to configure the state "ACT". This state offers the same properties as the state NO does. So we add this to the definition of our TMENU:
 
-.. code:: typoscript
+::
     
     TOPNAV.1 {
     
@@ -991,7 +992,7 @@ That way a page, which is active (because the user is on that page or on a subpa
 
 This completes our TypoScript code for the subpart TOPNAV. Here is the complete code for that subpart. The order of the properties again is slightly restructured and the code is indented:
 
-.. code:: typoscript
+::
 
     ##############################################
     #
@@ -1040,7 +1041,7 @@ Furthermore the sub navigation should also show pages on deeper levels like on l
 
 Here again is the structure of the HTML code, which we need to replace:
 
-.. code:: html
+::
 
     <!-- #col1: Left Column of the Content Area -->
     <div id="col1">
@@ -1063,13 +1064,14 @@ Here again is the structure of the HTML code, which we need to replace:
     <!-- #col1: Left Column End -->
 
 We again define an HMENU:
-.. code:: typoscript
+
+::
 
    SUBNAV = HMENU
 
 Now we have to set the level of pages of the page tree, with which the menu should begin. This can be done with the property "entryLevel", which is provided by the object HMENU. If it is set to "0", the menu begins with the first level of pages below the root page. That is what is used in the top menu TOPNAV. (In fact we did not have to set entryLevel to "0" explicitly there, because "0" is the default value.) But here we want the menu not to start with the pages, which are directly below the root page, but with the ones, which are one level deeper. So we add:
 
-.. code:: typoscript
+::
 
     SUBNAV = HMENU
     SUBNAV.entryLevel = 1
@@ -1083,7 +1085,7 @@ Since the structure of both levels of the menu basically is the same we will now
 
 To have things structured logically, I add the outer ul tags not to the wrap of the HMENU like we did e.g. for TOPNAV, but to the wrap of the first level of pages of the TMENU. In the end this does not make a difference in the rendering, the wrap in both cases appears at the same place. But having it inside the first level of the TMENU I can also copy that wrap, when I create the instructions for pages on level 2.
 
-.. code:: typoscript
+::
 
     SUBNAV {
     
@@ -1094,7 +1096,7 @@ To have things structured logically, I add the outer ul tags not to the wrap of 
     
 Something else which is important when you can have multiple levels of pages in a menu is the question, if you always want to see all subpages. By default TYPO3 only shows the subpages of *the* page, which currently is active. In contrast I want TYPO3 to always show all subpages, also the ones of pages, which the user is not on currently. This can be done with the property expAll:
 
-.. code:: typoscript
+::
 
     1 = TMENU
     1 {
@@ -1103,7 +1105,7 @@ Something else which is important when you can have multiple levels of pages in 
  
 Now let's have a look at the rendering definition for a single item on level 1, when it is in normal state. We want to wrap each item on level 1 in an li tag. In the menus METANAV and TOPNAV we always used the property "allWrap" to do this kind of task. However, this property only wraps the item itself. But when we have an item with subpages, these subpages would not be included in the wrap, but would follow after it. With other words: allWrap would insert the closing li tag, before the tags for the subpages start (that is the ul tag and the li tags inside it). This would lead to invalid HTML; the nesting of the different tags would no longer be valid. So what we need here is a property, which does not only wrap the menu item, which we have currently, but also all subitems. The result should be that the closing li tag is inserted *after* the subpages. This can be done with "wrapItemAndSub". So we add this to our template:
 
-.. code:: typoscript
+::
 
     SUBNAV.1 {
       # Definition per page
@@ -1116,7 +1118,7 @@ Now let's have a look at the rendering definition for a single item on level 1, 
 
 As you see in the HTML template there also is the CSS ID "active", which should be added to that one menu item, which currently is active. So again it is not enough to just define NO as normal default state and to always use that state, but we also have to add a special definition for the case of a page being active. So we need to define this different wrap in the property "wrapItemAndSub" of the object "ACT", so that it overwrites our normal default wrap:
 
-.. code:: typoscript
+::
 
     SUBNAV.1 {
       ACT = 1
@@ -1133,7 +1135,7 @@ Until now we always used the operator "=" to assign a value to a property. Copyi
 
 Before we continue with our template it makes sense to explain this with an example. I have the object HEADERTITLE. Now I can create a copy of it and call the copy ANOTHEROBJECT:
 
-.. code:: typoscript
+::
 
     page.10.marks {
       HEADERTITLE = TEXT
@@ -1147,7 +1149,8 @@ With this definition we define the object ANOTHEROBJECT and set its content to a
 
 When copying on the same level, you can just refer to the name of the copied object, prepended by a dot. See the following code:
 
-.. code:: typoscript
+::
+
     page.10.marks {
       HEADERTITLE = TEXT
       HEADERTITLE.value = TYPO3
@@ -1160,7 +1163,7 @@ This produces the same result as the example above, but it is even more readable
 
 So now let us come back to our template record. Here again is our current TypoScript, reduced to the part, which is important now. (You will again find the complete TypoScript for this subpart at the end of this section.) The copying takes place in the last line:
 
-.. code:: typoscript
+::
 
     SUBNAV = HMENU
     SUBNAV {
@@ -1182,7 +1185,7 @@ The line "2 < .1" is all it takes to create a complete copy of all the definitio
 
 Now when we have a look at our HTML template again we see that there is one small difference in the output of the pages on level 2 compared to the output of the pages on level 1: The wrap at the ul tag (that is the wrap for the whole page level) is different. While the ul tag had the CSS ID "submenu" attached on level 1, our HTML template shows us that there does not belong a CSS ID on level 2. So let's overwrite the wrap for level 2. We can do so after we copied the whole object to SUBNAV.2 by defining another value for SUBNAV.2.wrap:
 
-.. code:: typoscript
+::
     
     SUBNAV = HMENU
     SUBNAV {
@@ -1197,7 +1200,7 @@ That's it! Our submenu now can display up to two levels of pages. This should be
 
 Again here is the whole TypoScript code of that subpart, slightly restructured and nicely indented:
 
-.. code:: typoscript
+::
 
   SUBNAV = HMENU
   SUBNAV {
@@ -1253,13 +1256,13 @@ So in fact we can already visit the according pages that way. You will say "Well
 
 The subpart CONTENTRIGHT is a special subpart: With this subpart we instruct TYPO3 to get the content of the current page, that is the content of the page which the user has clicked in the menus. We will configure CONTENTRIGHT to get the content for the *right* column of our web pages (and not for the left or middle column) from the database. TYPO3 offers the cObject CONTENT to do that job so we define:
 
-.. code:: typoscript
+::
 
    CONTENTRIGHT = CONTENT
 
 As you can see in TSref the cObject CONTENT has a number of subproperties, which would allow us to define in detail, which records should be selected (and finally displayed). However, there is good news: Do you still remember that I told you to include a static template in your template record? You had to include the static template from the TYPO3 system extension "CSS Styled Content". This static template offers objects, which contain all the lines needed to get the correct contents from the database. In the page module in the TYPO3 Backend you by default see four columns. For each of these columns the static template from CSS Styled Content contains an object, which reads out the contents of that column. These objects have the following names:
 
-.. code:: typoscript
+::
 
     # Middle column (labeled "normal")
     styles.content.get
@@ -1272,7 +1275,8 @@ As you can see in TSref the cObject CONTENT has a number of subproperties, which
 
 Since we have included the static template before, we can now simply fill our subpart CONTENTRIGHT by copying the object, which is available as "styles.content.getRight". So we add this to our template:
 
-.. code:: typoscript
+::
+
     CONTENTRIGHT = CONTENT
     CONTENTRIGHT < styles.content.getRight
 
@@ -1280,7 +1284,7 @@ In fact the line "CONTENTRIGHT = CONTENT" is not even needed, because it is dire
 
 Just for fun we now have a look at the definitions, which we had to write, if the static template was not included:
 
-.. code:: typoscript
+::
 
     # get content, right
     CONTENTRIGHT = CONTENT
@@ -1295,7 +1299,7 @@ Thanks to the static template from CSS Styled Content we do not have to think ab
 
 And that is already it! Here you have again the complete TypoScript code for this subpart:
 
-.. code:: typoscript
+::
 
   ##############################################
   #
@@ -1323,7 +1327,7 @@ So basically we only want to output a short string, like a text, but it should g
 
 Let us define DATE as a TEXT object:
 
-.. code:: typoscript
+::
 
     DATE = TEXT
 
@@ -1337,14 +1341,14 @@ We will use: Day with two digits, then a dot, then month with two digits, then a
 
 So we add to our TypoScript:
 
-.. code:: typoscript
+::
 
     DATE = TEXT
     DATE.data = date : d.m.Y
 
 Codewise this is the complete setup code, which we need for this marker. As usual I print it here with comments again:
 
-.. code:: typoscript
+::
 
     ##############################################
     #
@@ -1370,13 +1374,13 @@ The marker BREADCRUMB should show a breadcrumb menu. This is a menu, which shows
 
 As it helps the user navigating through the website this also is a kind of menu. As you know we always use the cObject HMENU, when we want to create a menu. So we ammend to our template:
 
-.. code:: typoscript
+::
 
     BREADCRUMB = HMENU
 
 TYPO3 offers a special functionality to create a breadcrumb menu; maybe you have already seen it when we created our meta navigation (the menu with the few pages, which are always displayed at the top, no matter on which page the user currently is). The cObject HMENU has a property called "special", which has some values. With each of them you can create a special kind of menu. One of these values is called "rootline" and this basically is just another term for the pages, which we want to see in our menu. So let us add that:
 
-.. code:: typoscript
+::
 
     BREADCRUMB = HMENU
     BREADCRUMB {
@@ -1394,7 +1398,7 @@ Then the menu should show all pages up to the current page. But how can we do th
 
 With this knowledge we can now define the value of special.range as we need it:
 
-.. code:: typoscript
+::
 
     BREADCRUMB = HMENU  
     BREADCRUMB {
@@ -1403,14 +1407,14 @@ With this knowledge we can now define the value of special.range as we need it:
 
 Inside our HMENU we again define a TMENU 
 
-.. code:: typoscript
+::
 
     1 = TMENU
     1 {
 
 When you have a look at our HTML template again you will see that in the rootline menu there are links to the pages and between the links we have greater-than signs. In the other menus we have always differentiated the items by their item state. That way e.g. the current page could be rendered differently. This is also what we could do here. We could add:
 
-.. code:: typoscript
+::
 
     NO = 1
     NO.allWrap = |&nbsp;>&nbsp; 
@@ -1433,7 +1437,7 @@ To be applied, the value, which you assign to the wrap, must have the following 
 
 Abstractly:
 
-.. code:: typoscript
+::
 
    NO.allWrap = first|*|middle|*|last
 
@@ -1443,7 +1447,7 @@ In our breadcrumb menu we only have two different cases: We want the ">" sign in
 
 The easiest way to do that is to split the first part into subparts:
 
-.. code:: typoscript
+::
 
    NO.allWrap = ||&nbsp;>&nbsp;
 
@@ -1451,7 +1455,7 @@ Since there was no |*|, both subparts belong to part one. The first subpart of p
 
 After these goodies, here you again have the complete setup code for that marker:
 
-.. code:: typoscript
+::
     
     ##############################################
     #
@@ -1507,7 +1511,7 @@ Now we will configure the marker TITLE. This marker is placed above the middle c
 
 Let's start by defining a simple TEXT object:
 
-.. code:: typoscript
+::
 
    TITLE = TEXT
 
@@ -1517,14 +1521,14 @@ So now let's look through the possibilities of stdWrap to check, how it can help
 
 So we can add to our TypoScript:
 
-.. code:: typoscript
+::
 
    TITLE = TEXT
    TITLE.field = title
 
 And that is all. Now the marker TITLE gets replaced with the headline of the page. Again here is the commented and indented code:
 
-.. code:: typoscript
+::
 
     ##############################################
     #
@@ -1547,13 +1551,13 @@ I don't want to bore you. You already know how this is working, at least you hav
 
 There you have already learnt that it is a help, that you have included the static template of the extension CSS Styled Content. You know that you can define
 
-.. code:: typoscript
+::
 
    CONTENTMIDDLE = CONTENT
 
 to use a content object and you might remember that this line was not needed at all, because it will just be overwritten, when we define the next line where we copy the according object from the static template. The four objects, which help us get the content for the according column were named
 
-.. code:: typoscript
+::
 
     # Middle column (labeled "normal")
     styles.content.get
@@ -1566,7 +1570,7 @@ to use a content object and you might remember that this line was not needed at 
 
 Here we want to get the content, which is saved in the column called "normal" in the page module of the TYPO3 Backend. The object, which we copy to get the content from that column, is named styles.content.get. So we add
 
-.. code:: typoscript
+::
 
    CONTENTMIDDLE = CONTENT
    CONTENTMIDDLE < styles.content.get
@@ -1575,7 +1579,7 @@ Again we do not need more than these two lines. This is all to get our content o
 
 Here you again have the complete code for the subpart CONTENTMIDDLE:
 
-.. code:: typoscript
+::
 
     ##############################################
     #
