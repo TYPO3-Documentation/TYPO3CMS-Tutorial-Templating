@@ -27,7 +27,7 @@ The tutorial explains how to
 The result of the tutorial is a site similar to the Introduction Package. 
 The tutorial includes a set of files (mainly an HTML file and a CSS file), which are used as an example troughout this tutorial.
 
-.. _ requirements:
+.. _requirements:
 
 Requirements
 """"""""""""
@@ -51,3 +51,30 @@ Skills
 Please read Ts45min (Ts45min) before you start. It is enough if you have quickly read that document; you must not have understood everything noted there (and surely not all the details). Ts45Min should give you an overview of things in TYPO3. However, we will also repeat things in the Templating Tutorial where they are needed.
 
 Basic knowledge of HTML is needed (but no knowledge about details). Knowledge about CSS is not mandatory.
+
+.. _whatsNews:
+
+What's new
+^^^^^^^^^^
+
+This is the first version of this manual. It replaces the old "Modern Template Building Tutorial", which was originally written in 2003. Although we have tested the descriptions in this manual, there might still be places, which somehow are not clear or not understandable.
+
+If something remains unclear when you are working through the manual, please drop us a note!
+
+Either write us a mail to documentation@typo3.org or create a new issue in the issue tracker of this manual at http://forge.typo3.org/projects/typo3v4-doc_tut_templating/issues (to create an issue you will need an account on typo3.org).
+
+Thank you!
+
+.. _credits:
+
+Credits
+^^^^^^^
+
+.. _feedback
+
+Feedback
+^^^^^^^^
+
+For general questions about the documentation get in touch by writing to documentation@typo3.org. If you find a bug in this manual, please file an issue in this manual's bug tracker: http://forge.typo3.org/projects/show/typo3v4-doc_tut_templating. 
+
+Maintaining quality documentation is hard work and the Documentation Team is always looking for volunteers. If you feel like helping please join the documentation mailing list (typo3.projects.documentation on lists.typo3.org).

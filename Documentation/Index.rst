@@ -75,4 +75,6 @@ future reference.
    :titlesonly:
    :glob:
 
+   Introduction\Index
+   Preparation\Index
    Targets
