@@ -75,7 +75,7 @@ future reference.
    :titlesonly:
    :glob:
 
-   Introduction\Index
-   Preparation\Index
-   Tasks\Index
+   Introduction/Index
+   Preparation/Index
+   Tasks/Index
    Targets
