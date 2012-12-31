@@ -5,10 +5,10 @@
 
 .. include:: ../Includes.txt
 
-.. _task:
+.. _tasks:
 
-Task
-^^^^
+Tasks
+^^^^^
 
 .. note::
    This is a step by step instruction like a cooking recipe. It must be a logical thread from start to end divided steps. It gives additional information (but not to much!) and warns for difficult situation (e.g. data loss). After several steps a result may be well. The task end must be identifiable by a result.
