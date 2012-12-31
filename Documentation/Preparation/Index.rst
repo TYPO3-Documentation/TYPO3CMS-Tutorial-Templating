@@ -34,84 +34,84 @@ We now show you detailed, how to create that page structure. We are using the In
 
 In the TYPO3 backend make sure you are in the page module by opening the section "Web" in the left part of the Backend and by clicking the "Page" module in this section.
 
-.. figure:: ../Images/Images/TBT-page-module.jpg
+.. figure:: ../Images/TBT-page-module.jpg
    :alt: Page Module  
 
 Create a first page, which hierarchically is located directly below the TYPO3 logo at the top. We call this page "root" page. Rightclick on the logo of "New TYPO3 site", then leftclick New.
 
-.. figure:: ../Images/Images/TBT-page-structure-new.jpg
+.. figure:: ../Images/TBT-page-structure-new.jpg
    :alt: A new structure
 
 Place the page at the bottom of the present pages/folders.
 
-.. figure:: ../Images/Images/TBT-page-structure-new-2.jpg
+.. figure:: ../Images/TBT-page-structure-new-2.jpg
    :alt: A new structure
 
 Change the page type to "Standard" and confirm that change. Give the page the Page Title "Root".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-3.jpg
+.. figure:: ../Images/TBT-page-structure-new-3.jpg
    :alt: A new structure
 
 In the tab "Behaviour" in the palette "Miscellaneous" mark the checkbox "Use as root page".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-4.jpg
+.. figure:: ../Images/TBT-page-structure-new-4.jpg
    :alt: A new structure
 
 Click "Save and close document". Now you see the new page with a globe icon in the page tree:
 
-.. figure:: ../Images/Images/TBT-page-structure-new-5.jpg
+.. figure:: ../Images/TBT-page-structure-new-5.jpg
    :alt: A new structure
 
 Create some subpages, which hierarchically are located inside that root page: Rightclick on the root page and from the context menu select "Page Actions > New".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-6.jpg
+.. figure:: ../Images/TBT-page-structure-new-6.jpg
    :alt: A new structure
 
 Place the new page hierarchically inside of the Root page.
 
-.. figure:: ../Images/Images/TBT-page-structure-new-7.jpg
+.. figure:: ../Images/TBT-page-structure-new-7.jpg
    :alt: A new structure
 
 Give it the Page Title "Home".
 
 In the tab "Access" make it visible by unchecking the option "Visibility > Page > Disable".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-8.jpg
+.. figure:: ../Images/TBT-page-structure-new-8.jpg
    :alt: A new structure
 
 Click "Save and Close document".
 
 The same way create some other subpages inside the root page. Place them on the same level as the page "Home", but below it. In the page tree, click on the small triangle in front of the page "Root":
 
-.. figure:: ../Images/Images/TBT-page-structure-new-9.jpg
+.. figure:: ../Images/TBT-page-structure-new-9.jpg
    :alt: A new structure
 
 Then you can see the complete page structure. Here is what the result might look like:
 
-.. figure:: ../Images/Images/TBT-page-structure-new-10.jpg
+.. figure:: ../Images/TBT-page-structure-new-10.jpg
    :alt: A new structure
 
 Edit the root page
 
-.. figure:: ../Images/Images/TBT-page-structure-new-11.jpg
+.. figure:: ../Images/TBT-page-structure-new-11.jpg
    :alt: A new structure
 
 Change its Type to "Shortcut" and confirm that change.
 
-.. figure:: ../Images/Images/TBT-page-structure-new-12.jpg
+.. figure:: ../Images/TBT-page-structure-new-12.jpg
    :alt: A new structure
 
 Click the small folder icon to select the target.
 
-.. figure:: ../Images/Images/TBT-page-structure-new-13.jpg
+.. figure:: ../Images/TBT-page-structure-new-13.jpg
    :alt: A new structure
 
 In the upcoming window, you can select the target. Choose the first page of the subpages. In our case this is the page, which we called "Home". Navigate there by clicking the small triangles in front of the page names. Then click on the page "Home".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-14.jpg
+.. figure:: ../Images/TBT-page-structure-new-14.jpg
    :alt: A new structure
 
 Back in the editing form from which you came, click "Save and close document".
 
-.. figure:: ../Images/Images/TBT-page-structure-new-14a.jpg
+.. figure:: ../Images/TBT-page-structure-new-14a.jpg
    :alt: A new structure
