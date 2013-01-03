@@ -5,7 +5,7 @@
 
 .. include:: ../Includes.txt
 
-.. _copying-template
+.. _copying-template:
 
 Copying the template files to the right place
 """""""""""""""""""""""""""""""""""""""""""""

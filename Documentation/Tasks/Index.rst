@@ -17,12 +17,12 @@ In this tutorial we use the most common approach for building a website with TYP
 
 In a later chapter we will configure TYPO3 to replace these markers and subparts with the content, which has been inserted in TYPO3.
 
-.. _working-template
+.. _working-template:
 
 Working with the HTML template
 """"""""""""""""""""""""""""""
 
-.. _shortinformation
+.. _shortinformation:
 
 Short information about markers and subparts
 ********************************************
@@ -72,7 +72,7 @@ The name of markers and subparts is only important for TYPO3 to replace them. It
 .. hint::
    When you put your own markers and subparts in a template later, use short but meaningful marker names.
 
-.. _open-template
+.. _open-template:
    
 Open the HTML template
 **********************
@@ -84,14 +84,14 @@ Open the HTML template
 * Our HTML template is the file fileadmin/template/index.html. You will notice that this is just a normal HTML document. You can open it with your webbrowser and you will see the design.
 * Open the HTML template with your text editor.
 
-.. _add-marker-subparts
+.. _add-marker-subparts:
 
 Add markers/subparts
 ********************
 
 We will now modify the HTML template by adding markers and subparts. Later we will configure TYPO3 to replace each of them with the content we want (see the next chapter).
 
-.. _add-subpart-document
+.. _add-subpart-document:
 
 Add the subpart "DOCUMENT"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,7 +137,7 @@ Add a subpart called "DOCUMENT" inside the body tag. The first marker of this su
       </body>
     </html>
 
-.. _subpart-metanav
+.. _subpart-metanav:
 
 Add the subpart "METANAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,7 +162,7 @@ Add the subpart "METANAV"
                         <!-- ###METANAV### End -->
                     </div>
 
-.. _marker-title
+.. _marker-title:
 
 Add the marker "HEADERTITLE"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -173,7 +173,7 @@ Add the marker "HEADERTITLE"
 
   <div id="headertitle">###HEADERTITLE###</div>
 
-.. _subpart-topnav
+.. _subpart-topnav:
   
 Add the subpart "TOPNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -195,7 +195,7 @@ Add the subpart "TOPNAV"
         <!-- ###TOPNAV### End -->
     </div>
 
-.. _col1-subpart
+.. _col1-subpart:
 
 Column 1: Add the subpart "SUBNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -226,7 +226,7 @@ As you might already have seen the template has three columns.
     </div>
     <!-- #col1: Left Column End -->
 
-.. _col2-subpart
+.. _col2-subpart:
 
 Column 2: Add the subpart "CONTENTRIGHT"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -236,7 +236,7 @@ Column 2: Add the subpart "CONTENTRIGHT"
 
 A screenshot follows after we added the markers and subparts of column 3.
 
-.. _col3-markers
+.. _col3-markers:
 
 Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONTENTMIDDLE"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -297,7 +297,7 @@ Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONT
 
 This completes the changes, which we had to make in the HTML template.
 
-.. _desired-task
+.. _desired-task:
 
 The desired task result
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -457,14 +457,14 @@ This is how our HTML template now looks like:
         </body>
     </html>
 
-.. _working-with-typoscript
+.. _working-with-typoscript:
 
 Working with the TypoScript template record
 """""""""""""""""""""""""""""""""""""""""""
 
 In the last steps, we have worked in the HTML template. Now we will work at another place. We will now work in the TYPO3 Backend. There we will create a TypoScript template and configure it as we need it.
 
-.. _typoscript-template
+.. _typoscript-template:
 
 TypoScript template records - a brief introduction
 **************************************************
@@ -475,7 +475,7 @@ Typoscript can be used to control nearly everything in the frontend, for example
 
 For more information on the options available in TypoScript template records see the TypoScript reference, TSref.
 
-.. _create-ts-template
+.. _create-ts-template:
 
 Create a new TypoScript template
 ********************************
@@ -545,7 +545,7 @@ You don't see the code in different colors, but just as black text? Then you mos
 .. note::
    The t3editor helps with syntax-highlighting, but keep in mind, that if you use extensions, the t3editor does not know about valid properties. So, if something is not highlighted it does not mean that it is wrong - if something is highlighted, it does not mean, that it is right. If something does not work like expected read the relevant manuals.}}
 
-.. _how-to-use
+.. _how-to-use:
 
 How to use TSref
 ****************
@@ -582,7 +582,7 @@ What you see is this:
 .. figure:: ../Images/TBT-template-new7.jpg
    :alt:
 
-.. _load-html-template
+.. _load-html-template:
 
 Load the HTML template in the TypoScript template
 *************************************************
@@ -641,7 +641,7 @@ However, if you view the sourcecode of the output, you will notice that TYPO3 cr
 
 We will fix this in the next step.
 
-.. _work-subpart-document
+.. _work-subpart-document:
 
 Work with the subpart DOCUMENT
 ******************************
@@ -656,7 +656,7 @@ So we add to our template:
 
 The resulting HTML output is a syntactically correct HTML page now. While the *"outer part"* of the output (like the html tag itself, the head tag and its content and the body tag itself) is created by TYPO3, the *contents of the body tag* are taken from our HTML template.
 
-.. _configure-marker-subparts
+.. _configure-marker-subparts:
 
 Configure markers/subparts
 **************************
@@ -701,7 +701,7 @@ For each of the markers and subparts we will rebuild the structure of the HTML c
 
 Note: To keep the TypoScript code arranged clearly during the following sections, we do not show the whole code again, when we e.g. add one line to it. Instead we will only show parts of it repeatedly during the setup of a marker or subpart. At the end of each section you will again find the result, which shows the complete code for the according marker or subpart.
 
-.. _configure-metanav
+.. _configure-metanav:
 
 Configure the subpart METANAV
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -864,7 +864,7 @@ And here is a screenshot of the HTML source code of the resulting output:
 .. figure:: ../Images/TBT-Conf_METANAV.jpg
    :alt:
 
-.. _configure_headertitle
+.. _configure_headertitle:
    
 Configure the marker HEADERTITLE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -905,7 +905,7 @@ Have you noted that we just have defined a marker (and no subpart)? Check that y
 
 In the next sections the code in this manual (like the part directly above) will no longer show a big comment above showing into which property you have to put a definition, because now you know where they belong. By the way: The order in which you define the markers and the subparts inside page.10.marks and page.10.subparts basically does not matter. (This is only different in a few cases: You can for instance create a copy of an object using the "<" operator. If you defined "DATE < page.10.marks.HEADERTITLE" below the definition of HEADERTITLE which we added above, you got the same output, which you get for the marker HEADERTITLE, also for the marker DATE. When you create a copy, the definition which you want to copy must be noted above the one in which you create the copy. However, we do not create copies of our own TypoScript code in this tutorial, so that we do not have to care about in which order we define our subparts or markers inside the respective properties.)
 
-.. _configure-topnav
+.. _configure-topnav:
 
 Configure the subpart TOPNAV
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1029,7 +1029,7 @@ This completes our TypoScript code for the subpart TOPNAV. Here is the complete 
 
 With this code added to our TypoScript template, the main navigation in the orange bar is already working. If you now view the Frontend (that is the website, which is produced by TYPO3), you will see that inside the orange bar we already see the titles of the pages, which we have created on the first level of the page tree inside the TYPO3 Backend some steps before. If you click one of these pages in the Frontend (inside the orange bar), you will also notice how the active page is displayed differently. A look at the source code of the frontend output shows us that for this page TYPO3 uses the wrap, which we have defined for the state ACT.
 
-.. _configure-subnav
+.. _configure-subnav:
 
 Configure the subpart SUBNAV
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1245,7 +1245,7 @@ Again here is the whole TypoScript code of that subpart, slightly restructured a
 
 Now we have defined the meta navigation, the top navigation and the sub navigation. So all menus in our site are configured now and should display links to the pages, which you have created inside the TYPO3 Backend. However, until now all pages only display the blind text, which comes from the HTML template. We will change this in the next sections.
 
-.. _configure-contentright
+.. _configure-contentright:
 
 Configure the subpart CONTENTRIGHT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1365,7 +1365,7 @@ With this marker you could again see how much you sometimes have to jump from ch
 .. note::
    Usually, the pages are cached for 24 hours. So it will happen, that a page gets cached at 31.12.2012. The date is filled then with 31.12.2012. But if someone request that page early at 1.1.2013 it will still state 31.12.2012. If you configure config.cache_clearAtMidnight the cache will be cleared at midnight and you have allways the correct date.
 
-.. _configure-breadcrumb
+.. _configure-breadcrumb:
 
 Configure the marker BREADCRUMB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1500,7 +1500,7 @@ After these goodies, here you again have the complete setup code for that marker
 
 After that many new things just for the marker BREADCRUMB, we will have a look at the marker TITLE. No fear, compared to the last marker it will be like a walk in the park.
 
-.. _configure-title
+.. _configure-title:
 
 Configure the marker TITLE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1542,7 +1542,7 @@ And that is all. Now the marker TITLE gets replaced with the headline of the pag
 
 Now let us define the subpart CONTENTMIDDLE.
 
-.. _configure-contentmiddle
+.. _configure-contentmiddle:
 
 Configure the subpart CONTENTMIDDLE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1595,7 +1595,7 @@ Here you again have the complete code for the subpart CONTENTMIDDLE:
 
 This was the last subpart, which we had to configure. All markers already are configured as well. So now all markers and subparts get replaced. When you viewed your website some steps before (when we created the menus), you could already navigate through the site (the URLs changed), but there was only that dummy text and no real content. This has changed now.
 
-.. _desired-task-result
+.. _desired-task-result:
 
 The desired task result
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1603,7 +1603,7 @@ The desired task result
 .. note::
    Enter some content to see the result completely.
 
-.. _task-result
+.. _task-result:
 
 The task result
 """""""""""""""
@@ -1614,7 +1614,7 @@ View your website now!
 
 You will notice that all markers and all subparts display the content they should display. Basically you can now use your TYPO3 installation and add your contents, that is: Add pages and fill them with content elements. Each page - as long as it is a subpage to the page "Root" - will be rendered using your template with all its definitions. You can add an unlimited number of pages without having to write a single line of template code for them. If you have editors who should put the content in the TYPO3 installation you should create them a normal account, that is an account, which is no administrator in TYPO3. That way these users do not see the template module at all and you can even define for all modules, if they should see them. But these things have nothing to do with templating so we won't discuss them in detail.
 
-.. _next-steps
+.. _next-steps:
 
 Next steps
 **********
