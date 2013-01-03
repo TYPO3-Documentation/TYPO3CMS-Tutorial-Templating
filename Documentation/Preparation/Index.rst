@@ -19,7 +19,7 @@ to reproduce each step of what we do in your own TYPO3 installation.
    :titlesonly:
    :glob:
 
+   Installing/Index
    Copying/Index
    Creating/Index
-   Installing/Index
    Targets
