@@ -6,27 +6,27 @@
 .. include:: Includes.txt
 
 
-========================
-Templating
-========================
+===========================
+Templating Tutorial: Basics
+===========================
 
 :Previous Key:
-      ...
+      doc_tut_templating
 
 :Version:
-      ...
+      1.0.0
 
 :Language:
       en
 
 :Description:
-      ...
+      Step-by-step to templating in TYPO3 using TypoScript.
 
 :Keywords:
-      ...
+      template, typoscript, beginner
 
 :Copyright:
-      ...
+      2012-2013
 
 :Author:
       Documentation Team
