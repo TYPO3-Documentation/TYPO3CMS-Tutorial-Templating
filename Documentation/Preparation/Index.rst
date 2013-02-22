@@ -5,6 +5,7 @@
 
 .. include:: ../Includes.txt
 
+
 .. _preparation:
 
 Preparation
@@ -22,4 +23,3 @@ to reproduce each step of what we do in your own TYPO3 installation.
    Installing/Index
    Copying/Index
    Creating/Index
-   Targets

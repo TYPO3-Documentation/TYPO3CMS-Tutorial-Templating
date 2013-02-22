@@ -3,7 +3,8 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
+
 
 .. _installing-extension:
 
@@ -18,9 +19,15 @@ template files (HTML, CSS and the TypoScript in an textfile) on your system.
 (If you have already done that, you can skip the rest of this chapter.).
 
 .. note::
-   The extension key of this tutorial is "doc_tut_templating". Search for it in your extension manager.
-   Installing this extension in your TYPO3 installation
+   The extension key of this tutorial is "doc_tut_templating". Search for it in your extension manager
+   and install it.
 
-Result: The extension is shown as "installed". Installing the extension is not
+
+.. _installing-extension-result:
+
+Result
+~~~~~~
+
+The extension is shown as "installed". Installing the extension is not
 needed, but if installing worked for the user (which we can check easily), we
 know that the files are in place for the next step.

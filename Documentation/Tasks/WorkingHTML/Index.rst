@@ -3,12 +3,14 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
+
 
 .. _working-template:
 
 Working with the HTML template
 """"""""""""""""""""""""""""""
+
 
 .. _shortinformation:
 
@@ -17,9 +19,10 @@ Short information about markers and subparts
 
 This section will tell you what markers and subparts are, how they look like and what they are used for.
 
-A marker is a word in your HTML template, which is wrapped by "###" on both sides. The marker "TITLE" would for example look like this: 
+A marker is a word in your HTML template, which is wrapped by "###" on both sides.
+The marker "TITLE" would for example look like this:
 
-::
+.. code-block:: html
 
   <h1>###TITLE###</h1>
 
@@ -31,7 +34,7 @@ In contrast a subpart is a pair of two markers in your HTML template, which have
 
 Example:
 
-::
+.. code-block:: html
 
   ###METANAV###
   <p>
@@ -44,7 +47,7 @@ Opposite to single markers (like "###TITLE###" from above) you may insert the su
 
 Example:
 
-::
+.. code-block:: html
 
   <!-- ###METANAV### Start -->
   <p>
@@ -60,24 +63,34 @@ The name of markers and subparts is only important for TYPO3 to replace them. It
 .. hint::
    When you put your own markers and subparts in a template later, use short but meaningful marker names.
 
+
 .. _open-template:
-   
+
 Open the HTML template
 **********************
 
 .. note::
-   You can open and edit HTML files with any text editor. However, you will make your life much easier, if you use an editor, which supports syntax highlighting. With syntax highlighting you will see directly where a certain tag begins, where it ends, where there are attributes and so on. A very good editor with syntax highlighting is Notepad++, but there also are many others. Choose the one you like!
+   You can open and edit HTML files with any text editor. However, you will make your life much easier,
+   if you use an editor, which supports syntax highlighting. With syntax highlighting you will see directly
+   where a certain tag begins, where it ends, where there are attributes and so on.
+   A very good editor with syntax highlighting is Notepad++, but there also are many others.
+   Choose the one you like!
 
-* In one of the last chapters you have copied the template files to the folder fileadmin/template/.
-* Our HTML template is the file fileadmin/template/index.html. You will notice that this is just a normal HTML document. You can open it with your webbrowser and you will see the design.
-* Open the HTML template with your text editor.
+- In one of the last chapters you have copied the template files to the folder fileadmin/template/.
+
+- Our HTML template is the file fileadmin/template/index.html. You will notice that this is just a normal HTML document. You can open it with your webbrowser and you will see the design.
+
+- Open the HTML template with your text editor.
+
 
 .. _add-marker-subparts:
 
 Add markers/subparts
 ********************
 
-We will now modify the HTML template by adding markers and subparts. Later we will configure TYPO3 to replace each of them with the content we want (see the next chapter).
+We will now modify the HTML template by adding markers and subparts.
+Later we will configure TYPO3 to replace each of them with the content we want (see the next chapter).
+
 
 .. _add-subpart-document:
 
@@ -86,7 +99,7 @@ Add the subpart "DOCUMENT"
 
 Add a subpart called "DOCUMENT" inside the body tag. The first marker of this subpart should be directly behind the opening body tag and the second one directly in front of the closing body tag so that everything in the body tag is inside that subpart. TYPO3 will later create its own HTML structure for us and we will configure TYPO3 to only put the HTML code inside that structure, which is inside this subpart (and not also the head tag or the html tags or so). That is the reason, why we need it here.
 
-::
+.. code-block:: html
 
     <!DOCTYPE html>
     <html>
@@ -104,7 +117,7 @@ Add a subpart called "DOCUMENT" inside the body tag. The first marker of this su
         <meta name="Language" content="English" />
         <meta name="revisit-after" content="1 Day" />
         <meta name="Content-Language" content="en" />
-    
+
         <link href="style.css" rel="stylesheet" type="text/css" />
       </head>
       <body>
@@ -125,22 +138,24 @@ Add a subpart called "DOCUMENT" inside the body tag. The first marker of this su
       </body>
     </html>
 
+
 .. _subpart-metanav:
 
 Add the subpart "METANAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Inside the div box with the id "metanav" there is our metanavigation. Add a subpart called "METANAV", so that the whole content of that box is inside the subpart.
+Inside the div box with the id "metanav" there is our metanavigation.
+Add a subpart called "METANAV", so that the whole content of that box is inside the subpart.
 
-::
- 
+.. code-block:: html
+
     <body>
         <!-- ###DOCUMENT### Start -->
         <div id="page_margins">
             <div id="page" class="hold_floats">
-                
+
                 <div id="header">
-                    
+
                     <div id="metanav">
                         <!-- ###METANAV### Start -->
                         <ul>
@@ -150,38 +165,43 @@ Add the subpart "METANAV"
                         <!-- ###METANAV### End -->
                     </div>
 
+
 .. _marker-title:
 
 Add the marker "HEADERTITLE"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Below the metanavigation there is a div with the id "headertitle". Replace its content with the marker "HEADERTITLE".
+Below the metanavigation there is a div with the id "headertitle".
+Replace its content with the marker "HEADERTITLE".
 
-:: 
+.. code-block:: html
 
   <div id="headertitle">###HEADERTITLE###</div>
 
+
 .. _subpart-topnav:
-  
+
 Add the subpart "TOPNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Inside the div, which has the id "nav", we have our mainnavigation. Do the same as for "metanav" but call that subpart "TOPNAV".
+Inside the div, which has the id "nav", we have our mainnavigation.
+Do the same as for "metanav" but call that subpart "TOPNAV".
 
-::
+.. code-block:: html
 
-    <div id="nav">
-        <!-- ###TOPNAV### Start -->
-        <div id="nav_main">
-            <ul>
-		 <li><a>Menu Item 1</a></li>
-		 <li><a>Menu Item 2</a></li>
-		 <li id="current"><a>Menu Item 3</a></li>
-		 <li><a>Menu Item 4</a></li>
-            </ul>
-        </div>
-        <!-- ###TOPNAV### End -->
-    </div>
+	<div id="nav">
+		<!-- ###TOPNAV### Start -->
+			<div id="nav_main">
+				<ul>
+					<li><a>Menu Item 1</a></li>
+					<li><a>Menu Item 2</a></li>
+					<li id="current"><a>Menu Item 3</a></li>
+					<li><a>Menu Item 4</a></li>
+				</ul>
+			</div>
+		<!-- ###TOPNAV### End -->
+	</div>
+
 
 .. _col1-subpart:
 
@@ -189,10 +209,13 @@ Column 1: Add the subpart "SUBNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As you might already have seen the template has three columns.
-* Let's begin with the left column, column 1, which has the id "col1".
-** Inside of column 1 there is the div with the id "col1_content". It will hold the sub menu. Wrap the whole content of that div in the subpart "SUBNAV".
 
-::  
+- Let's begin with the left column, column 1, which has the id "col1".
+
+  - Inside of column 1 there is the div with the id "col1_content".
+    It will hold the sub menu. Wrap the whole content of that div in the subpart "SUBNAV".
+
+.. code-block:: html
 
     <!-- #col1: Left Column of the Content Area -->
     <div id="col1">
@@ -214,28 +237,38 @@ As you might already have seen the template has three columns.
     </div>
     <!-- #col1: Left Column End -->
 
+
 .. _col2-subpart:
 
 Column 2: Add the subpart "CONTENTRIGHT"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Column 2, the div with the id "col2" is the right column of our layout.
-** In the div below there will be the content of that column. Wrap the content of that div into the subpart "CONTENTRIGHT".
+- Column 2, the div with the id "col2" is the right column of our layout.
+
+  - In the div below there will be the content of that column.
+    Wrap the content of that div into the subpart "CONTENTRIGHT".
 
 A screenshot follows after we added the markers and subparts of column 3.
+
 
 .. _col3-markers:
 
 Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONTENTMIDDLE"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Column 3, the div with the id "col3" is the column, which will be displayed in the middle. In our layout it is the main content area.
-** Inside the div with the id "breadcrumb" replace the date with a marker called "DATE" and the rootline with a marker called "BREADCRUMB".
-** Next there is the page title. Replace the content of the h1 tag with the marker "TITLE".
-** In the div below there will be the content of that column. Wrap the content of that div into the subpart "CONTENTMIDDLE".
+- Column 3, the div with the id "col3" is the column, which will be displayed in the middle.
+  In our layout it is the main content area.
 
-::
- 
+  - Inside the div with the id "breadcrumb" replace the date with a marker called "DATE"
+    and the rootline with a marker called "BREADCRUMB".
+
+  - Next there is the page title. Replace the content of the h1 tag with the marker "TITLE".
+
+  - In the div below there will be the content of that column. Wrap the content of that div
+    into the subpart "CONTENTMIDDLE".
+
+.. code-block:: html
+
     <!-- #col2: Right Column of the Content Area -->
     <div id="col2">
         <div id="col2_content" class="clearfix">
@@ -283,19 +316,21 @@ Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONT
     </div>
     <!-- #col3: Middle Column End -->
 
+
 This completes the changes, which we had to make in the HTML template.
 
-.. _desired-task:
 
-The desired task result
-~~~~~~~~~~~~~~~~~~~~~~~
+.. _working-template-result:
+
+Result
+~~~~~~
 
 This is how our HTML template now looks like:
 
-:: 
+.. code-block:: html
 
     <!DOCTYPE html>
-    
+
     <html>
         <head>
             <title>Here goes the title</title>
@@ -309,17 +344,17 @@ This is how our HTML template now looks like:
             <meta name="Language" content="English" />
             <meta name="revisit-after" content="1 Day" />
             <meta name="Content-Language" content="en" />
-            
+
             <link href="style.css" rel="stylesheet" type="text/css" />
         </head>
-        
+
         <body>
             <!-- ###DOCUMENT### Start -->
             <div id="page_margins">
                 <div id="page" class="hold_floats">
-                    
+
                     <div id="header">
-                        
+
                         <div id="metanav">
                             <!-- ###METANAV### Start -->
                             <ul>
@@ -328,11 +363,11 @@ This is how our HTML template now looks like:
                             </ul>
                             <!-- ###METANAV### End -->
                         </div>
-                        
+
                         <div id="headertitle">###HEADERTITLE###</div>
                     </div>
-                    
-                    
+
+
                     <div id="nav">
                         <!-- ###TOPNAV### Start -->
                         <div id="nav_main">
@@ -345,11 +380,11 @@ This is how our HTML template now looks like:
                         </div>
                         <!-- ###TOPNAV### End -->
                     </div>
-                    
-                    
+
+
                     <!-- 3 Column Content -->
-                    
-                    
+
+
                     <!-- #col1: Left Column of the Content Area -->
                     <div id="col1">
                         <div id="col1_content" class="clearfix">
@@ -369,7 +404,7 @@ This is how our HTML template now looks like:
                         </div>
                     </div>
                     <!-- #col1: Left Column End -->
-                    
+
                     <!-- #col2: Right Column of the Content Area -->
                     <div id="col2">
                         <div id="col2_content" class="clearfix">
@@ -387,7 +422,7 @@ This is how our HTML template now looks like:
                         </div>
                     </div>
                     <!-- #col2: Right Column End -->
-                    
+
                     <!-- #col3:  Middle Column of the Content Area -->
                     <div id="col3">
                         <div id="col3_content" class="clearfix">
@@ -424,23 +459,24 @@ This is how our HTML template now looks like:
                         </div>
                     </div>
                     <!-- #col3: Middle Column End -->
-                    
+
                     <!-- IE Column Clearing -->
                     <div id="ie_clearing">&nbsp;</div>
                     <!-- IE Column Clearing End -->
-                    
-                    
+
+
                     <!-- 3 Column Content End -->
-                    
-                    
+
+
                     <!-- Footer Start -->
                     <div id="footer">
                         Design: <a>Sabine&nbsp;Hueber,&nbsp;designeon</a>
                     </div>
                     <!-- Footer End -->
-                    
+
                 </div>
             </div>
             <!-- ###DOCUMENT### End -->
         </body>
     </html>
+

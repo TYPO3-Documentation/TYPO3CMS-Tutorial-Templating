@@ -3,7 +3,8 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
+
 
 .. _creating-page-structure:
 
@@ -20,7 +21,7 @@ In the TYPO3 backend make sure you are in the page module by opening the section
 section.
 
 .. figure:: ../../Images/TBT-page-module.jpg
-   :alt: The Page Module  
+   :alt: The Page Module
 
 Create a first page, which hierarchically is located directly below the TYPO3
 logo at the top. We call this page "root" page.
@@ -41,8 +42,8 @@ page Title "Root".
 .. figure:: ../../Images/TBT-page-structure-new-3.jpg
    :alt: Customising the root page
 
-4. Switch to tab "Behaviour" in the palette "Miscellaneous". 
-Mark the checkbox "Use as root page" 
+4. Switch to tab "Behaviour" in the palette "Miscellaneous".
+Mark the checkbox "Use as root page"
 
 .. figure:: ../../Images/TBT-page-structure-new-4.jpg
    :alt: Use page as root page
@@ -115,5 +116,5 @@ by clicking the small triangles in front of the page names. Click on the page "H
 
 .. figure:: ../../Images/TBT-page-structure-new-14a.jpg
    :alt: Button "Save and close document"
-   
+
 Now you have create a complete page structure.

@@ -6,6 +6,8 @@
 .. include:: Includes.txt
 
 
+.. _start:
+
 ===========================
 Templating Tutorial: Basics
 ===========================

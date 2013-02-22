@@ -3,7 +3,8 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
+
 
 .. _copying-template:
 
@@ -12,9 +13,10 @@ Copying the template files to the right place
 
 Now you have the extracted files in your file system. They are, from the folder
 where you installed TYPO3, inside the subfolder
-typo3conf/ext/doc_tut_templating/template. Next copy the folder "template" with
-its contents and paste it all into the folder fileadmin/, so that you get the
-folder fileadmin/template/ and the files inside. Creating a page structure
+:file:`typo3conf/ext/doc_tut_templating/template`.
+Next copy the folder :file:`template` with
+its contents and paste it all into the folder :file:`fileadmin/`, so that you get the
+folder :file:`fileadmin/template/` and the files inside. Creating a page structure
 
 We will now create some pages inside TYPO3. These pages are helpful, when you
 later want to check, if TYPO3 uses the instructions in the TypoScript template
