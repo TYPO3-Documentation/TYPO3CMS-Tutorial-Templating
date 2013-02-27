@@ -1,9 +1,8 @@
 # Settings.yml
-
 ---
 conf.py:
-  copyright: 2012-2013
-  project: Templating Tutorial, Basics
+  project: Templating Tutorial: Basics
+  copyright: 2011-2013
   version: 1.0.0
   release: 1.0.0
 ...

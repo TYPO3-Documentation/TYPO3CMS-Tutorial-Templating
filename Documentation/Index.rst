@@ -28,7 +28,7 @@ Templating Tutorial: Basics
       template, typoscript, beginner
 
 :Copyright:
-      2012-2013
+      2011-2013
 
 :Author:
       Documentation Team
