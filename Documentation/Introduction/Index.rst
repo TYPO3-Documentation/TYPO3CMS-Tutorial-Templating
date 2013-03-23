@@ -11,7 +11,6 @@
 Introduction
 ------------
 
-
 .. _aim:
 
 Aim
@@ -40,10 +39,10 @@ Requirements
 ^^^^^^^^^^^^
 
 You need an installed version of TYPO3 4.6 or higher. We recommanded the "Blank Package" as a basis.
-It is downloadable from `here: <http://typo3.org/download/packages/>`_.
+It is downloadable from `here: <http://typo3.org/download/>`_.
 
 
-.. _skillL-level:
+.. _skill-level:
 
 Skill level
 ^^^^^^^^^^^
@@ -90,7 +89,7 @@ Thank you!
 Credits
 ^^^^^^^
 
-This manual was started by Christopher Stelmaszyk and completed by Christian WÃ¶bberking,
+This manual was started by Christopher Stelmaszyk and completed by Christian Wöbbeking,
 with feedback from some TYPO3 beginners.
 
 
