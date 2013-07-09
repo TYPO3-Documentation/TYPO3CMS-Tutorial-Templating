@@ -89,7 +89,7 @@ Thank you!
 Credits
 ^^^^^^^
 
-This manual was started by Christopher Stelmaszyk and completed by Christian Wöbbeking,
+This manual was started by Christopher Stelmaszyk and completed by Christian WÃ¶bbeking,
 with feedback from some TYPO3 beginners.
 
 
