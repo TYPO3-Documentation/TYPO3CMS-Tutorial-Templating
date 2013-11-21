@@ -125,10 +125,14 @@ Before we continue to write our own TypoScript, let us have a look at the lines,
     page.10 = TEXT
     page.10.value = HELLO WORLD!
 
-Did you read the Tutorial TypoScript in 45 Minutes? If you did, you should already know, what these lines are doing.
-To remind you, here is a short explanation. We will also use this explanation to repeat (or to learn) how to use TSref!
+Did you read the Tutorial TypoScript in 45 Minutes? If you did, you
+should already know, what these lines are doing. To remind you, here is
+a short explanation. We will also use this explanation to repeat (or to
+learn) how to use TSref!
 
-You do not have a copy of TSref currently? TSref, the TypoScript reference, is available from TYPO3 TER, which is here: http://typo3.org/extensions/repository/ Search for the keyword "doc_core_tsref". This is the "extension key", under which the documentation is published. The extension doc_core_tsref contains a PDF file, which you can download from TER. Use it to conveniently look things up.
+You do not have a copy of TSref currently? TSref, the TypoScript
+reference, is available from here: http://docs.typo3.org/typo3cms/TyposcriptReference/
+Use it to conveniently look things up.
 
 - Lines starting with "#" are comments. You can use them to comment your code.
   They are not parsed, when TYPO3 reads the template to render the website.
