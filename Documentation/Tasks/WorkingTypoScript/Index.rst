@@ -959,7 +959,7 @@ Let us define DATE as a TEXT object:
 
 Did you put this line into page.10.marks? Remember that DATE is no subpart.
 
-When you read the introduction of the cObject TEXT in TSref carefully you will notice that on the rootlevel of the TEXT object stdWrap properties are available. This only is the case for the cObject TEXT! All other cObjects have a property called "stdWrap", in which stdWrap properties are available.
+When you read the introduction of the cObject TEXT in TSref carefully you will notice that the TEXT object has a property called "stdWrap", in which stdWrap properties are available.
 
 When we have a look at the function stdWrap in TSref you will see that there is a property called "data", which has the data type TSref/getText|getText. Looking at the "Data types reference" you will see that using getText it is possible to get several information from somewhere in PHP. One of this information is the current date (see the example!). TSref shows us that in that case the syntax of our value is something like "date : d-m-y". The part "date :" must not be changed. The part behind is used for the date format, which we want to get. For the possible values you can have a look at the PHP manual on the date function: http://php.net/manual/en/function.date.php
 
@@ -970,7 +970,7 @@ So we add to our TypoScript:
 ::
 
     DATE = TEXT
-    DATE.data = date : d.m.Y
+    DATE.stdWrap.data = date : d.m.Y
 
 Codewise this is the complete setup code, which we need for this marker. As usual I print it here with comments again:
 
@@ -984,7 +984,7 @@ Codewise this is the complete setup code, which we need for this marker. As usua
 
     # Outputs the current date in the defined format
     DATE = TEXT
-    DATE.data = date : d.m.Y
+    DATE.stdWrap.data = date : d.m.Y
 
 With this marker you could again see how much you sometimes have to jump from chapter to chapter when you read TSref. But don't be worried: The syntax of the resulting TypoScript code mostly is - like in our case - rather simple.
 
@@ -1153,7 +1153,7 @@ Let's start by defining a simple TEXT object:
 
    TITLE = TEXT
 
-You should remember that each cObject has stdWrap available: Either there is a property "stdWrap" or - in case of the cObject TEXT - the stdWrap properties are available directly for the object itself. By the way: You should already know that TYPO3 uses a database to store your pages and your page content. Do you know how a database is structured? It contains several tables (e.g. the pages are stored in the table called "pages") and in each table there are fields (e.g. in the table "pages" there is the field "author", which can contain the name of the author of each page. But that just for your information.
+You should remember that each cObject has stdWrap available in a property "stdWrap". By the way: You should already know that TYPO3 uses a database to store your pages and your page content. Do you know how a database is structured? It contains several tables (e.g. the pages are stored in the table called "pages") and in each table there are fields (e.g. in the table "pages" there is the field "author", which can contain the name of the author of each page. But that just for your information.
 
 So now let's look through the possibilities of stdWrap to check, how it can help us. You will find that stdWrap has the property "field". This property returns the contents of that field of the current page out of the database, which you set as value for the property. You don't have to look into the table "pages" of your database and view its structure to see where TYPO3 stores the page titles. I will tell you: They are in the field called "title".
 
@@ -1162,7 +1162,7 @@ So we can add to our TypoScript:
 ::
 
    TITLE = TEXT
-   TITLE.field = title
+   TITLE.stdWrap.field = title
 
 And that is all. Now the marker TITLE gets replaced with the headline of the page. Again here is the commented and indented code:
 
@@ -1176,7 +1176,7 @@ And that is all. Now the marker TITLE gets replaced with the headline of the pag
 
     # The marker TITLE outputs the page headline
     TITLE = TEXT
-    TITLE.field = title
+    TITLE.stdWrap.field = title
 
 Now let us define the subpart CONTENTMIDDLE.
 
