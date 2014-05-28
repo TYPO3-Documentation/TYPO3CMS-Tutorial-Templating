@@ -5,4 +5,7 @@ conf.py:
   copyright: 2011-2013
   version: 1.0.0
   release: 1.0.0
+  html_theme_options:
+    github_repository: TYPO3-Documentation/TYPO3CMS-Tutorial-Templating
+    github_branch: latest
 ...
