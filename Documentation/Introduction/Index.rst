@@ -78,7 +78,7 @@ there might still be places, which somehow are not clear or not understandable.
 If something remains unclear when you are working through the manual, please drop us a note!
 
 Either write us a mail to documentation@typo3.org or create a new issue in the issue tracker
-of this manual at http://forge.typo3.org/projects/typo3cms-doc-templating/issues
+of this manual at https://forge.typo3.org/projects/typo3cms-doc-templating/issues
 (to create an issue you will need an account on typo3.org).
 
 Thank you!
@@ -100,7 +100,7 @@ Feedback
 
 For general questions about the documentation get in touch by writing to documentation@typo3.org.
 If you find a bug in this manual, please file an issue in this manual's bug tracker:
-http://forge.typo3.org/projects/show/typo3cms-doc-templating\.
+https://forge.typo3.org/projects/typo3cms-doc-templating\.
 
 Maintaining quality documentation is hard work and the Documentation Team is always looking for volunteers.
 If you feel like helping please join the documentation mailing list
