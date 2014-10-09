@@ -11,9 +11,9 @@
 Preparation
 ^^^^^^^^^^^
 
-This tutorial comes with example files which are used throughout.
-These files include the HTML template taught in this tutorial. Use them
-to reproduce each step of what we do in your own TYPO3 installation.
+This tutorial comes with example files, in particular the HTML template
+on which everything is based. You can refer to these files to reproduce
+the tasks demonstrated here in your own TYPO3 CMS installation.
 
 .. toctree::
    :maxdepth: 5
