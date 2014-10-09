@@ -18,13 +18,13 @@ Aim
 
 In this tutorial you will learn how to build up a web-site with TYPO3.
 
-The tutorial explains how to
+This tutorial explains how to:
 
-- use an HTML document as a template for a website, which is run by TYPO3.
+- use an HTML document as a template for a TYPO3 website.
 
-- integrate that HTML document into the TYPO3 system as a basis for all pages
+- integrate the HTML document into the TYPO3 system as a basis for all pages
 
-- make TYPO3 insert the content of each page into that HTML template
+- set up TYPO3 to insert the content of each page into the HTML template
 
 - create text-based dynamic navigations (the menus on each page).
 
@@ -38,7 +38,7 @@ which are used as an example troughout this tutorial.
 Requirements
 ^^^^^^^^^^^^
 
-You need an installed version of TYPO3 4.6 or higher. We recommanded the "Blank Package" as a basis.
+You need an installed version of TYPO3 4.6 or higher. We recommend the "Blank Package" as a basis.
 It is downloadable from `here: <http://typo3.org/download/>`_.
 
 
@@ -47,7 +47,7 @@ It is downloadable from `here: <http://typo3.org/download/>`_.
 Skill level
 ^^^^^^^^^^^
 
-You are a beginner as a site developer. This tutorial contains step by step instructions,
+This tutorial assumes you are a beginner-level site developer. This tutorial contains step by step instructions,
 which enable you to create your first website with TYPO3, based on a given HTML file.
 
 The job is to integrate a template into the TYPO3 system. This job is known as  "Integration" in the TYPO3 world.
@@ -58,12 +58,12 @@ The job is to integrate a template into the TYPO3 system. This job is known as  
 Skills
 ^^^^^^
 
-Please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`  before you start.
-It is enough if you have quickly read that document; you must not have understood everything
-noted there (and surely not all the details). This tutorial should give you an overview of things in TYPO3.
-However, we will also repeat things in the Templating Tutorial where they are needed.
+Before you begin, please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
+It is enough if you have skimmed it. It is not necessary that you understand everything
+noted there (and certainly not all the details). This tutorial should give you an overview of TYPO3.
+However, we will also repeat concepts in the Templating Tutorial where they are needed.
 
-Basic knowledge of HTML is needed (but no knowledge about details). Knowledge about CSS is not mandatory.
+A basic knowledge of HTML is necessary (detailed knowledge is not). Knowledge of CSS is not mandatory.
 
 
 .. _what-s-new:
@@ -98,7 +98,7 @@ with feedback from some TYPO3 beginners.
 Feedback
 ^^^^^^^^
 
-For general questions about the documentation get in touch by writing to documentation@typo3.org.
+For general questions regarding the documentation, get in touch by writing to documentation@typo3.org.
 If you find a bug in this manual, please file an issue in this manual's bug tracker:
 https://forge.typo3.org/projects/typo3cms-doc-templating\.
 
