@@ -58,8 +58,8 @@ The job is to integrate a template into the TYPO3 system. This job is known as  
 Skills
 ^^^^^^
 
-Before you begin,please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
-It is enough if you have skimmed it. It is not necessary that you understand everything everything
+Before you begin, please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
+It is enough if you have skimmed it. It is not necessary that you understand everything
 noted there (and certainly not all the details). This tutorial should give you an overview of TYPO3.
 However, we will also repeat concepts in the Templating Tutorial where they are needed.
 
