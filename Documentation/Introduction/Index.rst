@@ -16,21 +16,20 @@ Introduction
 Aim
 ^^^
 
-In this tutorial you will learn how to build up a web-site with TYPO3 CMS.
+In this tutorial, you will learn how to build up a web-site using the TYPO3 CMS.
 
-This tutorial explains how to:
+This tutorial teaches you how to:
 
 - use an HTML document as a template for a TYPO3 CMS website.
 
 - integrate the HTML document into the TYPO3 CMS system as a basis for all pages
 
-- set up TYPO3 CMS to insert the content of each page into the HTML template
+- set up the TYPO3 CMS to insert the content of each page into the HTML template
 
-- create text-based dynamic navigations (the menus on each page).
+- create text-based dynamic navigation menus.
 
 The result of the tutorial is a site similar to the Introduction Package.
-The tutorial includes a set of files (mainly an HTML file and a CSS file),
-which are used as an example troughout this tutorial.
+This tutorial also includes an HTML and a CSS files which are used for practice.
 
 
 .. _requirements:
@@ -38,7 +37,7 @@ which are used as an example troughout this tutorial.
 Requirements
 ^^^^^^^^^^^^
 
-You need an installed version of TYPO3 CMS 6.2. Just download the source code.
+You need an installed version of TYPO3 CMS 6.2. You can download the source code.
 from http://typo3.org/download/.
 
 
@@ -47,23 +46,22 @@ from http://typo3.org/download/.
 Skill level
 ^^^^^^^^^^^
 
-This tutorial assumes you are a beginner-level site developer. This tutorial contains step by step instructions,
-which enable you to create your first website with TYPO3 CMS, based on a given HTML file.
+This tutorial assumes you are a beginner-level site developer and contains step by step instructions,
+for you to create your first TYPO3 CMS website, based on an HTML file (this file will be supplied for the tutorial).
 
-The job is to integrate a template into the TYPO3 CMS system. This job is known as  "Integration" in the TYPO3 CMS world.
+You will learn how to integrate a template into the TYPO3 CMS system, known as  "Integration" in the TYPO3 CMS world.
 
 
 .. _skills:
 
 Skills
 ^^^^^^
+A basic knowledge of HTML is necessary (detailed knowledge is not). Knowledge of CSS is not mandatory. 
 
 Before you begin, please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
-It is enough if you have skimmed it. It is not necessary that you understand everything
-noted there (and certainly not all the details). This tutorial should give you an overview of TYPO3 CMS.
+It is not necessary that you read and understand everything and every detail. Skimming it for a basic understanding is enough.
+This tutorial should give you an overview of TYPO3 CMS.
 However, we will also repeat concepts in the Templating Tutorial where they are needed.
-
-A basic knowledge of HTML is necessary (detailed knowledge is not). Knowledge of CSS is not mandatory.
 
 
 .. _what-s-new:
@@ -73,7 +71,7 @@ What's new
 
 This is the first version of this manual. It replaces the old "Modern Template Building Tutorial",
 which was originally written in 2003. Although we have tested the descriptions in this manual,
-there might still be places, which somehow are not clear or not understandable.
+there might still be places, which somehow are not clear or understandable.
 
 If something remains unclear when you are working through the manual, please drop us a note!
 
