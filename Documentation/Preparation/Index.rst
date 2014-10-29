@@ -11,9 +11,11 @@
 Preparation
 ^^^^^^^^^^^
 
-This tutorial comes with example files, in particular the HTML template
-on which everything is based. You can refer to these files to reproduce
-the tasks demonstrated here in your own TYPO3 CMS installation.
+As mentioned before, this tutorial applies two main files, an HTML template and a CSS file. 
+We will be editing and working on the HTML template during this tutorial. You need the CSS file, but you will not need to 
+edit it during this tutorial. As we progress in our learning, you will need them to reproduce 
+the tasks demonstrated here in your own installation. 
+You will receive instructions on how to install them on your own website using the Extension Manager.
 
 .. toctree::
    :maxdepth: 5
