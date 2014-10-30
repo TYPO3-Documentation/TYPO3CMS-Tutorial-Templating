@@ -61,7 +61,8 @@ Skills
 Before you begin, please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
 It is enough if you have skimmed it. It is not necessary that you understand everything
 noted there (and certainly not all the details). This tutorial should give you an overview of TYPO3 CMS.
-However, concepts in :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`will be repeated here in the Templating Tutorial where they are needed.
+However, concepts in :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`
+will be repeated here in the Templating Tutorial where they are needed.
 
 A basic knowledge of HTML is necessary (detailed knowledge is not). Knowledge of CSS is not mandatory.
 
@@ -75,11 +76,8 @@ This is the first version of this manual. It replaces the old "Modern Template B
 which was originally written in 2003. Although we have tested the descriptions in this manual,
 there might still be places, which somehow are not clear or nor understandable.
 
-If something remains unclear when you are working through the manual, please drop us a note!
-
-Either write us a mail to documentation@typo3.org or create a new issue in the issue tracker
-of this manual at https://forge.typo3.org/projects/typo3cms-doc-templating/issues
-(to create an issue you will need an account on typo3.org) or you can edit this file on Github.
+If something remains unclear when you are working through the manual, please drop us a note
+(see :ref:`Feedback <feedback>` below)!
 
 Thank you and have fun!
 
@@ -98,10 +96,16 @@ with feedback from some TYPO3 CMS beginners.
 Feedback
 ^^^^^^^^
 
-For general questions regarding the documentation, get in touch by writing to documentation@typo3.org.
-If you find a bug in this manual, please file an issue in this manual's bug tracker:
-https://forge.typo3.org/projects/typo3cms-doc-templating/ or on Github.
+For general questions about the documentation get in touch by writing
+to `documentation@typo3.org <mailto:documentation@typo3.org>`_.
 
-Maintaining quality documentation is hard work and the Documentation Team is always looking for volunteers.
-If you feel like helping please join the documentation mailing list
-(typo3.projects.documentation on `lists.typo3.org <http://lists.typo3.org/cgi-bin/mailman/listinfo/typo3-project-documentation>`_).
+If you find a bug in this manual, please be so kind as to check the
+online version on http://docs.typo3.org/typo3cms/TemplatingTutorial/.
+From there you can hit the "Edit me on GitHub" button in the top right corner
+and submit a pull request via GitHub. Alternatively you can just file an issue
+using the bug tracker: https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-Templating/issues.
+
+Maintaining high quality documentation requires time and effort
+and the TYPO3 Documentation Team always appreciates support.
+If you want to support us, please join the documentation
+mailing list/forum (http://forum.typo3.org/index.php/f/44/).
