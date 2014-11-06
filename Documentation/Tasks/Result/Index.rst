@@ -12,12 +12,13 @@ Next steps
 """"""""""
 
 .. note::
+
    There are other possible tasks such as: adding a second level to navigation, creating a graphical menu (without text),
    ensuring that the HTML output conforms to the W3C standard, etc.
 
-In this tutorial we built the website by adding markers and
+In this tutorial we built the website by adding marks and
 subparts to an HTML file and mapping them to a TypoScript template,
-which is a very common way to do templating in TYPO3.
+which is a very common way to do templating in TYPO3 CMS.
 
 There are other possibilities (which might be covered in future tutorials):
 
