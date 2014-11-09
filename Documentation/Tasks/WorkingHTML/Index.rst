@@ -14,54 +14,119 @@ Working with the HTML template
 
 .. _shortinformation:
 
-Short information about markers and subparts
-********************************************
+A quick explanation on marks and subparts
+*****************************************
 
-This section will tell you what markers and subparts are, how they look like and what they are used for.
+This section explains what marks and subparts are, what they look like and what they are used for.
+Both marks and subparts refere to a concept called "markers".
+A marker is a word  wrapped in three hash tags (###) on either side.
 
-A marker is a word in your HTML template, which is wrapped by "###" on both sides.
-The marker "TITLE" would for example look like this:
+Examples:
+
+.. code-block:: text
+
+	###TITLE###
+	###METANAV###
+	###DOCUMENT###
+
+All of the above are valid markers. There's more on
+:ref:`naming makers <shortinformation-naming>` later.
+
+.. _shortinformation-marks:
+
+Marks
+~~~~~
+
+A mark is a single marker placed in your HTML template.
+Example:
 
 .. code-block:: html
 
-  <h1>###TITLE###</h1>
+	<h1>###TITLE###</h1>
 
-(Note that you may not insert markers inside HTML-comment-tags. They would not be replaced.)
+When the template is interpreted by TYPO3 CMS, the mark
+(i.e. :code:`###TITLE###`) is replaced with what you configured TYPO3 CMS to put there.
+Everything around the mark (above and below) remains untouched.
 
-TYPO3 will later replace the marker (that is the part "###TITLE###") with what you configured TYPO3 to put there. Everything around the marker will remain as it is.
+.. important::
 
-In contrast a subpart is a pair of two markers in your HTML template, which have the same name. Between these two markers there may be some HTML code.
+   Marks may not be placed inside HTML comment tags. In such a case they do not get replaced.
+   So the following is **wrong**:
+
+   .. code-block:: html
+
+   		<!--###TITLE###-->
+
+
+.. _shortinformation-subparts:
+
+Subparts
+~~~~~~~~
+
+Subparts use the same syntax, but use **pairs of markers**, with possibly some HTML code
+in between.
 
 Example:
 
 .. code-block:: html
 
-  ###METANAV###
-  <p>
-    This is HTML code.
-    It will be replaced by TYPO3, when we configure the subpart "METANAV".
-  </p>
-  ###METANAV###
+	###METANAV###
+	<p>
+		This is HTML code.
+		It will be replaced by TYPO3, when we configure the subpart "METANAV".
+	</p>
+	###METANAV###
 
-Opposite to single markers (like "###TITLE###" from above) you may insert the subpart-markers inside HTML-comment-tags. That way they do not show up, when you open your template file in the browser. Inside the comment tag, you can also add other notes. In this tutorial we add the information, if it is the beginning or the end of the subpart like done in the next example.
+The subpart consists of both markers and everything in between.
+When the template is interpreted by TYPO3 CMS the whole subpart
+is replaced by whatever was configured to be placed there.
+Everything around the subpart (above and below) remains untouched.
+
+Contrary to marks, the subpart markers may be placed inside HTML comment tags.
+That way they do not show up, when you open your template file in the browser,
+but still do their work with TYPO3 CMS. Additional information may be placed
+inside the comment tag. It is a current practice to indicate the beginning
+and the end of the subpart by using the words "Start" and "End" in the opening
+and closing markers respectively.
 
 Example:
 
 .. code-block:: html
 
-  <!-- ###METANAV### Start -->
-  <p>
-    This is HTML code.
-    It will be replaced by TYPO3, when we configure the subpart "METANAV".
-  </p>
-  <!-- ###METANAV### End -->
+	<!-- ###METANAV### Start -->
+	<p>
+		This is HTML code.
+		It will be replaced by TYPO3, when we configure the subpart "METANAV".
+	</p>
+	<!-- ###METANAV### End -->
 
-TYPO3 will later replace the whole subpart (that is everything between and including the two markers "###METANAV###") with what you configured TYPO3 to put there. Everything around the subpart will remain as it is, everything in it will be replaced.
 
-The name of markers and subparts is only important for TYPO3 to replace them. It does not have anything to do with the IDs or classes, which some HTML tags have, or with CSS styles, which are associated with these IDs or classes. However, you can use names for markers and subparts, which somehow fit to the IDs or classes, so that it is easier for you to remember, where which marker/subpart is used and for what.
+.. _shortinformation-naming:
 
-.. hint::
-   When you put your own markers and subparts in a template later, use short but meaningful marker names.
+Naming markers
+~~~~~~~~~~~~~~
+
+A question that often arises on marks and subparts is how to name them.
+Just use any name that you see fit, TYPO3 CMS will know how to replace them
+(more on this up ahead). There is going to be correspondance between the names
+used in the markers and TYPO3 CMS configuration.
+
+Marks and subparts have nothing to do with IDs or classes, which some HTML tags have,
+or with CSS styles, which are associated with these IDs or classes.
+However, you can use names for marks and subparts, which somehow fit the IDs or classes,
+so that it is easier for you to remember the roles of the various marks and subparts.
+
+In general create relevant, meaningful and short marker names in your templates.
+
+.. important::
+
+   The only rule is that the marker names must be single words
+   with no space inside them. The following are **not** valid markers:
+
+   .. code-block:: text
+
+		###MAIN CONTENT###
+		###SECONDARY HEADER###
 
 
 .. _open-template:
@@ -70,25 +135,40 @@ Open the HTML template
 **********************
 
 .. note::
+
    You can open and edit HTML files with any text editor. However, you will make your life much easier,
    if you use an editor, which supports syntax highlighting. With syntax highlighting you will see directly
    where a certain tag begins, where it ends, where there are attributes and so on.
-   A very good editor with syntax highlighting is Notepad++, but there also are many others.
-   Choose the one you like!
 
-- In one of the last chapters you have copied the template files to the folder fileadmin/template/.
+   If you don't already have one of these, a quick search on Internet will turn up
+   a lot of them and you should be able to find one which runs on your computer
+   and with which you are comfortable.
 
-- Our HTML template is the file fileadmin/template/index.html. You will notice that this is just a normal HTML document. You can open it with your webbrowser and you will see the design.
+
+- In one of the previous chapters you have copied the template files
+  from :file:`/typo3conf/ext/doc_tut_templating/Resources/Private/Template`
+  to :file:`fileadmin/template/`.
+
+- Our HTML template is the file :file:`fileadmin/template/index.html`.
+  You will notice that this is just a normal HTML document.
+  You can open it with your web browser and see the design.
+
+  .. tip::
+
+     Do not use :file:`index-with-markers.html` which is the finished result,
+     with all marks and subparts. You can check it out when you're done to validate
+     your work, but using it right away would spoil your learning process.
 
 - Open the HTML template with your text editor.
 
 
 .. _add-marker-subparts:
+.. _add-marks-subparts:
 
-Add markers/subparts
-********************
+Add marks/subparts
+******************
 
-We will now modify the HTML template by adding markers and subparts.
+We will now modify the HTML template by adding marks and subparts.
 Later we will configure TYPO3 to replace each of them with the content we want (see the next chapter).
 
 
@@ -97,46 +177,59 @@ Later we will configure TYPO3 to replace each of them with the content we want (
 Add the subpart "DOCUMENT"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Add a subpart called "DOCUMENT" inside the body tag. The first marker of this subpart should be directly behind the opening body tag and the second one directly in front of the closing body tag so that everything in the body tag is inside that subpart. TYPO3 will later create its own HTML structure for us and we will configure TYPO3 to only put the HTML code inside that structure, which is inside this subpart (and not also the head tag or the html tags or so). That is the reason, why we need it here.
+Add a subpart called "DOCUMENT" inside the body tag. Remember that subparts come in pairs.
+Hence the first marker of this subpart should be directly behind the opening :code:`<body>` tag
+and the second one directly in front of the closing :code:`<body>` tag so that
+everything in the :code:`<body>` tag is inside that subpart.
+TYPO3 CMS will later recreate its own HTML structure for us and we will configure TYPO3 CMS
+to only put the HTML code inside that structure, which is inside this subpart
+(all tags "outide" the two ###DOCUMENT### markers, i.e., :code:`<html>`,
+:code:`<head>`, :code:`<title>`, :code:`<meta />`, :code:`<link>` and :code:`<body>`
+will not be influenced). That is the reason, why we need it here.
 
 .. code-block:: html
+   :emphasize-lines: 14,38
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>
-          Here is the title
-        </title>
-        <meta charset="utf-8" />
-        <meta name="description" content="Here is a description" />
-        <meta name="keywords" content="Some keywords regarding the content" />
-        <meta name="audience" content="All" />
-        <meta name="author" content="Sabine Hueber" />
-        <meta name="publisher" content="..." />
-        <meta name="Robots" content="index,follow" />
-        <meta name="Language" content="English" />
-        <meta name="revisit-after" content="1 Day" />
-        <meta name="Content-Language" content="en" />
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>
+				Here is the title
+			</title>
+			<meta charset="utf-8" />
+			...
+			<meta name="Content-Language" content="en" />
 
-        <link href="style.css" rel="stylesheet" type="text/css" />
-      </head>
-      <body>
-    <!--###DOCUMENT### Start-->
-        <div id="page_margins">
-          <div id="page" class="hold_floats">
-            <div id="header">
-              <!--###METANAV### Start-->
-              <div id="metanav">
-    <!-- The middle of the HTML document ist not shown here! -->
-            <div id="footer">
-               Design: Sabine&nbsp;Hueber,&nbsp;designeon
-            </div>
-    <!-- Footer Ende -->
-          </div>
-       </div>
-    <!--###DOCUMENT### end-->
-      </body>
-    </html>
+			<link href="style.css" rel="stylesheet" type="text/css" />
+		</head>
+		<body>
+			<!--###DOCUMENT### Start-->
+				<div id="page_margins">
+					<div id="page" class="hold_floats">
+
+						<div id="header">
+
+							<div id="metanav">
+								<ul>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Imprint</a></li>
+								</ul>
+							</div>
+
+							<div id="headertitle">TYPO3</div>
+						</div>
+						...
+						<!-- Footer Start -->
+						<div id="footer">
+							Design: <a href="http://www.designeon.de">Sabine&nbsp;Hueber,&nbsp;designeon</a>
+						</div>
+						<!-- Footer End -->
+
+					</div>
+				</div>
+			<!--###DOCUMENT### end-->
+		</body>
+	</html>
 
 
 .. _subpart-metanav:
@@ -144,39 +237,45 @@ Add a subpart called "DOCUMENT" inside the body tag. The first marker of this su
 Add the subpart "METANAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the div box with the id "metanav" there is our metanavigation.
-Add a subpart called "METANAV", so that the whole content of that box is inside the subpart.
+Inside the div box with the id "metanav" comes the navigation
+to some special pages. Add a subpart called "METANAV",
+so that the whole content of that box is inside the subpart.
+This is exactly the same process as the previous exercise.
 
 .. code-block:: html
+   :emphasize-lines: 9,14
 
-    <body>
-        <!-- ###DOCUMENT### Start -->
-        <div id="page_margins">
-            <div id="page" class="hold_floats">
+	<body>
+		<!-- ###DOCUMENT### Start -->
+			<div id="page_margins">
+				<div id="page" class="hold_floats">
 
-                <div id="header">
+					<div id="header">
 
-                    <div id="metanav">
-                        <!-- ###METANAV### Start -->
-                        <ul>
-                           <li><a>Contact</a></li>
-			   <li><a>Imprint</a></li>
-                        </ul>
-                        <!-- ###METANAV### End -->
-                    </div>
+						<div id="metanav">
+							<!-- ###METANAV### Start -->
+								<ul>
+									<li><a>Contact</a></li>
+									<li><a>Imprint</a></li>
+								</ul>
+							<!-- ###METANAV### End -->
+						</div>
+						...
 
 
 .. _marker-title:
+.. _mark-title:
 
-Add the marker "HEADERTITLE"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add the mark "HEADERTITLE"
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Below the metanavigation there is a div with the id "headertitle".
-Replace its content with the marker "HEADERTITLE".
+Below the meta-navigation there is a div with the id "headertitle".
+Replace its content with the mark "HEADERTITLE". Remember that marks
+use a single marker, not a pair of them.
 
 .. code-block:: html
 
-  <div id="headertitle">###HEADERTITLE###</div>
+	<div id="headertitle">###HEADERTITLE###</div>
 
 
 .. _subpart-topnav:
@@ -184,10 +283,11 @@ Replace its content with the marker "HEADERTITLE".
 Add the subpart "TOPNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the div, which has the id "nav", we have our mainnavigation.
+Inside the div, which has the id "nav", we have our main navigation.
 Do the same as for "metanav" but call that subpart "TOPNAV".
 
 .. code-block:: html
+   :emphasize-lines: 2,11
 
 	<div id="nav">
 		<!-- ###TOPNAV### Start -->
@@ -208,14 +308,15 @@ Do the same as for "metanav" but call that subpart "TOPNAV".
 Column 1: Add the subpart "SUBNAV"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As you might already have seen the template has three columns.
+As you might already have noticed the template has three columns.
 
 - Let's begin with the left column, column 1, which has the id "col1".
 
   - Inside of column 1 there is the div with the id "col1_content".
-    It will hold the sub menu. Wrap the whole content of that div in the subpart "SUBNAV".
+    It will hold the submenu. Wrap the whole content of that div in the subpart "SUBNAV".
 
 .. code-block:: html
+   :emphasize-lines: 4,16
 
     <!-- #col1: Left Column of the Content Area -->
     <div id="col1">
@@ -248,26 +349,29 @@ Column 2: Add the subpart "CONTENTRIGHT"
   - In the div below there will be the content of that column.
     Wrap the content of that div into the subpart "CONTENTRIGHT".
 
-A screenshot follows after we added the markers and subparts of column 3.
+The result is shown after adding the marks and subparts of column 3
+in the next section.
 
 
 .. _col3-markers:
 
-Column 3: Add the markers "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONTENTMIDDLE"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Column 3: Add the marks "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONTENTMIDDLE"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Column 3, the div with the id "col3" is the column, which will be displayed in the middle.
+- Column 3, the div with the id "col3", is the column, which will be displayed in the middle.
   In our layout it is the main content area.
 
-  - Inside the div with the id "breadcrumb" replace the date with a marker called "DATE"
-    and the rootline with a marker called "BREADCRUMB".
+  - Inside the div with the id "breadcrumb" replace the date with a mark called "DATE"
+    and the rootline with a mark called "BREADCRUMB".
 
-  - Next there is the page title. Replace the content of the h1 tag with the marker "TITLE".
+  - Next there is the page title. Replace the content of the :code:`<h1></h1>` tag with the mark "TITLE".
+    This was demonstrated at the beginning of this chapter.
 
   - In the div below there will be the content of that column. Wrap the content of that div
     into the subpart "CONTENTMIDDLE".
 
 .. code-block:: html
+   :emphasize-lines: 5,11,20,21,23,42
 
     <!-- #col2: Right Column of the Content Area -->
     <div id="col2">
