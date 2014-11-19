@@ -15,6 +15,9 @@ conf.py:
     t3ts45:
     - http://docs.typo3.org/typo3cms/TyposcriptIn45MinutesTutorial
     - null
+    t3start:
+    - http://docs.typo3.org/typo3cms/GettingStartedTutorial
+    - null
   html_theme_options:
     github_repository: TYPO3-Documentation/TYPO3CMS-Tutorial-Templating
     github_branch: latest
