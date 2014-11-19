@@ -10,11 +10,17 @@
 Tasks
 ^^^^^
 
-In this tutorial we use the most common approach for building a website with TYPO3 CMS:
-we take one HTML file, which we call our HTML template. It will be used as a basis for the website.
-TYPO3 CMS will use this file as a basis, but certain parts of this file will be replaced with the content,
-which you have in your TYPO3 CMS installation. To tell TYPO3 CMS, which parts it should replace,
-we will modify the HTML template now. Inside the HTML template we will add so called "marks" and "subparts".
+In this tutorial we will use one of the most common approaches for building a website in TYPO3 CMS.
+We will adapt an HTML file to TYPO3 CMS, and it will be used as a basis for the website.
+Certain changes will be made in this HTML template for it to work well with TYPO3 CMS.
+These changes will allow certain parts, or segments, of this template to be replaced with the content,
+which you have in your TYPO3 CMS installation. To tell TYPO3 CMS which parts it should replace,
+our next step is to modify the HTML template. Inside it, we will add what we call "marks" and "subparts".
+
+.. tip::
+
+   You may want to repeat these two words to yourself over and over again,
+   as they are very important to keep in mind all throughout this tutorial.
 
 In a later chapter we will configure TYPO3 CMS to replace these marks and subparts with the content,
 which has been inserted in TYPO3 CMS.
