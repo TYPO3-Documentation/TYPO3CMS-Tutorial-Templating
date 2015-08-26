@@ -26,7 +26,7 @@ a short explanation. We will also use this explanation to repeat (or to
 learn) how to use TSref!
 
 You do not have a copy of TSref currently? TSref, the TypoScript
-reference, is available from here: http://docs.typo3.org/typo3cms/TyposcriptReference/
+reference, is available from here: https://docs.typo3.org/typo3cms/TyposcriptReference/
 Use it to conveniently look things up.
 
 - Lines starting with "#" are comments. You can use them to comment your code.
