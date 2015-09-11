@@ -60,7 +60,7 @@ and the second one directly in front of the closing :code:`<body>` tag so that
 everything in the :code:`<body>` tag is inside that subpart.
 TYPO3 CMS will later recreate its own HTML structure for us and we will configure TYPO3 CMS
 to only put the HTML code inside that structure, which is inside this subpart
-(all tags "outide" the two ###DOCUMENT### markers, i.e., :code:`<html>`,
+(all tags "outside" the two ###DOCUMENT### markers, i.e., :code:`<html>`,
 :code:`<head>`, :code:`<title>`, :code:`<meta />`, :code:`<link>` and :code:`<body>`
 will not be influenced). That is the reason, why we need it here.
 
