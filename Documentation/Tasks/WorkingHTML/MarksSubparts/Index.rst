@@ -270,7 +270,7 @@ Column 3: Add the marks "DATE", "BREADCRUMB" and "TITLE" and the subpart "CONTEN
     <div id="col3">
         <div id="col3_content" class="clearfix">
             <div id="breadcrumb">###DATE###&nbsp;:::&nbsp;###BREADCRUMB###</div>
-            <h1>###TITLE</h1>
+            <h1>###TITLE###</h1>
             <div>
                 <!-- ###CONTENTMIDDLE### Start -->
                 <h2>Middle Column - Element 1</h2>
