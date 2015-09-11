@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -11,11 +7,12 @@
 Copying the template files to the right place
 """""""""""""""""""""""""""""""""""""""""""""
 
-Now you have the extracted files in your file system. They are, from the folder
-where you installed TYPO3, inside the subfolder
-:file:`/typo3conf/ext/doc_tut_templating/Resources/Private/Template`.
-Next copy the folder :file:`Template` contents and paste it all into the folder :file:`fileadmin/template/`, so that you get the
-folder :file:`fileadmin/template/` and the files inside.
+Now you have the extracted files in your file system. They reside
+relative to the root folder where you installed TYPO3 in the subfolder
+:file:`typo3conf/ext/doc_tut_templating/Resources/Private/Template`.
+
+Get that :file:`Template` folder and copy it with all its contents
+to :file:`fileadmin/template/`.
 
 
 .. _copying-template-page-structure:
