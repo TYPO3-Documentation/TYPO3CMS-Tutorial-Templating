@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../Includes.txt
 
@@ -16,11 +12,11 @@ Introduction
 Aim
 ^^^
 
-In this tutorial you will learn how to build a website with TYPO3 CMS.
+In this tutorial you will learn how to build a web site with TYPO3 CMS.
 
 This tutorial explains how to:
 
-- use an HTML document as a template for a TYPO3 CMS website.
+- use an HTML document as a template for a TYPO3 CMS web site.
 
 - integrate the HTML document into the TYPO3 CMS system as a basis for all pages
 
@@ -39,7 +35,7 @@ Requirements
 ^^^^^^^^^^^^
 
 You need an installed version of TYPO3 CMS 6.2. You can download the source code
-from http://typo3.org/download/.
+from https://typo3.org/download/.
 
 
 .. _skill-level:
@@ -50,7 +46,8 @@ Skill level
 This tutorial assumes you are a beginner-level site developer. It contains step by step instructions,
 to help you learh how to create your first website with TYPO3 CMS, based on the given HTML file.
 
-This tutorial teaches you to integrate a template into the TYPO3 CMS system known as  "Integration" in the TYPO3 CMS world.
+This tutorial teaches you to integrate a template into the TYPO3 CMS system,
+as task known as "Integration" in the TYPO3 CMS world.
 
 
 .. _skills:
