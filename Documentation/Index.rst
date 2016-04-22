@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: Includes.txt
 
@@ -16,19 +12,19 @@ Templating Tutorial: Basics
       doc_tut_templating
 
 :Version:
-      1.0.0
+      6.2
 
 :Language:
       en
 
 :Description:
-      Step-by-step to templating in TYPO3 using TypoScript.
+      Step-by-step guide to templating in TYPO3 using TypoScript.
 
 :Keywords:
       template, typoscript, beginner
 
 :Copyright:
-      2011-2015
+      2011-2016
 
 :Author:
       Documentation Team
