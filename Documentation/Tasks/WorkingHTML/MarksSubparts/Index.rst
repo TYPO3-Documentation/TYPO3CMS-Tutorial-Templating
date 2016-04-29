@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../../Includes.txt
 
@@ -22,13 +18,9 @@ Open the HTML template
    and with which you are comfortable.
 
 
-- In one of the previous chapters you have copied the template files
-  from :file:`/typo3conf/ext/doc_tut_templating/Resources/Private/Template`
-  to :file:`fileadmin/template/`.
-
-- Our HTML template is the file :file:`fileadmin/template/index.html`.
-  You will notice that this is just a normal HTML document.
-  You can open it with your web browser and see the design.
+Our HTML template is the file :file:`fileadmin/doc_tut_templating/index.html`.
+You will notice that this is just a normal HTML document.
+You can open it with your web browser and see the design.
 
   .. tip::
 
@@ -36,7 +28,7 @@ Open the HTML template
      with all marks and subparts. You can check it out when you're done to validate
      your work, but using it right away would spoil your learning process.
 
-- Open the HTML template with your text editor.
+Now open the HTML template with your favorite text editor.
 
 
 .. _add-marker-subparts:
@@ -46,7 +38,6 @@ Add marks/subparts
 ******************
 
 We will now modify the HTML template by adding marks and subparts.
-Later we will configure TYPO3 to replace each of them with the content we want (see the next chapter).
 
 
 .. _add-subpart-document:
@@ -60,7 +51,7 @@ and the second one directly in front of the closing :code:`<body>` tag so that
 everything in the :code:`<body>` tag is inside that subpart.
 TYPO3 CMS will later recreate its own HTML structure for us and we will configure TYPO3 CMS
 to only put the HTML code inside that structure, which is inside this subpart
-(all tags "outside" the two ###DOCUMENT### markers, i.e., :code:`<html>`,
+(all tags "outside" the two :code:`###DOCUMENT###` markers, i.e., :code:`<html>`,
 :code:`<head>`, :code:`<title>`, :code:`<meta />`, :code:`<link>` and :code:`<body>`
 will not be influenced). That is the reason, why we need it here.
 
@@ -306,7 +297,7 @@ This completes the changes, which we had to make in the HTML template.
 Result
 ~~~~~~
 
-This is how our HTML template now looks like:
+This is how your HTML template should now look like:
 
 .. code-block:: html
 

@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../../Includes.txt
 
@@ -79,7 +75,7 @@ Everything around the subpart (above and below) remains untouched.
 Contrary to marks, the subpart markers may be placed inside HTML comment tags.
 That way they do not show up, when you open your template file in the browser,
 but still do their work with TYPO3 CMS. Additional information may be placed
-inside the comment tag. It is a current practice to indicate the beginning
+inside the comment tag. It is a common practice to indicate the beginning
 and the end of the subpart by using the words "Start" and "End" in the opening
 and closing markers respectively.
 
