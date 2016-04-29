@@ -34,7 +34,7 @@ which are used throughout.
 Requirements
 ^^^^^^^^^^^^
 
-You need an installed version of TYPO3 CMS 6.2. You can download the source code
+You need an installed version of TYPO3 CMS 7 LTS. You can download the source code
 from https://typo3.org/download/.
 
 

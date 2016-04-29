@@ -12,7 +12,7 @@ Templating Tutorial: Basics
       doc_tut_templating
 
 :Version:
-      6.2
+      7 LTS
 
 :Language:
       en
@@ -74,6 +74,6 @@ future reference.
    :glob:
 
    Introduction/Index
-   Preparation/Index
+   Installation/Index
    Tasks/Index
    Targets
