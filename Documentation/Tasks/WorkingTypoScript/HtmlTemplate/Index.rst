@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../../Includes.txt
 
@@ -11,16 +7,14 @@
 Load the HTML template in the TypoScript template
 *************************************************
 
-As you could see from the output of the few lines of TypoScript, which we have above, they only produce the words "HELLO WORLD!".
+As you could see above, our template does not currently produce an interesting
+output. What we really want is to:
 
-But that is not, what we want to have. We don't only want to output some words, but we want to output
+- use our complete HTML template file
+- display actual content from TYPO3 CMS within that template.
 
-- first of all our complete template file
-- and inside we want to replace our marks and subparts.
-
-So where a TEXT object was defined above, we need to define an object, which outputs a template file. This can be done using the cObject "TEMPLATE". Look it up in TSref!
-
-So instead of the code above we write
+To proceed with this, we first change the content of the :code:`PAGE`
+object to use a :ref:`TEMPLATE object <t3tsref:cobj-template>`:
 
 .. code-block:: typoscript
 
@@ -37,36 +31,51 @@ So instead of the code above we write
    you can press Ctrl+S to save what currently is in the Setup field.
    This can make your work noticeably faster.
 
-As TSref tells us, the TEMPLATE cObject has the property "template", in which we can define a cObject, which must be loaded with the template code. This is exactly what we want to do! Since our template is a file, an HTML file, we choose the cObject FILE and add:
+The TEMPLATE cObject has a property called :code:`template`, in which we can define a cObject
+which will be loaded with the template code. This is exactly what we want to do!
+Since our template is a file, an HTML file, we choose the cObject
+:ref:`FILE <t3tsref:cobj-file>` and add:
 
 .. code-block:: typoscript
 
 	# Our template is a file
 	page.10.template = FILE
 
-Did you look up the content object FILE in TSref? If not, do so now!
-You will see that for this cObject there is the property "file". The cObject FILE returns the content of the file, which is set in this property. But how exactly do you have to link your file now? This is also answered in TSref. The data type of the property "file" is "resource". You find it in the "Data types reference". There you also find the information that you can link to a file in your TYPO3 installation using a relative path. See the example in TSref. So we add to our template:
+Do you know what the next step is? Did you look up the content object :ref:`FILE <t3tsref:cobj-file>` in TSref?
+If not, do so now! You will see that for this object there is a property called :code:`file`.
+The :code:`FILE` object returns the content of the file, which is set in this property.
+
+But how exactly do you have to link your file now? This is also answered in the TSref.
+The data type of the :code:`file` property is :ref:`resource <t3tsref:data-type-resource>`.
+The TSref indicates that you can point to a file in your TYPO3 CMS installation using a relative path.
+So we add to our template:
 
 .. code-block:: typoscript
 
-	# Our template file is fileadmin/template/index.html
-	page.10.template.file = fileadmin/template/index.html
+	# Our template file is fileadmin/doc_tut_templating/index.html
+	page.10.template.file = fileadmin/doc_tut_templating/index.html
 
-This loads our template file. If you now view your website (the frontend), you will notice that our template file is used, but that in fact the CSS styles are still missing.
+This loads our template file. If you now view your website (the frontend),
+you will notice that our template file is used, but that the CSS styles is missing.
 
-So obviously we still have to add a reference to our CSS file to our PAGE object somehow.
+Something is missing...
 
-The section on the "PAGE object" in TSref tells us how we can add tags to the head tag of the HTML output. There are the properties "stylesheet" and "shortcutIcon", which we want to use to include our stylesheet and our icon:
+Going through the TSref for the :code:`PAGE` we can find several ways to include
+a reference to CSS file. The favored one is the property called :code:`includeCSS`,
+which is an arrray making it possible to include several files.
+While we are at it, let's also add a :code:`shortcutIcon`:
 
 .. code-block:: typoscript
 
 	# Insert shortcut icon in the head of the website
-	page.shortcutIcon = fileadmin/template/favicon.ico
+	page.shortcutIcon = fileadmin/doc_tut_templating/favicon.ico
 	# Insert stylesheet in the head of the website
-	page.stylesheet = fileadmin/template/style.css
+	page.includeCSS.base = fileadmin/doc_tut_templating/style.css
 
-Now our Frontend output already has the styles included.
+Now our frontend output already has the styles included.
 
-However, if you view the sourcecode of the output, you will notice that TYPO3 created an own HTML structure and inside the body tags of this structure, there is our complete template, with *its* own html, head and body tags and all the content. This is syntactically wrong HTML or in other words: It is no valid HTML page currently.
+However, if you view the sourcecode of the output, you will notice that TYPO3 CMS created its own HTML structure,
+inside of which is our own HTML template, complete :code:`<html>`, :code:`<head>` and :code:`body` tags and all the content.
+This is obviously not what we want and also not syntactically correct.
 
-We will fix this in the next step.
+We will fix this in the next steps.
