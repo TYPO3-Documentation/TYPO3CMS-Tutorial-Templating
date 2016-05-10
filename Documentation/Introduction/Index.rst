@@ -55,10 +55,10 @@ a task known as "Integration" in the TYPO3 CMS world.
 Skills
 ^^^^^^
 
-Before you begin, please read the :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`.
+Before you begin, please read the :ref:`TypoScript in 45 Minutes Tutorial <t3ts45:start>`.
 It is enough if you have skimmed it. It is not necessary that you understand everything
 noted there (and certainly not all the details). This tutorial should give you an overview of TYPO3 CMS.
-However, concepts in :ref:`TypoScript in 45 minutes tutorial <t3ts45:start>`
+However, concepts in :ref:`TypoScript in 45 Minutes Tutorial <t3ts45:start>`
 will be repeated here in the Templating Tutorial where they are needed.
 
 A basic knowledge of HTML is necessary (detailed knowledge is not). Knowledge of CSS is not mandatory.
