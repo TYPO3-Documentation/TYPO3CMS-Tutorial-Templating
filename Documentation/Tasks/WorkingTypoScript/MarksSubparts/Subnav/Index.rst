@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../../../Includes.txt
 
@@ -11,10 +7,13 @@
 SUBNAV subpart
 ~~~~~~~~~~~~~~
 
-Next we will configure the subpart SUBNAV. This subpart should render the sub navigation, which will be displayed in the left column of the Frontend output.
+Next we will configure the subpart SUBNAV. This subpart should render the sub navigation,
+which will be displayed in the left column of the Frontend output.
 
-Basically this again is a normal menu, but it has some specifics: It should not show the pages, which are on level 1 of the page tree, but instead it shows the pages, which are *below* the page on level 1, which is currently *active*. So the first level of pages, which should appear in this menu are the pages on level 2 of the page tree.
-Furthermore the sub navigation should also show pages on deeper levels like on level 3. So we also have to configure this level.
+Basically this again is a normal menu, but with a couple of twists. First of all,
+it should not show the pages which are on the first level of the page tree, but instead
+those which are below the active page on level 1. Furthermore the sub navigation
+should also show pages on deeper levels like on level 3. So we also have to configure this level.
 
 Here again is the structure of the HTML code, which we need to replace:
 
@@ -40,39 +39,61 @@ Here again is the structure of the HTML code, which we need to replace:
     </div>
     <!-- #col1: Left Column End -->
 
-We again define an HMENU:
+We again define a :code:`HMENU`:
 
 .. code-block:: typoscript
 
 	SUBNAV = HMENU
 
-Now we have to set the level of pages of the page tree, with which the menu should begin. This can be done with the property "entryLevel", which is provided by the object HMENU. If it is set to "0", the menu begins with the first level of pages below the root page. That is what is used in the top menu TOPNAV. (In fact we did not have to set entryLevel to "0" explicitly there, because "0" is the default value.) But here we want the menu not to start with the pages, which are directly below the root page, but with the ones, which are one level deeper. So we add:
+Now we have to set the level of the page tree on which the menu should begin.
+This can be done with the property :code:`entryLevel`, which is provided
+by the :code:`HMENU` object. If it is set to :code:`0`, the menu begins with
+the first level of pages below the root page. That is what is used in
+the top menu TOPNAV by default Here we want to start one level deeper,
+so we et:
 
 .. code-block:: typoscript
 
 	SUBNAV = HMENU
 	SUBNAV.entryLevel = 1
 
-Now independently from the question of the entryLevel: When you have a look at the above screenshot you will see that the HTML code of the menu basically has the same structure for the pages on level 1 as for the pages on level 2. Here is what the structure looks like:
+.. note::
 
-- We need one ul tag around the whole menu and each item on the first level must be wrapped in li tags.
+   Setting an :code:`entryLevel` does not change le numbers used for
+   levels inside the menu object. The first level is still "1", the next
+   one "2", etc.
 
-- Where a menu item has subpages, there inside the li tag we need a ul tag and inside that ul tag the next level of pages should be rendered. Have a look at the screenshot above. There "Submenu Item 3" shows this situation.
+Given the HTML code above we can see that we have the same structure on level 1 as on level 2,
+i.e.:
 
-Since the structure of both levels of the menu basically is the same we will now define the structure for the pages on level one, will then copy that structure for the pages on level two and only make the few changes there, which are needed.
+- we need one :code:`<ul>` tag around the whole menu and each item on the first level
+  must be wrapped in :code:`<li>` tags.
 
-To have things structured logically, I add the outer ul tags not to the wrap of the HMENU like we did e.g. for TOPNAV, but to the wrap of the first level of pages of the TMENU. In the end this does not make a difference in the rendering, the wrap in both cases appears at the same place. But having it inside the first level of the TMENU I can also copy that wrap, when I create the instructions for pages on level 2.
+- where a menu item has subpages, we need a :code:`<ul>` tag inside the :code:`<li>` tag.
+  Inside that :code:`<ul>` tag, the next level of pages should be rendered.
+  :code:`<ul>` tags will end up nested, as in the HTML code above.
+
+Since the structure of both levels of the menu are nearly the same, we will now
+define the structure for the first level and then copy that structure for the second level,
+with just a few changes.
+
+In the TOPNAV, the :code:`wrap` could be placed on the :code:`HMENU` object because the
+menu only had a single level. In the case of the SUBNAV, we want to place the :code:`wrap`
+on the :code:`TMENU` object instead. In a way this is also more logical, even if there
+was a single menu level.
 
 .. code-block:: typoscript
 
 	SUBNAV {
 
-		# Definition for pages on the first level of the menu
+		// Definition for pages on the first level of the menu
 		1 = TMENU
 		1 {
 			wrap = <ul id="submenu">|</ul>
 
-Something else which is important when you can have multiple levels of pages in a menu is the question, if you always want to see all subpages. By default TYPO3 only shows the subpages of *the* page, which currently is active. In contrast I want TYPO3 to always show all subpages, also the ones of pages, which the user is not on currently. This can be done with the property expAll:
+There's another important consideration for multiple-level menus: do you want to see all child
+pages of the current page or also children of the sibling pages? The latter is more often the case.
+This behaviour can be toggled on and off with the :code:`expAll` property.
 
 .. code-block:: typoscript
 
@@ -81,39 +102,49 @@ Something else which is important when you can have multiple levels of pages in 
 		wrap = <ul id="submenu">|</ul>
 		expAll = 1
 
-Now let's have a look at the rendering definition for a single item on level 1, when it is in normal state. We want to wrap each item on level 1 in an li tag. In the menus METANAV and TOPNAV we always used the property "allWrap" to do this kind of task. However, this property only wraps the item itself. But when we have an item with subpages, these subpages would not be included in the wrap, but would follow after it. With other words: allWrap would insert the closing li tag, before the tags for the subpages start (that is the ul tag and the li tags inside it). This would lead to invalid HTML; the nesting of the different tags would no longer be valid. So what we need here is a property, which does not only wrap the menu item, which we have currently, but also all subitems. The result should be that the closing li tag is inserted *after* the subpages. This can be done with "wrapItemAndSub". So we add this to our template:
+Now let's have a look at the rendering definition for a single item on level 1, when it is in normal state.
+We want to wrap each item on level 1 in an :code:`<li>` tag, but that tag should be wrapped around the
+:code:`<ul>` structure of its child pages. In that case the :code:`allWrap` property which we have used
+so far in the METANAV and TOPNAV menus is not appropriate, because it wil wrap only around the menu item
+itself and not around the child structure, thus generating invalid HTML. Luckily there is a specific
+property just for this case, called :code:`wrapItemAndSub`:
 
 .. code-block:: typoscript
 
 	SUBNAV.1 {
-		# Definition per page
-		# NO: default formatting
+		// Definition per page
+		// NO: default formatting
 		NO = 1
 		NO {
 			wrapItemAndSub = <li>|</li>
 		}
 	}
 
-As you see in the HTML template there also is the CSS ID "active", which should be added to that one menu item, which currently is active. So again it is not enough to just define NO as normal default state and to always use that state, but we also have to add a special definition for the case of a page being active. So we need to define this different wrap in the property "wrapItemAndSub" of the object "ACT", so that it overwrites our normal default wrap:
+This menu also has an active state, which we need to define. We also need to use the :code:`wrapItemAndSub`
+property for the :code:`ACT` state:
 
 .. code-block:: typoscript
 
 	SUBNAV.1 {
 		ACT = 1
 		ACT {
-			# Use another wrap
+			// Use another wrap
 			wrapItemAndSub = <li id="active">|</li>
 		}
 	}
 
 
-Now we have the definitions for the pages in the first level of our menu complete.
+With that, the definition of our first menu level is complete.
 
-The next thing to do is to add the defintions for pages, which are displayed in the second level of our menu. You already know that - while the rendering of the pages for the first level of our menu is defined in "SUBNAV.1" - the rendering for the pages on level 2 will be done in "SUBNAV.2". As I explained above, we will not define each of these lines again for level 2, because they are nearly identical. Instead you will now learn how to copy objects in TypoScript.
+As we discussed earlier, the structure for the second level is basically the same. It would be a shame
+writing the same TypoScript code again. Instead we want to use the possiblity to copy TypoScript
+objects, so that :code:`SUBNAV.2` starts out the same as :code:`SUBNAV.1`.
 
-Until now we always used the operator "=" to assign a value to a property. Copying an object works with the operator "<".
+Until now we always used the :code:`=` operator to assign a value to a property.
+Copying an object works with the :code:`<` operator.
 
-Before we continue with our template it makes sense to explain this with an example. I have the object HEADERTITLE. Now I can create a copy of it and call the copy ANOTHEROBJECT:
+Let's first look at a simple example, where we copy an object called HEADERTITLE
+to ANOTHEROBJECT.
 
 .. code-block:: typoscript
 
@@ -121,13 +152,15 @@ Before we continue with our template it makes sense to explain this with an exam
 		HEADERTITLE = TEXT
 		HEADERTITLE.value = TYPO3
 
-		# Create a copy of HEADERTITLE in ANOTHEROBJECT
+		// Create a copy of HEADERTITLE in ANOTHEROBJECT
 		ANOTHEROBJECT < page.10.marks.HEADERTITLE
 	}
 
-With this definition we define the object ANOTHEROBJECT and set its content to a copy of the object HEADERTITLE. Copying also includes all subproperties and their values. The example above also sets ANOTHEROBJECT.value to the value "TYPO3".
+With this code we define the object ANOTHEROBJECT and set its content to be a copy of object HEADERTITLE.
+Copying also includes all subproperties and their values. Which means that the example above also sets
+:code:`ANOTHEROBJECT.value` to the value "TYPO3".
 
-When copying on the same level, you can just refer to the name of the copied object, prepended by a dot. See the following code:
+When copying on the same level, you can just refer to the name of the copied object, prepended by a dot:
 
 .. code-block:: typoscript
 
@@ -135,20 +168,22 @@ When copying on the same level, you can just refer to the name of the copied obj
 		HEADERTITLE = TEXT
 		HEADERTITLE.value = TYPO3
 
-		# Create a copy of HEADERTITLE in ANOTHEROBJECT
+		// Create a copy of HEADERTITLE in ANOTHEROBJECT
 		ANOTHEROBJECT < .HEADERTITLE
 	}
 
-This produces the same result as the example above, but it is even more readable. This also is the reason why we will use this "short notation" when we now copy level 1 of our menu to level 2.
+This produces the same result as the example above, but it is even more readable. We will
+use this "short notation" for our menu level copy.
 
-So now let us come back to our template record. Here again is our current TypoScript, reduced to the part, which is important now. (You will again find the complete TypoScript for this subpart at the end of this section.) The copying takes place in the last line:
+Back to our template record. Here is our TypoScript code so far, with the copy of the first
+level to the second level:
 
 .. code-block:: typoscript
 
 	SUBNAV = HMENU
 	SUBNAV {
 
-		# Definition for pages on level 1
+		// Definition for pages on level 1
 		1 = TMENU
 		1 {
 			NO = 1
@@ -156,27 +191,35 @@ So now let us come back to our template record. Here again is our current TypoSc
 			ACT = 1
 		}
 
-		# Definition for pages on level 2
-		# Copy the definitions from level 1
+		// Definition for pages on level 2
+		// Copy the definitions from level 1
 		2 < .1
 	}
 
-The line "2 < .1" is all it takes to create a complete copy of all the definitions, which we set up for the pages on level 1. With these few signs we have copied all the definitions, which we have in SUBNAV.1 to SUBNAV.2. Easy, isn't it? The only thing you must be aware of is the dot in front of the copied object. Remember that it means that you point to an object on the same level. And do not forget it!
+The line :code:`2 < .1` is all it takes to create a complete copy of all the definitions.
 
-Now when we have a look at our HTML template again we see that there is one small difference in the output of the pages on level 2 compared to the output of the pages on level 1: The wrap at the ul tag (that is the wrap for the whole page level) is different. While the ul tag had the CSS ID "submenu" attached on level 1, our HTML template shows us that there does not belong a CSS ID on level 2. So let's overwrite the wrap for level 2. We can do so after we copied the whole object to SUBNAV.2 by defining another value for SUBNAV.2.wrap:
+.. important::
+
+   Do not forget the dot in front of the copied object. Remember that it means that you point to an object on the same level,
+   i.e. a child of the same parent object.
+
+Looking at our HTML template again we see that there is one small difference in the output of the pages on level 2:
+the :code:`<ul>` tag on the second level is different. It does not have an :code:`id="submenu"` attribute
+as there exists on level 1. So we need overwrite the :code:`wrap` on level 2
+**after** the copy operation:
 
 .. code-block:: typoscript
 
 	SUBNAV = HMENU
 	SUBNAV {
 
-		# Definition for pages on level 2
-		# Copy the definitions from level 1,
-		# but use another wrap.
+		// Definition for pages on level 2
+		// Copy the definitions from level 1,
+		// but use another wrap.
 		2 < .1
 		2.wrap = <ul>|</ul>
 
-That's it! Our submenu now can display up to two levels of pages. This should be enough for most websites.
+That's it! Our submenu now can display up to two levels of pages. This should be enough for most web sites.
 
 Again here is the whole TypoScript code of that subpart, slightly restructured and nicely indented:
 
@@ -184,43 +227,46 @@ Again here is the whole TypoScript code of that subpart, slightly restructured a
 
 	SUBNAV = HMENU
 	SUBNAV {
-		# Only display subpages of the page from the main
-		# navigation, which is in the current rootline.
-		# Default value of entryLevel is 0, which are the
-		# pages on the first level.
-		# We want to begin with those subpages on level 2.
+		// Only display subpages of the page from the main
+		// navigation, which is in the current rootline.
+		// Default value of entryLevel is 0, which are the
+		// pages on the first level.
+		// We want to begin with those subpages on level 2.
 		entryLevel = 1
 
-		# Definition for pages on level 1
+		// Definition for pages on level 1
 		1 = TMENU
 		1 {
 			wrap = <ul id="submenu">|</ul>
-			# Always expand all subpages.
+			// Always expand all subpages.
 			expAll = 1
 
-			# Definition per page
-			# NO: default formatting
+			// Definition per page
+			// NO: default formatting
 			NO = 1
 			NO {
-				# Each entry is wrapped by
-				# <li> </li>
+				// Each entry is wrapped by
+				// <li> </li>
 				wrapItemAndSub = <li>|</li>
 			}
 
-			# ACT: User is on this or below this page
-			# Activate this state for this menu
+			// ACT: User is on this or below this page
+			// Activate this state for this menu
 			ACT = 1
 			ACT {
-				# Use another wrap
+				// Use another wrap
 				wrapItemAndSub = <li id="active">|</li>
 			}
 		}
 
-		# Definition for pages on level 2
-		# Copy the definitions from level 1,
-		# but use another wrap.
+		// Definition for pages on level 2
+		// Copy the definitions from level 1,
+		// but use another wrap.
 		2 < .1
 		2.wrap = <ul>|</ul>
 	}
 
-Now we have defined the meta navigation, the top navigation and the sub navigation. So all menus in our site are configured now and should display links to the pages, which you have created inside the TYPO3 Backend. However, until now all pages only display the blind text, which comes from the HTML template. We will change this in the next sections.
+Now we have defined the meta navigation, the top navigation and the sub navigation.
+All menus in our site are configured now and should display links to TYPO3 CMS pages.
+However all pages still display the same dummy text and the content from the TYPO3 CMS.
+We will change this in the next chapters.
