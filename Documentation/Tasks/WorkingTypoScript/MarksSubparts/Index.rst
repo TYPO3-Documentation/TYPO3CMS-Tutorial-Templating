@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../../Includes.txt
 
@@ -11,7 +7,14 @@
 Work with the subpart DOCUMENT
 ******************************
 
-Currently TYPO3 puts our whole HTML template file between body tags. To get a valid HTML page, we should only put *that* part of our template inside these body tags, which really belongs between body tags. Again having a look at the TEMPLATE cObject in TSref there is the property "workOnSubpart" which does exactly this. In this property you can name a subpart, which you want the TEMPLATE cObject to return. That way this subpart gets extracted from our HTML template file and is the only thing returned. Do you remember how we wrapped the whole content of the body tags of our HTML template in the subpart DOCUMENT? This was the reason to do that; here we use it.
+Currently TYPO3 CMS puts our whole HTML template file between body tags.
+To get a valid HTML page, we should only put *that* part of our template inside these body tags,
+which really belongs between body tags. Again having a look at the :code:`TEMPLATE` object in the TSref
+there is the property "workOnSubpart" which does exactly this. In this property you can name a subpart,
+which you want the :code:`TEMPLATE` object to return. This subpart gets extracted from our HTML template file
+and is the only thing returned. Do you remember how we wrapped the whole content of the body tags
+of our HTML template in the subpart DOCUMENT? This was the reason to do that and we are going to use it now.
+
 So we add to our template:
 
 .. code-block:: typoscript
@@ -19,7 +22,10 @@ So we add to our template:
 	# Work with the subpart "DOCUMENT"
 	page.10.workOnSubpart = DOCUMENT
 
-The resulting HTML output is a syntactically correct HTML page now. While the *"outer part"* of the output (like the html tag itself, the head tag and its content and the body tag itself) is created by TYPO3, the *contents of the body tag* are taken from our HTML template.
+The resulting HTML output is a syntactically correct HTML page now.
+While the *"outer part"* of the output (like the :code:`<html>` tag itself,
+the :code:`<headY` tag and its content and the :code:`<body>` tag itself) is created by TYPO3 CMS,
+the *contents of the body tag* are taken from our HTML template.
 
 
 .. _configure-marker-subparts:
@@ -31,7 +37,7 @@ Configure marks/subparts
 The names of the marks and subparts are now used in the TypoScript template
 to insert dynamic content into the HTML template at those places, where the marks respectively subparts are.
 
-Having a look at the section on the cObject TEMPLATE you will notice that there are two properties
+Having a look at the section on the :code:`TEMPLATE` object you will notice that there are two properties
 which hold the configuration for subparts and marks.
 
 Quite logically, inside the property "subparts" we can define the rendering instructions for our subparts
@@ -41,36 +47,35 @@ Let us add them to the setup of our TEMPLATE object:
 
 .. code-block:: typoscript
 
-	######################################################
-	#
-	# Configuration of SUBPARTS
-	#
-	######################################################
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//
+	// Configuration of SUBPARTS
+	//
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	# Define the subparts, which are inside the subpart DOCUMENT
+	// Define the subparts, which are inside the subpart DOCUMENT
 	page.10.subparts {
 
 	}
 
-	######################################################
-	#
-	# Configuration of MARKS
-	#
-	######################################################
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//
+	// Configuration of MARKERS
+	//
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	# Define the marks inside the subpart DOCUMENT
+	// Define the marks inside the subpart DOCUMENT
 	page.10.marks {
 
 	}
 
-Our subparts are sub-properties of "page.10.subparts" and our marks
-are subproperties of "page.10.marks". When we define the marks and subparts
-in the next sections, it is important not to mix up page.10.subparts and page.10.marks!
-If you put the definition of a *mark* into page.10.*subparts*, the mark will not be replaced and vice versa.
+Our subparts will be sub-properties of :code`page.10.subparts` and our marks
+will be subproperties of :code`page.10.marks`. When we define the marks and subparts
+in the next sections, it is important not to mix up those two code sections!
+Marks definitions put into subparts, or vice-versa, will simply not render.
 
 For each mark and each subpart we will define which content object we want to use.
 Then we configure this content object to produce the output we want.
-You already know that the list of available content objects can be seen in the table of contents of TSref.
 
 For each of the marks and subparts we will rebuild the structure of the HTML code,
 which we had in our template. After that we will have the same structure again,
@@ -79,14 +84,15 @@ and their content, which you have created in your TYPO3 CMS installation.
 
 .. note::
 
-   To keep the TypoScript code arranged clearly during the following sections,
-   we do not show the whole code again, when we e.g. add one line to it.
-   Instead we will only show parts of it repeatedly during the setup of a mark or subpart.
-   At the end of each section you will again find the result,
-   which shows the complete code for the according mark or subpart.
+   To avoid cluttering up the next chapters, when we define TypoScript configuration,
+   we will only show the affected lines and not the whole configuration for each
+   little change.
+
+   At the end of the chapter, you will find the whole configuration for a given
+   mark or subpart, as a verification and summary.
 
 
-The next sections will take you through the configuration step for
+The next sections will take you through the configuration steps for
 each subpart and mark.
 
 
