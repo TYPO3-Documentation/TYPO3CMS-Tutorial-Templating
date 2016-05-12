@@ -76,4 +76,5 @@ future reference.
    Introduction/Index
    Installation/Index
    Tasks/Index
+   NextSteps/Index
    Targets
