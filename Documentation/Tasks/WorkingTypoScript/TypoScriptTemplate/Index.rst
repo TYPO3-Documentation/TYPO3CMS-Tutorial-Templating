@@ -121,3 +121,9 @@ and you should see the following:
 The "t3editor" extension helps with autocompletion and syntax highlighting, but keep in mind that it knows only
 about Core TypoScript configuration. If you use extensions, the "t3editor" will be somewhat
 less helpful.
+
+.. tip::
+
+   While you are at it, you may want to also include the static template of the
+   "form" system extension, called "Default TS (form)". This will make it possible
+   to render the contact form provided on the "Contact" page.
