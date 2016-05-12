@@ -89,27 +89,27 @@ Here again is the complete setup code for that mark:
 
 .. code-block:: typoscript
 
-	##############################################
-	#
-	# Mark BREADCRUMB
-	#
-	##############################################
+	////////////////////////////////////////////////////////////////////////////////////////////
+	//
+	// Mark BREADCRUMB
+	//
+	////////////////////////////////////////////////////////////////////////////////////////////
 
-	# Outputs a menu which shows a click path to
-	# the current page.
+	// Outputs a menu which shows a click path to
+	// the current page.
 	BREADCRUMB = HMENU
 
 	BREADCRUMB {
 		special = rootline
-		# Range: Syntax is "Start level|End level"
-		# Values for both:
-		# 0 stands for the root page, positive values go outwards.
-		# Negative values begin with the outermost level of the current
-		# rootline and go inwards;
-		# e.g. -1 stands for the page on the outermost level of the
-		# current rootline.
-		# Start level: 1 = The page one level below the root page.
-		# End level: -1 = The current page.
+		// Range: Syntax is "Start level|End level"
+		// Values for both:
+		// 0 stands for the root page, positive values go outwards.
+		// Negative values begin with the outermost level of the current
+		// rootline and go inwards;
+		// e.g. -1 stands for the page on the outermost level of the
+		// current rootline.
+		// Start level: 1 = The page one level below the root page.
+		// End level: -1 = The current page.
 		special.range = 1|-1
 
 		1 = TMENU
