@@ -1,4 +1,3 @@
-﻿
 .. include:: Includes.txt
 
 .. only:: html
