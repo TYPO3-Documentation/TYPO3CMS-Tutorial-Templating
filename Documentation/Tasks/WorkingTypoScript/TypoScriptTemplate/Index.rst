@@ -44,7 +44,7 @@ In the page tree click on the "Tutorial Root" page. You will see this screen:
 
 
 As you can see, there currently is no TypoScript record on our root page.
-We have to create one, so that TYPO3 CMS knows how it should dispay our root page
+We have to create one, so that TYPO3 CMS knows how it should display our root page
 - and also all its subpages - in our web site. Note that the template record is inherited to all subpages.
 That means that the configuration, which we insert in the template record of our root page,
 will automatically be used for all subpages as well.
