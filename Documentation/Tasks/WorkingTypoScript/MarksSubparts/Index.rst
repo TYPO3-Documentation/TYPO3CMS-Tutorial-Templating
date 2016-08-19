@@ -23,7 +23,7 @@ So we add to our template:
 
 The resulting HTML output is a syntactically correct HTML page now.
 While the *"outer part"* of the output (like the :code:`<html>` tag itself,
-the :code:`<headY` tag and its content and the :code:`<body>` tag itself) is created by TYPO3 CMS,
+the :code:`<head>` tag and its content and the :code:`<body>` tag itself) is created by TYPO3 CMS,
 the *contents of the body tag* are taken from our HTML template.
 
 
@@ -68,8 +68,8 @@ Let us add them to the setup of our TEMPLATE object:
 
 	}
 
-Our subparts will be sub-properties of :code`page.10.subparts` and our marks
-will be subproperties of :code`page.10.marks`. When we define the marks and subparts
+Our subparts will be sub-properties of :code:`page.10.subparts` and our marks
+will be subproperties of :code:`page.10.marks`. When we define the marks and subparts
 in the next sections, it is important not to mix up those two code sections!
 Marks definitions put into subparts, or vice-versa, will simply not render.
 
