@@ -398,7 +398,7 @@ This is how your HTML template should now look like:
                     <div id="col3">
                         <div id="col3_content" class="clearfix">
                             <div id="breadcrumb">###DATE###&nbsp;:::&nbsp;###BREADCRUMB###</div>
-                            <h1>###TITLE</h1>
+                            <h1>###TITLE###</h1>
                             <div>
                                 <!-- ###CONTENTMIDDLE### Start -->
                                 <h2>Middle Column - Element 1</h2>
