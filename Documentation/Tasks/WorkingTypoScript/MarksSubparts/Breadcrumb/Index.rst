@@ -38,9 +38,9 @@ Let's have a look at the meaning of the numbers. The root page is on level 0.
 Positive values stand for page levels deeper down. Our example corresponds to a
 rootline menu starting with the root page (level 0) and including the active pages on each level
 down to 5 levels below the root page. Obviously the menu does not display pages deeper
-than the one is user is currently on.
+than the one the user is currently on.
 
-It our case, we don't want the BREADCRUMB to start on the root level, because the root page
+In our case, we don't want the BREADCRUMB to start on the root level, because the root page
 is just a redirection to the page called "Home". Hence we want our range to start with :code:`1`.
 
 But how can we set the end of our range without knowing the depth the page tree may reach
