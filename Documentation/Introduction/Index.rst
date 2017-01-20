@@ -43,7 +43,7 @@ Skill level
 ^^^^^^^^^^^
 
 This tutorial assumes you are a beginner-level site developer. It contains step by step instructions,
-to help you learh how to create your first website with TYPO3 CMS, based on the given HTML file.
+to help you learn how to create your first website with TYPO3 CMS, based on the given HTML file.
 
 This tutorial teaches you how to integrate an HTML template into the TYPO3 CMS system,
 a task known as "Integration" in the TYPO3 CMS world.

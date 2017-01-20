@@ -7,7 +7,7 @@ CONTENTRIGHT subpart
 ~~~~~~~~~~~~~~~~~~~~
 
 Using the menus you can now navigate through your website. However since the content is always the same,
-the only was to check if it really works is to look at the URLs in the address bar of your browser.
+the only way to check if it really works is to look at the URLs in the address bar of your browser.
 
 Now is the time to stop displaying the content of the HTML template and get the actual stuff
 output in the frontend, starting with the subpart called CONTENTRIGHT.
