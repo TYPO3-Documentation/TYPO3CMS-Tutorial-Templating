@@ -61,7 +61,7 @@ Something is missing...
 
 Going through the TSref for the :code:`PAGE` we can find several ways to include
 a reference to CSS file. The favored one is the property called :code:`includeCSS`,
-which is an arrray making it possible to include several files.
+which is an array making it possible to include several files.
 While we are at it, let's also add a :code:`shortcutIcon`:
 
 .. code-block:: typoscript
