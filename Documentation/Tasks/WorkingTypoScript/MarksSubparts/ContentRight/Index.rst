@@ -53,7 +53,7 @@ In fact the line :code:`CONTENTRIGHT = CONTENT` is not even needed,
 because :code:`styles.content.getRight` itself contains an object definition.
 It is only included here to make it more obvious what is happening.
 
-Just for information, this is the code which would have been needed if
+Just for your information, this is the code which would have been needed if
 we hadn't had a definition available for copy:
 
 .. code-block:: typoscript

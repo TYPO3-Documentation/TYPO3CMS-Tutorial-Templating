@@ -9,7 +9,7 @@ BREADCRUMB mark
 The mark BREADCRUMB should show a breadcrumb trail, i.e. the path in the web site which leads
 to the current page.
 
-In TYPO3 CMS this also considered to be a kind of menu and - as such - we will be using
+In TYPO3 CMS this is also considered to be a kind of menu and - as such - we will be using
 our old friend :code:`HMENU`. And so we start again:
 
 .. code-block:: typoscript
@@ -31,7 +31,7 @@ The "rootline" menu has its own options, the most important one being :code:`spe
 :code:`special.range` takes two integers as values, seperated by a pipe.
 For example :code:`special.range = 0|5`. With this property we can define the range of our menu,
 i.e. from which page tree level it should start (e.g. :code:`0`) and at which level it should stop
-(e.g. :code:`5`). All pages along the trail between these two levels (and include those exactly
+(e.g. :code:`5`). All pages along the trail between these two levels (including those exactly
 at the levels) will be included in the menu.
 
 Let's have a look at the meaning of the numbers. The root page is on level 0.
@@ -44,8 +44,8 @@ In our case, we don't want the BREADCRUMB to start on the root level, because th
 is just a redirection to the page called "Home". Hence we want our range to start with :code:`1`.
 
 But how can we set the end of our range without knowing the depth the page tree may reach
-when our web site finished. The solutions is to use negative numbers in the range. Negative values
-begin with the deepest level of the current rootline and go upwards. As such :code:`-1`
+when our web site is finished. The solution is to use negative numbers in the range. Negative
+values begin with the deepest level of the current rootline and go upwards. As such :code:`-1`
 stands for the page on the deepest level of the current rootline. And that's exactly the value
 that we want.
 
@@ -65,7 +65,7 @@ Inside our :code:`HMENU` we again define a :code:`TMENU`:
 	1 = TMENU
 	1 {
 
-Our HTML template says that in the rootline menu is comprised of links to the pages,
+Our HTML template says that the rootline menu is comprised of links to the pages,
 with "greater than" signs (:code:`>`) in between. We also want to differentiate the
 current page from the others pages:
 

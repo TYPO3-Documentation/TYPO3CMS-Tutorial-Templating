@@ -25,7 +25,7 @@ at "root level", i.e. you can apply them directly to the object.
 
 Now the :ref:`stdWrap <t3tsref:stdwrap>` function has a property called :code:`data`,
 which is of data type :ref:`getText <t3tsref:data-type-gettext>`. From this we can see
-that this data type can call on PHP's :code:`date()` function, using the same format options
+that this data type can call PHP's :code:`date()` function, using the same format options
 (see http://php.net/manual/en/function.date.php).
 
 We will use a :code:`d.m.Y` format. For those unfamiliar with PHP, this means having the

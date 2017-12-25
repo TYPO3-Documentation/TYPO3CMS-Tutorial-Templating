@@ -25,7 +25,7 @@ the structure of the HTML code, which we need to create:
         <!-- ###TOPNAV### End -->
     </div>
 
-Since we want to display a menu we again begin defining a :code:`HMENU` object:
+Since we want to display a menu we again begin defining an :code:`HMENU` object:
 
 .. code-block:: typoscript
 
