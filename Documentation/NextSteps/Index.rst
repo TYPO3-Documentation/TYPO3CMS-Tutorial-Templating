@@ -21,7 +21,7 @@ There are other possibilities (which might be covered in future tutorials):
   but which automatically wraps up those sections of an HTML page
   which have certain classes or ids in corresponding template subparts.
 
-- using only TypoScript, without any HTML template, for building the website .
+- using only TypoScript, without any HTML template, for building the website.
 
 - using the Fluid templating engine by applying the FLUIDTEMPLATE
   object rather than the TEMPLATE object.

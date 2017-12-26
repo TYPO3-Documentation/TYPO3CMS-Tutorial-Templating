@@ -38,7 +38,7 @@ Here again is the structure of the HTML code, which we need to replace:
     </div>
     <!-- #col1: Left Column End -->
 
-We again define a :code:`HMENU`:
+We again define an :code:`HMENU`:
 
 .. code-block:: typoscript
 
@@ -49,7 +49,7 @@ This can be done with the property :code:`entryLevel`, which is provided
 by the :code:`HMENU` object. If it is set to :code:`0`, the menu begins with
 the first level of pages below the root page. That is what is used in
 the top menu TOPNAV by default Here we want to start one level deeper,
-so we et:
+so we set:
 
 .. code-block:: typoscript
 
@@ -58,7 +58,7 @@ so we et:
 
 .. note::
 
-   Setting an :code:`entryLevel` does not change le numbers used for
+   Setting an :code:`entryLevel` does not change the numbers used for
    levels inside the menu object. The first level is still "1", the next
    one "2", etc.
 
@@ -68,11 +68,11 @@ i.e.:
 - we need one :code:`<ul>` tag around the whole menu and each item on the first level
   must be wrapped in :code:`<li>` tags.
 
-- where a menu item has subpages, we need a :code:`<ul>` tag inside the :code:`<li>` tag.
+- where a menu item has subpages, we need an :code:`<ul>` tag inside the :code:`<li>` tag.
   Inside that :code:`<ul>` tag, the next level of pages should be rendered.
   :code:`<ul>` tags will end up nested, as in the HTML code above.
 
-Since the structure of both levels of the menu are nearly the same, we will now
+Since the structure of both levels of the menu is nearly the same, we will now
 define the structure for the first level and then copy that structure for the second level,
 with just a few changes.
 
@@ -104,8 +104,8 @@ This behaviour can be toggled on and off with the :code:`expAll` property.
 Now let's have a look at the rendering definition for a single item on level 1, when it is in normal state.
 We want to wrap each item on level 1 in an :code:`<li>` tag, but that tag should be wrapped around the
 :code:`<ul>` structure of its child pages. In that case the :code:`allWrap` property which we have used
-so far in the METANAV and TOPNAV menus is not appropriate, because it wil wrap only around the menu item
-itself and not around the child structure, thus generating invalid HTML. Luckily there is a specific
+so far in the METANAV and TOPNAV menus is not appropriate, because it will wrap only around the menu item
+itself and not around the child structure, thus generating invalid HTML code. Luckily there is a specific
 property just for this case, called :code:`wrapItemAndSub`:
 
 .. code-block:: typoscript
@@ -136,7 +136,7 @@ property for the :code:`ACT` state:
 With that, the definition of our first menu level is complete.
 
 As we discussed earlier, the structure for the second level is basically the same. It would be a shame
-writing the same TypoScript code again. Instead we want to use the possiblity to copy TypoScript
+writing the same TypoScript code again. Instead we want to use the possibility to copy TypoScript
 objects, so that :code:`SUBNAV.2` starts out the same as :code:`SUBNAV.1`.
 
 Until now we always used the :code:`=` operator to assign a value to a property.
@@ -204,7 +204,7 @@ The line :code:`2 < .1` is all it takes to create a complete copy of all the def
 
 Looking at our HTML template again we see that there is one small difference in the output of the pages on level 2:
 the :code:`<ul>` tag on the second level is different. It does not have an :code:`id="submenu"` attribute
-as there exists on level 1. So we need overwrite the :code:`wrap` on level 2
+as there exists on level 1. So we need to overwrite the :code:`wrap` on level 2
 **after** the copy operation:
 
 .. code-block:: typoscript

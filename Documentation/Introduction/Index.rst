@@ -70,7 +70,7 @@ What's new
 
 This is the first version of this manual. It replaces the old "Modern Template Building Tutorial",
 which was originally written in 2003. Although we have tested the descriptions in this manual,
-there might still be places, which somehow are not clear or nor understandable.
+there might still be places, which somehow are not clear or not understandable.
 
 If something remains unclear when you are working through the manual, please drop us a note
 (see :ref:`Feedback <feedback>` below)!

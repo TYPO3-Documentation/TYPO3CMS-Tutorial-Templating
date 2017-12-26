@@ -7,7 +7,7 @@
 Installation
 ^^^^^^^^^^^^
 
-In this tutorial, we will mostly work with a HTML template, a CSS file and
+In this tutorial, we will mostly work with an HTML template, a CSS file and
 a basic page tree. All these resources are bundled into a distribution, in
 the same way as the Official Introduction Package, which you will be familiar
 with if you have been through the :ref:`Getting Started Tutorial <t3start:start>`.
