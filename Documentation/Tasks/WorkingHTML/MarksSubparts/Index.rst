@@ -70,7 +70,7 @@ will not be influenced). That is the reason, why we need it here.
 			<link href="style.css" rel="stylesheet" type="text/css" />
 		</head>
 		<body>
-			<!--###DOCUMENT### Start-->
+			<!-- ###DOCUMENT### Start -->
 				<div id="page_margins">
 					<div id="page" class="hold_floats">
 
@@ -94,7 +94,7 @@ will not be influenced). That is the reason, why we need it here.
 
 					</div>
 				</div>
-			<!--###DOCUMENT### end-->
+			<!-- ###DOCUMENT### End -->
 		</body>
 	</html>
 
