@@ -566,7 +566,7 @@ In the :file:`Templates/ForLayouts.html` file, replace its
 
 .. code-block:: html
 
-   <f:layout name="{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.contentTest\')} == 1', then: 'Layout2ColumnPage', else: 'Layout1ColumnPage')}" />
+   <f:layout name="{f:if(condition: '{f:cObject(typoscriptObjectPath:\\'lib.contentTest\\')} == 1', then: 'Layout2ColumnPage', else: 'Layout1ColumnPage')}" />
 
 This design tests for content in the TYPO3 backend page Right (#2) column
 position; and if it finds such content, uses the double column layout.
