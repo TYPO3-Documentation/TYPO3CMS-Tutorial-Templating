@@ -13,3 +13,7 @@
 
 .. default-role:: code
 .. highlight:: php
+
+.. special in this project:
+
+.. role:: name (strong)
