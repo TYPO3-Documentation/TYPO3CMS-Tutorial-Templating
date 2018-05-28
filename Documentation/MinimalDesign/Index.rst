@@ -1,4 +1,5 @@
 .. include:: ../Includes.txt
+.. highlight:: typoscript
 
 .. _minimal-design:
 
@@ -19,11 +20,7 @@ but do not include any static templates.
 The TypoScript-only version
 ===========================
 
-In the TypoScript template Setup field, write the following three lines.
-
-::
-
-.. code-block:: typoscript
+In the TypoScript template Setup field, write the following three lines::
 
    page = PAGE
    page.1 = TEXT
@@ -41,11 +38,7 @@ The TYPO3 Fluid version
 =======================
 
 Empty the “Minimal design” page TypoScript template Setup field, then write
-the following three lines in the field.
-
-::
-
-.. code-block:: typoscript
+the following three lines in the field::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -55,9 +48,7 @@ Create a file named :file:`Minimal.html` in a
 :file:`fileadmin/sitedesign/Resources/Private/Templates folder`. Notice that
 the initial letter in the file name is capitalized: some parts of Fluid may
 not find a file if its name doesn’t start with a capital letter. Write the
-following single line in the file.
-
-::
+following single line in the file:
 
 .. code-block:: none
 
@@ -76,29 +67,26 @@ Resulting web page
 
 Here is the resulting web page HTML source for both the TypoScript-only and
 the Typo3 Fluid minimal designs. Notice how TYPO3 CMS added default markup
-surrounding the single line of content.
-
-::
+surrounding the single line of content:
 
 .. code-block:: html
 
    <!DOCTYPE html>
    <html lang="en">
-   <head>
-   <meta charset="utf-8">
-   <!--
-      This website is powered by TYPO3 - inspiring people to share!
-      TYPO3 is a free open source Content Management Framework initially
-      created by Kasper Skaarhoj and licensed under GNU/GPL.
-      TYPO3 is copyright 1998-2018 of Kasper Skaarhoj. Extensions are
-      copyright of their respective owners.
-      Information and contribution at https://typo3.org/
-   -->
-   <title>Minimal design</title>
-   <meta name="generator" content="TYPO3 CMS">
-   </head>
-   <body>
-   Hello, world.
-   </body>
+      <head>
+         <meta charset="utf-8">
+         <!--
+            This website is powered by TYPO3 - inspiring people to share!
+            TYPO3 is a free open source Content Management Framework initially
+            created by Kasper Skaarhoj and licensed under GNU/GPL.
+            TYPO3 is copyright 1998-2018 of Kasper Skaarhoj. Extensions are
+            copyright of their respective owners.
+            Information and contribution at https://typo3.org/
+         -->
+         <title>Minimal design</title>
+         <meta name="generator" content="TYPO3 CMS">
+      </head>
+      <body>
+         Hello, world.
+      </body>
    </html>
-

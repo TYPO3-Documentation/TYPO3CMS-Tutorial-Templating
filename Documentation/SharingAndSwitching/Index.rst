@@ -1,4 +1,5 @@
 .. include:: ../Includes.txt
+.. highlight:: typoscript
 
 .. _sharing-and-switching-design-elements:
 
@@ -23,11 +24,7 @@ that share one header and one footer.
 In the TYPO3 CMS backend, create a standard page named
 :aspect:`PartialSingleColumn` just under (inside) the “Home” page. On the
 “PartialSingleColumn” standard page, create a TypoScript extension template.
-In the TypoScript template Setup field, write the following lines.
-
-::
-
-.. code-block:: typoscript
+In the TypoScript template Setup field, write the following lines::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -44,32 +41,20 @@ Notice the new :aspect:`partialRootPath` instruction.
 
 Create a file named :file:`Partial1Column.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
-the following lines in the file.
-
-::
+the following lines in the file:
 
 .. code-block:: html
 
    <div id="page">
-      
       <f:render partial="PageHeader" />
-      
       <div id="page-body">
-         
          <div id="page-title">{data.title}</div>
-         
          <div id="whole-content">
-            
             <f:format.raw>{contentNormal}</f:format.raw>
-            
          </div>
-         
          <div id="page-body-end">&nbsp;</div>
-         
       </div>
-      
       <f:render partial="PageFooter" />
-      
    </div>
 
 Notice the new :html:`<f:render partial="…" />` elements.
@@ -77,11 +62,7 @@ Notice the new :html:`<f:render partial="…" />` elements.
 In the TYPO3 CMS backend, create a standard page named
 :aspect:`PartialDoubleColumn` just under (inside) the “Home” page. On the
 “PartialDoubleColumn” standard page, create a TypoScript extension template
-record. In the TypoScript template Setup field, write the following lines.
-
-::
-
-.. code-block:: typoscript
+record. In the TypoScript template Setup field, write the following lines::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -98,69 +79,47 @@ record. In the TypoScript template Setup field, write the following lines.
 
 Create a file named :file:`Partial2ColumnPage.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Layouts` folder, and write the
-following lines in the file.
-
-::
+following lines in the file:
 
 .. code-block:: html
 
    <div id="page">
-      
       <f:render partial="PageHeader" />
-      
       <div id="page-body">
-         
          <div id="page-title">{data.title}</div>
-         
          <div id="main-content">
-            
             <f:format.htmlentitiesDecode>{contentNormal}</f:format.htmlentitiesDecode>
-            
          </div>
-         
          <div id="side-content">
-            
             <f:format.htmlentitiesDecode>{contentRight}</f:format.htmlentitiesDecode>
-            
          </div>
-         
          <div id="page-body-end">&nbsp;</div>
-         
       </div>
-
       <f:render partial="PageFooter" />
-      
    </div>
 
 Create a file named :file:`PageHeader.html` in a
 :file:`fileadmin/sitedesign/Resources/Private/Partials` folder, and write the
-following lines in the file.
-
-::
+following lines in the file:
 
 .. code-block:: html
 
       <div id="page-header">
-         
          <div id="navigation-top-level"><f:cObject typoscriptObjectPath="lib.topNavigation" /></div>
-         
          <div id="navigation-trail">{f:cObject(typoscriptObjectPath:'lib.breadcrumbTrail')->f:format.raw()}</div>
-         
       </div>
 
 Create a file named :file:`PageFooter.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Partials` folder, and write the
-following lines in the file.
-
-::
+following lines in the file:
 
 .. code-block:: html
 
-<div id="page-footer">
-         
-         <div id="footer-notice"> <p>This is the page footer area.</p> </div>
-         
+   <div id="page-footer">
+      <div id="footer-notice">
+         <p>This is the page footer area.</p>
       </div>
+   </div>
 
 The combination of the :html:`<f:render partial="…" />` element and the
 partial’s file name tells the TYPO3 CMS renderer which content goes where in
@@ -178,11 +137,7 @@ using a different technique than earlier.
 In the TYPO3 CMS backend, create a standard page named
 :aspect:`SectionSingleColumn` just under (inside) the “Home” page. On the
 “SectionSingleColumn” standard page, create a TypoScript extension template.
-In the TypoScript template Setup field, write the following lines.
-
-::
-
-.. code-block:: typoscript
+In the TypoScript template Setup field, write the following lines::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -198,56 +153,32 @@ Notice the lack of a :aspect:`partialRootPath` instruction.
 
 Create a file named :file:`Section1Column.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
-the following lines in the file.
-
-::
+the following lines in the file:
 
 .. code-block:: html
 
    <div id="page">
-      
       <f:render section="PageHeader" />
-      
       <div id="page-body">
-         
          <div id="page-title">{data.title}</div>
-         
          <div id="whole-content">
-            
             <f:format.raw>{contentNormal}</f:format.raw>
-            
          </div>
-         
          <div id="page-body-end">&nbsp;</div>
-         
       </div>
-      
       <f:render section="PageHeader" />
-      
       <f:render section="PageFooter" />
-      
    </div>
-   
    <f:section name="PageHeader">
-      
       <div id="page-header">
-         
          <div id="navigation-top-level"><f:cObject typoscriptObjectPath="lib.topNavigation" /></div>
-         
          <div id="navigation-trail">{f:cObject(typoscriptObjectPath:'lib.breadcrumbTrail')->f:format.raw()}</div>
-         
       </div>
-      
    </f:section>
-   
    <f:section name="PageFooter">
-      
       <div id="page-footer">
-         
          <div id="footer-notice"> <p>This is the page footer area.</p> </div>
-         
       </div>
-      
    </f:section>
 
 Notice the :html:`<f:render section="…" />` and :html:`<f:section>` elements.
@@ -269,11 +200,7 @@ using yet another different technique than earlier.
 In the TYPO3 CMS backend, create a standard page named
 :aspect:`LayoutSingleColumn` just under (inside) the “Home” page. On the
 “LayoutSingleColumn” standard page, create a TypoScript extension template.
-In the TypoScript template Setup field, write the following lines.
-
-::
-
-.. code-block:: typoscript
+In the TypoScript template Setup field, write the following lines::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -290,53 +217,40 @@ Notice the new :aspect:`layoutRootPath` instruction.
 
 Create a file named :file:`ForLayouts.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
-the following lines in the file.
-
-::
+the following lines in the file:
 
 .. code-block:: html
 
    <f:layout name="Layout1ColumnPage" />
-   
+
    <f:section name="WholeContent">
       <div id="whole-content">
-         
          <f:format.raw>{contentNormal}</f:format.raw>
-         
       </div>
    </f:section>
-   
+
    <f:section name="MainContent">
       <div id="main-content">
-         
          <f:format.htmlentitiesDecode>{contentNormal}</f:format.htmlentitiesDecode>
-         
       </div>
    </f:section>
-   
+
    <f:section name="SideContent">
       <div id="side-content">
-         
          <f:format.htmlentitiesDecode>{contentRight}</f:format.htmlentitiesDecode>
-         
       </div>
    </f:section>
-   
+
    <f:section name="PageHeader">
       <div id="page-header">
-         
          <div id="navigation-top-level"><f:cObject typoscriptObjectPath="lib.topNavigation" /></div>
-         
          <div id="navigation-trail">{f:cObject(typoscriptObjectPath:'lib.breadcrumbTrail')->f:format.raw()}</div>
-         
       </div>
    </f:section>
-   
+
    <f:section name="PageFooter">
       <div id="page-footer">
-         
          <div id="footer-notice"> <p>This is the page footer area.</p> </div>
-         
       </div>
    </f:section>
 
@@ -346,28 +260,18 @@ use with this Fluid template. The remaining elements in this file are
 
 Create a file named :file:`Layout1ColumnPage.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Layouts` folder, and write the
-following lines in the file.
-
-::
+following lines in the file:
 
 .. code-block:: html
 
    <div id="page">
-      
       <f:render section="PageHeader" />
-      
       <div id="page-body">
-         
          <div id="page-title">{data.title}</div>
-         
          <f:render section="WholeContent" />
-         
          <div id="page-body-end">&nbsp;</div>
-         
       </div>
-      
       <f:render section="PageFooter" />
-      
    </div>
 
 This design places subordinate elements into one Fluid template file, and
@@ -384,11 +288,7 @@ and footer, using the Fluid layouts technique.
 In the TYPO3 CMS backend, create a standard page named
 :aspect:`LayoutDoubleColumn` just under (inside) the “Home” page. On the
 “LayoutDoubleColumn” standard page, create a TypoScript extension template.
-In the TypoScript template Setup field, write the following lines.
-
-::
-
-.. code-block:: typoscript
+In the TypoScript template Setup field, write the following lines::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -409,30 +309,19 @@ backend page. Also, notice that the Fluid template name has not changed.
 
 Create a file named :file:`Layout2ColumnPage.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Layouts` folder, and write the
-following lines in the file.
-
-::
+following lines in the file:
 
 .. code-block:: html
 
    <div id="page">
-      
       <f:render section="PageHeader" />
-      
       <div id="page-body">
-         
          <div id="page-title">{data.title}</div>
-         
          <f:render section="MainContent" />
-         
          <f:render section="SideContent" />
-         
          <div id="page-body-end">&nbsp;</div>
-         
       </div>
-      
       <f:render section="PageFooter" />
-      
    </div>
 
 Compare this layout to :file:`Layout1ColumnPage.html`. A couple
@@ -442,18 +331,12 @@ similar.
 Now, edit the :file:`Templates/ForLayouts.html` file. Replace its
 :html:`<f:layout name="Layout1ColumnPage" />` line with the following line.
 
-::
-
 .. code-block:: html
 
    <f:layout name="{settings.layout}" />
 
 Edit the “LayoutSingleColumn” page TypoScript template in the TYPO3 CMS
-backend. Replace or edit its Setup field content to become the following.
-
-::
-
-.. code-block:: typoscript
+backend. Replace or edit its Setup field content to become the following::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -470,11 +353,7 @@ backend. Replace or edit its Setup field content to become the following.
 We only added a new :aspect:`settings.layout` instruction.
 
 Edit the “LayoutDoubleColumn” page TypoScript template in the TYPO3 CMS
-backend. Replace or edit its Setup field content to become the following.
-
-::
-
-.. code-block:: typoscript
+backend. Replace or edit its Setup field content to become the following::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -498,12 +377,8 @@ We now control which layout the “ForLayouts” template uses through a
 Alternatively, we could remove the :aspect:`settings.layout` instruction from
 the “LayoutSingleColumn” and “LayoutDoubleColumn” page TypoScript templates,
 and add the following lines to the “Home” page TypoScript template Setup
-field. (Keep the previously prepared library objects, :aspect:`topNavigation`
-and :aspect:`breadcrumbTrail`, in place.)
-
-::
-
-.. code-block:: typoscript
+field. Keep the previously prepared library objects, :aspect:`topNavigation`
+and :aspect:`breadcrumbTrail`, in place::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -514,11 +389,7 @@ TypoScript template to affect all the subordinate pages.
 
 If we wanted one design for a few pages and the other design for the rest, we
 could modify the “Home” page TypoScript template Setup field again. Edit or
-add the following lines. (Insert your own page UID values.)
-
-::
-
-.. code-block:: typoscript
+add the following lines. Insert your own page UID values::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
@@ -532,6 +403,7 @@ This TypoScript template *condition* snippet applies the double column page
 layout if the current page has identifier 2 or 4, and applies the single
 column page layout for any other current page.
 
+
 A flexible page column design
 =============================
 
@@ -543,11 +415,7 @@ In the “Home” page TypoScript template Setup field, keep the previously
 prepared library objects, :aspect:`topNavigation` and
 :aspect:`breadcrumbTrail`, in place. However, remove any other instructions
 you may have added. Then, add the following lines at the bottom of the Setup
-field.
-
-::
-
-.. code-block:: typoscript
+field::
 
    lib.contentTest = TEXT
    lib.contentTest.value = 1
@@ -562,8 +430,6 @@ field.
 In the :file:`Templates/ForLayouts.html` file, replace its
 :html:`<f:layout name="Layout1ColumnPage" />` line with the following line.
 
-::
-
 .. code-block:: html
 
    <f:layout name="{f:if(condition: '{f:cObject(typoscriptObjectPath:\\'lib.contentTest\\')} == 1', then: 'Layout2ColumnPage', else: 'Layout1ColumnPage')}" />
@@ -577,20 +443,14 @@ Finally, make the design more efficient.
 Delete the TypoScript template records from the “LayoutSingleColumn” and
 “LayoutDoubleColumn” pages in the TYPO3 CMS backend. Edit the “Home” page
 TypoScript template by replacing all its Setup field content with the
-following instructions.
-
-::
-
-.. code-block:: typoscript
+following instructions::
 
    lib {
-      
       topNavigation = HMENU
       topNavigation {
          1 = TMENU
          1.NO.linkWrap = | |*| &nbsp;&nbsp;&nbsp; |*|
       }
-      
       breadcrumbTrail = HMENU
       breadcrumbTrail {
          special = rootline
@@ -608,7 +468,6 @@ following instructions.
             linkWrap = | |*| &nbsp;&raquo;&nbsp;<em>|</em>|
          }
       }
-      
       contentTest = TEXT
       contentTest.value = 1
       contentTest.if.isTrue.numRows {
