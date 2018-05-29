@@ -50,8 +50,11 @@ tutorials, guides, reference manuals, code snippets, and videos. Some
 potentially useful documents are:
 
 :ref:`Developing TYPO3 Extensions with Extbase and Fluid <t3extbasebook:start>`
+
 :ref:`A TYPO3 Extbase and Fluid Guide <t3extbase:start>`
+
 :ref:`TypoScript in 45 Minutes <t3ts45:start>`
+
 :ref:`TypoScript Reference (“Content Objects” chapter, “FLUIDTEMPLATE” section) <t3tsref:cobj-fluidtemplate>`
 
 Searches
