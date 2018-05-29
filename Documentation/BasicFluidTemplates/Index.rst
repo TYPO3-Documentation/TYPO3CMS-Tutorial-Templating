@@ -114,9 +114,9 @@ source.
 
 Much of this :name:`SingleColumn` page Fluid template has typical HTML notation.
 The :html:`f:` prefixed items denote the Fluid namespace and follow Fluid
-rules. Examples here are :html:`f:cObject` (shown in tag notation) and
-:html:`f:format.raw()` (shown in inline notation). Fluid also operates on the
-bracketed :html:`{ }` items, such as :html:`{contentNormal}` and even the
+rules. Examples here are :html:`<f:cObject />` (shown in tag notation) and
+:html:`f:cObject()->f:format.raw()` (shown in inline notation). Fluid also operates on the
+bracketed :html:`{…}` items, such as :html:`{contentNormal}` and even the
 long :html:`{f:cObject …}` item in :html:`navigation-trail`. The
 :html:`{data.title}` item here fetches the web page title from the
 underlying repository.
