@@ -37,7 +37,7 @@ that content can quickly become complex due to TypoScript syntax rules.
 The TYPO3 Fluid version
 =======================
 
-Empty the “Minimal design” page TypoScript template Setup field, then write
+Empty the :name:`Minimal design` page TypoScript template Setup field, then write
 the following three lines in the field::
 
    page = PAGE
@@ -59,7 +59,7 @@ View the resulting web page.
 This TYPO3 Fluid design puts the page content into a file, allowing separate
 access controls and preparing for editing that doesn’t need attention to
 TypoScript syntax rules. The TYPO3 CMS renderer still requires a TypoScript
-template on the “Minimal design” page, to know what file to process for web
+template on the :name:`Minimal design` page, to know what file to process for web
 page content.
 
 Resulting web page
