@@ -10,7 +10,7 @@ Sharing and switching design elements
 Our single column page design processed a Fluid template in a
 :file:`Templates` folder; and our double column page design processed a Fluid
 template in a :file:`Layouts` folder. The two designs had some identical
-elements, including :aspect:`page-header` and :aspect:`page-footer`.
+elements, including :html:`page-header` and :html:`page-footer`.
 
 We can apply Fluid techniques to build more efficient and more flexible
 designs.
