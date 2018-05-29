@@ -57,7 +57,7 @@ content, and a footer. Each of the page sections has a uniquely identified
 HTML :html:`<div>` tag, allowing for future stylesheet application.
 
 In the TYPO3 CMS backend, create a standard page named :name:`SingleColumn`
-just under (inside) the “Home” page. On the “SingleColumn” standard page,
+just under (inside) the :name:`Home` page. On the :name:`SingleColumn` standard page,
 create a TypoScript extension template. In the TypoScript template Setup
 field, write the following lines::
 
@@ -76,7 +76,7 @@ the Fluid template and where to find it, using a slightly different syntax than
 the :name:`Minimal design` page TypoScript template. Additionally, the
 :name:`SingleColumn` TypoScript creates a :ts:`contentNormal` variable that
 obtains all available content from the TYPO3 backend :name:`SingleColumn` page
-'Normal' column.
+Normal column.
 
 Create a file named :file:`Basic1Column.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
@@ -112,13 +112,13 @@ an HTML :html:`<body>` element for output. Notice that the template does not
 define the default markup seen in the minimal design resulting web page HTML
 source.
 
-Much of this “SingleColumn” page Fluid template has typical HTML notation.
+Much of this :name:`SingleColumn` page Fluid template has typical HTML notation.
 The :html:`f:` prefixed items denote the Fluid namespace and follow Fluid
 rules. Examples here are :html:`f:cObject` (shown in tag notation) and
 :html:`f:format.raw()` (shown in inline notation). Fluid also operates on the
-bracketed :aspect:`{ }` items, such as :aspect:`{contentNormal}` and even the
-long :aspect:`{f:cObject …}` item in :aspect:`navigation-trail`. The
-:aspect:`{data.title}` item here fetches the web page title from the
+bracketed :html:`{ }` items, such as :html:`{contentNormal}` and even the
+long :html:`{f:cObject …}` item in :html:`navigation-trail`. The
+:html:`{data.title}` item here fetches the web page title from the
 underlying repository.
 
 A double column page design
@@ -127,8 +127,8 @@ A double column page design
 This design produces a basic web page having a header, two columns for
 content, and a footer.
 
-In the TYPO3 CMS backend, create a standard page named :aspect:`DoubleColumn`
-just under (inside) the “Home” page. On the “DoubleColumn” standard page,
+In the TYPO3 CMS backend, create a standard page named :name:`DoubleColumn`
+just under (inside) the :name:`Home` page. On the :name:`DoubleColumn` standard page,
 create a TypoScript extension template record. In the TypoScript template
 Setup field, write the following lines::
 
@@ -144,11 +144,11 @@ Setup field, write the following lines::
       }
    }
 
-This “DoubleColumn” page TypoScript template tells TYPO3 CMS a different
-location to find the Fluid template, and adds a :aspect:`contentRight`
+This :name:`DoubleColumn` page TypoScript template tells TYPO3 CMS a different
+location to find the Fluid template, and adds a :ts:`contentRight`
 variable that obtains all available content from the TYPO3 backend
-“DoubleColumn” page Right column. The :aspect:`contentNormal` variable will
-obtain content from the “DoubleColumn” page Normal column.
+:name:`DoubleColumn` page Right column. The :ts:`contentNormal` variable will
+obtain content from the :name:`DoubleColumn` page Normal column.
 
 Create a file named :file:`Basic2ColumnPage.html` in a
 :file:`fileadmin/sitedesign/Resources/Private/Layouts` folder, and write the
@@ -176,6 +176,6 @@ following lines in the file:
       </div>
    </div>
 
-This “DoubleColumn” page Fluid template puts :aspect:`contentNormal` and
-:aspect:`contentRight` into separate :html:`<div>` elements, and uses
-:aspect:`f:format.htmlentitiesDecode` instead of :aspect:`f:format.raw`.
+This :name:`DoubleColumn` page Fluid template puts :html:`contentNormal` and
+:html:`contentRight` into separate :html:`<div>` elements, and uses
+:html:`f:format.htmlentitiesDecode` instead of :html:`f:format.raw`.
