@@ -45,7 +45,7 @@ the following three lines in the field::
    page.1.file = fileadmin/sitedesign/Resources/Private/Templates/Minimal.html
 
 Create a file named :file:`Minimal.html` in a
-:file:`fileadmin/sitedesign/Resources/Private/Templates folder`. Notice that
+:file:`fileadmin/sitedesign/Resources/Private/Templates` folder. Notice that
 the initial letter in the file name is capitalized: some parts of Fluid may
 not find a file if its name doesn’t start with a capital letter. Write the
 following single line in the file:
