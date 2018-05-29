@@ -17,7 +17,7 @@ First, in the TYPO3 CMS backend, create a standard page named :name:`Home`
 just under (inside) the page tree TYPO3 logo container. On this standard page,
 create a new TypoScript template record. Give the new TypoScript template a
 title, make it a rootlevel template, and include the
-*Fluid Content Elements (fluid_styled_content)* static template. In
+:name:`Fluid Content Elements (fluid_styled_content)` static template. In
 the TypoScript template Setup field, write the following lines::
 
    lib {
