@@ -34,12 +34,8 @@ Documentation Team's abilities.
 
 **Tutorial**
 
-This document is a Tutorial. Tutorials are designed to be step-by-step
-instructions specifically created to walk a beginner through a particular task
-from beginning to end. To facilitate effective learning, tutorials provide
-examples to illustrate the subjects they cover. In addition, tutorials provide
-guidance on how to avoid common pitfalls and highlight key concepts that should
-be remembered for future reference.
+This document is a tutorial, intended to teach a lesson about one topic. We hope
+you enjoy learning its topic while working through the tutorial.
 
 **Feedback**
 
