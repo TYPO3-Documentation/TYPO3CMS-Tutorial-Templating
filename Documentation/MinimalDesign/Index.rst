@@ -12,7 +12,7 @@ least effort. This design can serve as a test of system output or as an
 illustration of the minimum required templating steps.
 
 For this minimal design, in a TYPO3 CMS backend, create a standard page named
-:aspect:`Minimal design` just under (inside) the page tree TYPO3 logo
+:name:`Minimal design` just under (inside) the page tree TYPO3 logo
 container. On this standard page, create a new TypoScript template record.
 Give the new TypoScript template a title, and make it a rootlevel template,
 but do not include any static templates.
