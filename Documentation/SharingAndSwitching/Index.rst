@@ -282,8 +282,7 @@ potential file loading and processing times.
 Switching Fluid layouts
 =======================
 
-First, prepare a design to produce a double column web page having a header
-and footer, using the Fluid layouts technique.
+This design switches between a single column layout and a double column layout.
 
 In the TYPO3 CMS backend, create a standard page named
 :name:`LayoutDoubleColumn` just under (inside) the :name:`Home` page. On the
