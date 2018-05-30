@@ -23,6 +23,8 @@ Templating with FLUIDTEMPLATE
 The content of this document is related to TYPO3 CMS, available from
 https://typo3.org/.
 
+Please visit the complete :ref:`Sitemap` for an overview of contents.
+
 **Official documentation**
 
 This document is included as part of the official TYPO3 documentation. It has
@@ -43,8 +45,6 @@ version <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/TYPO3
 Use the “Edit me on GitHub” button in the top right corner and submit a pull
 request via GitHub.
 
-
-Please visit the complete :ref:`Sitemap` for an overview of contents.
 
 .. toctree::
    :hidden:
