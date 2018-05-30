@@ -47,7 +47,7 @@ There is a centralized documentation library at typo3.org containing links to
 tutorials, guides, reference manuals, code snippets, and videos. Some
 potentially useful documents are:
 
-`Developing TYPO3 Extensions with Extbase and Fluid <:ref:t3extbasebook>`_
+`Developing TYPO3 Extensions with Extbase and Fluid :ref:t3extbasebook`_
 
 *A TYPO3 Extbase and Fluid Guide*
 
