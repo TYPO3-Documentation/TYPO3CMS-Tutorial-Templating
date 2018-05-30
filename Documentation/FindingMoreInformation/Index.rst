@@ -19,8 +19,6 @@ your own installed folder for :file:`typo3_src-8.7.13`.
 
 :file:`typo3_src-typo3_src-8.7.13/typo3/sysext/fluid_styled_content/Documentation/Introduction/Index.rst`
 
-:file:`typo3_src-8.7.13/typo3/sysext/fluid_styled_content/Resources/Private`
-
 :file:`typo3_src-8.7.13/typo3/sysext/fluid`
 
 TYPO3 CMS source code also includes Fluid examples you may find useful.
@@ -49,13 +47,13 @@ There is a centralized documentation library at typo3.org containing links to
 tutorials, guides, reference manuals, code snippets, and videos. Some
 potentially useful documents are:
 
-:ref:`Developing TYPO3 Extensions with Extbase and Fluid <t3extbasebook:start>`
+*Developing TYPO3 Extensions with Extbase and Fluid*
 
-:ref:`A TYPO3 Extbase and Fluid Guide <t3extbase:start>`
+*A TYPO3 Extbase and Fluid Guide*
 
-:ref:`TypoScript in 45 Minutes <t3ts45:start>`
+*TypoScript in 45 Minutes*
 
-:ref:`TypoScript Reference (“Content Objects” chapter, “FLUIDTEMPLATE” section) <t3tsref:cobj-fluidtemplate>`
+*TypoScript Reference* (“Content Objects” chapter, “FLUIDTEMPLATE” section)
 
 Searches
 ========
