@@ -27,9 +27,8 @@ content available for the second column.
 This is a basic tutorial about templating with TYPO3 Fluid and TypoScript. We
 assume you have an installed and working TYPO3 CMS version 8 or higher. You
 should also be familiar with the general principles chapter in the typo3.org
-:ref:`Getting Started Tutorial <t3start:start>` document, and the content
-elements and pages chapters in
-:ref:`TYPO3 Tutorial for Editors <t3editors:start>`.
+*Getting Started Tutorial* document, and the content elements and pages 
+chapters in *TYPO3 Tutorial for Editors*.
 
 This tutorial will have you create pages and templates; but after the minimal
 designs, it will assume you want to generate your own content elements for
@@ -39,6 +38,6 @@ your system as you work through the tutorial.
 The tutorial ends with some tips for finding further information about
 templating within TYPO3 CMS.
 
-~ Andrew Murphy wrote this tutorial in May, 2018.
+~ `Andrew Murphy`_ wrote this tutorial in May, 2018.
 
-
+.. _Andrew Murphy: front.desk@keystone-research-solutions.com
