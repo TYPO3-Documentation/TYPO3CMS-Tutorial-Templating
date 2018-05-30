@@ -26,26 +26,25 @@ https://typo3.org/.
 **Official documentation**
 
 This document is included as part of the official TYPO3 documentation. It has
-been approved by the TYPO3 Documentation Team following a peer-review process.
-The reader should expect the information in this document to be accurate -
-please report discrepancies to the Documentation Team at the issue tracker of
-this manual. Official documents are kept up-to-date to the best of the
-Documentation Team's abilities.
+been approved by the TYPO3 Documentation Team following a peer review process.
+The reader should expect the information in this document to be accurate. 
+Official documents are kept current to the best of the Documentation Team’s
+abilities.
 
 **Tutorial**
 
-This document is a tutorial, intended to teach a lesson about one topic. We hope
-you enjoy learning its topic while working through the tutorial.
+This document is a tutorial, intended to teach a lesson about one topic. We 
+hope you enjoy learning its topic while working through the tutorial.
 
 **Feedback**
 
 If you find an error in this manual, please be so kind as to check the `online
 version <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/TYPO3CMS-Tutorial-TemplatingWithFluidtemplate/>`__.
-Use the "Edit me on GitHub" button in the top right corner and submit a pull
+Use the “Edit me on GitHub” button in the top right corner and submit a pull
 request via GitHub.
 
 
-Please visit the complete :ref:`Sitemap` for overview.
+Please visit the complete :ref:`Sitemap` for an overview of contents.
 
 .. toctree::
    :hidden:
