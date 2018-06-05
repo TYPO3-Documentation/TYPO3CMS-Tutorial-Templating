@@ -17,7 +17,7 @@ your own installed folder for :file:`typo3_src-8.7.13`.
 
 :file:`typo3_src-8.7.13/vendor/typo3fluid/fluid/doc`
 
-:file:`typo3_src-typo3_src-8.7.13/typo3/sysext/fluid_styled_content/Documentation/Introduction/Index.rst`
+:file:`typo3_src-8.7.13/typo3/sysext/fluid_styled_content/Documentation/Introduction/Index.rst`
 
 :file:`typo3_src-8.7.13/typo3/sysext/fluid`
 
