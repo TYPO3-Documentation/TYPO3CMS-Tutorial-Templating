@@ -29,3 +29,4 @@ actual content coming from TYPO3 CMS.
 
    WorkingHTML/Index
    WorkingTypoScript/Index
+   WorkingFluidTemplate/Index
