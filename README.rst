@@ -1,9 +1,7 @@
 
-=============================
-Templating with FLUIDTEMPLATE
-=============================
+===========================
+Templating Tutorial: Basics
+===========================
 
-Draft of a new tutorial
-
-:Repository:   https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-TemplatingWithFluidtemplate
-:Published at: https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/TYPO3CMS-Tutorial-TemplatingWithFluidtemplate/
+:Repository:   https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-Templating/
+:Published at: https://docs.typo3.org/typo3cms/TemplatingTutorial/
