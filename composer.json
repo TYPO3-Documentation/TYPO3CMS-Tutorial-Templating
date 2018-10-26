@@ -1,0 +1,6 @@
+{
+    "name": "typo3/tutorial-templating",
+    "type": "typo3-cms-documentation",
+    "description": "Step-by-step guide to templating in TYPO3 using TypoScript.",
+    "license": "OPL-1.0"
+}
