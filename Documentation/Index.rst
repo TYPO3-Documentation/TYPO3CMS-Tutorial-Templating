@@ -8,7 +8,7 @@
 Templating with FLUIDTEMPLATE
 =============================
 
-:Version:      master (8.7)
+:Version:      |release|
 :Language:     en-US
 :Description:  A tutorial on designing a basic web page using TYPO3 Fluid.
 :Rendered:     |today|
