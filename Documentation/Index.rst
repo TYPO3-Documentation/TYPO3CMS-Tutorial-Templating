@@ -8,14 +8,13 @@
 Templating with FLUIDTEMPLATE
 =============================
 
-:Version:      master (8.7)
+:Version:      |release|
 :Language:     en-US
 :Description:  A tutorial on designing a basic web page using TYPO3 Fluid.
 :Rendered:     |today|
 :Keywords:     template, fluid, typoscript
 :Copyright:    2018 TYPO3 Documentation Team
 :Author:       Andrew Murphy
-:Email:        documentation@typo3.org
 :License:      Creative Commons Attribution-NonCommercial-ShareAlike 4.0
                International (CC BY-NC-SA 4.0),
                https://creativecommons.org/licenses/by-nc-sa/4.0/
