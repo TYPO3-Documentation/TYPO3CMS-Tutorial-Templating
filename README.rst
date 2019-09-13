@@ -6,7 +6,7 @@ Templating with FLUIDTEMPLATE
 A tutorial for templating with FLUIDTEMPLATE.
 
 :Repository:   https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-Templating/
-:Published at: https://docs.typo3.org/typo3cms/TemplatingTutorial/
+:Published at: https://docs.typo3.org/m/typo3/tutorial-templating/master/en-us/
 
 Additional information
 ======================
