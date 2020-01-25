@@ -55,7 +55,7 @@ These are the potentially useful manuals we will be referring to:
 * :ref:`t3extbasebook:start` This is a resource for developing extensions using
   Extbase and Fluid. The part about Extbase will not be relevant for you when
   creating a site template, but you might find useful information in the Fluid
-  section :ref:`fluid-start`. Do note that this manual has a different scope,
+  section :ref:`t3extbasebook:fluid`. Do note that this manual has a different scope,
   as the Fluid here is used for generating output for Plugins.
 
 Fluid
@@ -116,7 +116,7 @@ Specifically, choose one of these options:
    `Stack Overflow <https://stackoverflow.com/search?q=typo3>`__ using the tag "typo3"
 #. Ask general TYPO3 questions in the Slack channel #typo3-cms in the
    `TYPO3 Slack workspace <https://typo3.slack.com>`__.
-   :ref:`Get your Slack invitation <https://my.typo3.org/about-mytypo3org/slack>`__ first.
+   `Get your Slack invitation <https://my.typo3.org/about-mytypo3org/slack>`__ first.
    
 
 Credit
