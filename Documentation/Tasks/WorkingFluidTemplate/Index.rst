@@ -16,5 +16,3 @@ it to be usable in TYPO3 with the help of the FLUIDTEMPLATE object.
    :glob:
 
    Introduction/Index
-   Preparation/Index
-   Integration/Index
