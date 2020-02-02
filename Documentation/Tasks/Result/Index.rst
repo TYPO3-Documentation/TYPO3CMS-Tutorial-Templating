@@ -37,4 +37,5 @@ There are other possibilities (which might be covered in future tutorials):
 
 Do you want to know more about how copying objects in TypoScript works?
 Do you know that you can also create so-called "references" instead of copying an object?
-If you want to know more, have a look at the manual :ref:`t3tssyntax:start`!
+If you want to know more about the syntax of TypoScript, have a look at the chapter
+:ref:`t3coreapi:typoscript-syntax-start` in "TYPO3 Explained".
