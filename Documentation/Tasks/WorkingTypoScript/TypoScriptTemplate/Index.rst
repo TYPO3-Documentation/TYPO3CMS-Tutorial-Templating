@@ -93,8 +93,9 @@ Choose the "Save and close" action and you will back on the *Info/Modify* screen
 
 As you can guess the "Constants" section is used to define TypoScript constants.
 These constants can then be used in the setup field of the template.
-This is actually not covered in this tutorial, but is described in details
-in the :ref:`TypoScript Syntax and In-depth Study Reference <t3tssyntax:constants>`.
+This is actually not covered in this tutorial, but is described
+in the :ref:`t3tsref:using-and-setting`
+chapter of the "TypoScript Templating Reference".
 
 The field labeled "Setup" is the one, in which we will enter all the TypoScript configuration.
 As you can see in the screenshot above, it already contains a few lines of code.

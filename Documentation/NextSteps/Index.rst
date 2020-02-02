@@ -27,7 +27,8 @@ There are other possibilities (which might be covered in future tutorials):
   object rather than the TEMPLATE object.
 
 To complete your knowledge of TypoScript, you may want to look at the
-:ref:`t3tssyntax:start`. You will learn how to use constants,
+:ref:`t3tsref:using-and-setting` section of the "TypoScript Templating
+Reference". You will learn how to use constants,
 include TypoScript templates into one another, store your TypoScript
 in text-based files and much more.
 
