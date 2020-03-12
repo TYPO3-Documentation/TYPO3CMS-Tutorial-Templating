@@ -35,8 +35,8 @@ abilities.
 
 **Tutorial**
 
-This document is a tutorial, intended to teach a lesson about one topic. We 
-hope you enjoy learning its topic while working through the tutorial.
+This tutorial is intended to cover one particular topic in detail. We 
+hope you find this tutorial useful and we welcome any feedback.
 
 **Feedback**
 
