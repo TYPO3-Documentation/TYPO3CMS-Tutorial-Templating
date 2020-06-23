@@ -39,9 +39,8 @@ hope you find this tutorial useful and we welcome any feedback.
 
 **Feedback**
 
-If you find an error in this manual, please be so kind as to check the `online
-version <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/TYPO3CMS-Tutorial-TemplatingWithFluidtemplate/>`__.
-Use the “Edit me on GitHub” button in the top right corner and submit a pull
+If you find an error in this manual, please be so kind to hit the 
+“Edit me on GitHub” button in the top right corner and submit a pull
 request via GitHub.
 
 
