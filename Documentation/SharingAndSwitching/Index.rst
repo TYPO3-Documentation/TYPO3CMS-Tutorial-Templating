@@ -73,7 +73,7 @@ record. In the TypoScript template Setup field, write the following lines::
       variables {
          contentNormal < styles.content.get
          contentRight < styles.content.get
-         contentRight.select.where = colPos = 2
+         contentRight.select.where = {#colPos}=2
       }
    }
 
@@ -298,7 +298,7 @@ In the TypoScript template Setup field, write the following lines::
       variables {
          contentNormal < styles.content.get
          contentRight < styles.content.get
-         contentRight.select.where = colPos = 2
+         contentRight.select.where = {#colPos}=2
       }
    }
 
@@ -363,7 +363,7 @@ backend. Replace or edit its Setup field content to become the following::
       variables {
          contentNormal < styles.content.get
          contentRight < styles.content.get
-         contentRight.select.where = colPos = 2
+         contentRight.select.where = {#colPos}=2
       }
       settings.layout = Layout2ColumnPage
    }
@@ -422,7 +422,7 @@ field::
       table = tt_content
       select {
          orderBy = sorting
-         where = colPos = 2
+         where = {#colPos}=2
       }
    }
 
@@ -473,7 +473,7 @@ following instructions::
          table = tt_content
          select {
             orderBy = sorting
-            where = colPos = 2
+            where = {#colPos}=2
          }
       }
    }
@@ -487,7 +487,7 @@ following instructions::
       variables {
          contentNormal < styles.content.get
          contentRight < styles.content.get
-         contentRight.select.where = colPos = 2
+         contentRight.select.where = {#colPos}=2
       }
    }
 
