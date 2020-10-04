@@ -392,7 +392,7 @@ add the following lines. Insert your own page UID values::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
-   [page|uid = 2] || [page|uid = 4]
+   [page["uid"] in [2,4]]
       page.1.settings.layout = Layout2ColumnPage
    [ELSE]
       page.1.settings.layout = Layout1ColumnPage
