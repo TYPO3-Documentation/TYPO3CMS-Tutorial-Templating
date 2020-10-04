@@ -116,8 +116,8 @@ Specifically, choose one of these options:
    `Stack Overflow <https://stackoverflow.com/search?q=typo3>`__ using the tag "typo3"
 #. Ask general TYPO3 questions in the Slack channel #typo3-cms in the
    `TYPO3 Slack workspace <https://typo3.slack.com>`__.
-   :ref:`Get your Slack invitation <https://my.typo3.org/about-mytypo3org/slack>`__ first.
-   
+   `Get your Slack invitation <https://my.typo3.org/slack/invite>`__ first.
+
 
 Credit
 ======
