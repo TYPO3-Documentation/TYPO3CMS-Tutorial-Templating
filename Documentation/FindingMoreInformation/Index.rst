@@ -122,7 +122,7 @@ Specifically, choose one of these options:
 Credit
 ======
 
-The TYPO3 wiki was fundamental to starting the work leading to this tutorial.
+The retired TYPO3 wiki was fundamental to starting the work leading to this tutorial.
 
 The following Web search results contributed directly to the tutorial’s final
 template design.
@@ -134,6 +134,3 @@ template design.
 2012-06-20 21:24.
 
 [ https://forge.typo3.org/issues/34152 ], comment #31 by Ernesto Baschny.
-
-Example showing backslashed single quotes from the TYPO3 wiki.
-
