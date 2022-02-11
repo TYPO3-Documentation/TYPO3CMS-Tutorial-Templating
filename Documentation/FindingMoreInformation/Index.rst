@@ -122,8 +122,7 @@ Specifically, choose one of these options:
 Credit
 ======
 
-The TYPO3 wiki [ https://wiki.typo3.org/T3Doc/Fluidtemplate_by_example ] page
-was fundamental to starting the work leading to this tutorial.
+The retired TYPO3 wiki was fundamental to starting the work leading to this tutorial.
 
 The following Web search results contributed directly to the tutorial’s final
 template design.
@@ -135,7 +134,3 @@ template design.
 2012-06-20 21:24.
 
 [ https://forge.typo3.org/issues/34152 ], comment #31 by Ernesto Baschny.
-
-[ https://wiki.typo3.org/Fluid_Inline_Notation ], example showing backslashed
-single quotes.
-
