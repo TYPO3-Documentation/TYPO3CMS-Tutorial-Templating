@@ -122,7 +122,7 @@ Specifically, choose one of these options:
 Credit
 ======
 
-The retired TYPO3 wiki was fundamental to starting the work leading to this tutorial.
+The retired TYPO3 Wiki was fundamental to starting the work leading to this tutorial.
 
 The following Web search results contributed directly to the tutorial’s final
 template design.
