@@ -48,11 +48,11 @@ tutorials, guides, reference manuals and code snippets.
 
 These are the potentially useful manuals we will be referring to:
 
-* :ref:`t3ts45:start`: This is an introductory tutorial to TypoScript Templating
+* :doc:`t3ts45:Index`: This is an introductory tutorial to TypoScript Templating
 * :ref:`t3coreapi:typoscript-syntax-start` in the manual "TYPO3 Explained" walks you through
   everything you need to know about the TypoScript syntax
-* :ref:`t3tsref:start`
-* :ref:`t3extbasebook:start` This is a resource for developing extensions using
+* :doc:`t3tsref:Index`
+* :doc:`t3extbasebook:Index` This is a resource for developing extensions using
   Extbase and Fluid. The part about Extbase will not be relevant for you when
   creating a site template, but you might find useful information in the Fluid
   section :ref:`t3extbasebook:fluid`. Do note that this manual has a different scope,
