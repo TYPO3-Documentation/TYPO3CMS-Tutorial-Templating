@@ -1,16 +1,11 @@
-
 =============================
-Templating with FLUIDTEMPLATE
+Tutorial for Fluid Templating
 =============================
 
-A tutorial for templating with FLUIDTEMPLATE.
+In this tutorial you will create a TYPO3 website using the `Fluid`_ templating
+engine.
 
-:Repository:   https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-Templating/
-:Published at: https://docs.typo3.org/m/typo3/tutorial-templating/main/en-us/
+.. _Fluid: https://docs.typo3.org/m/typo3/book-extbasefluid/main/en-us/8-Fluid/Index.html
 
-Additional information
-======================
-
-* `Contribute to TYPO3 documentation <https://docs.typo3.org/typo3cms/HowToDocument/WritingDocsOfficial/Index.html>`__
-* `Contribute to TYPO3 core <https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/>`__
-* `Help & Support for TYPO3 <https://typo3.org/help>`__
+:Repository:  https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-Templating/
+:Read online: https://docs.typo3.org/m/typo3/tutorial-templating/main/en-us/
