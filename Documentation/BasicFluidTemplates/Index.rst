@@ -46,8 +46,8 @@ the TypoScript template Setup field, write the following lines::
    }
 
 This TypoScript template provides the :name:`fluid_styled_content` static
-template and two library objects, :ts:`topNavigation` and
-:ts:`breadcrumbTrail`, to the :name:`Home` page and any of its subpages.
+template and two library objects, :typoscript:`topNavigation` and
+:typoscript:`breadcrumbTrail`, to the :name:`Home` page and any of its subpages.
 
 A single column page design
 ===========================
@@ -74,7 +74,7 @@ field, write the following lines::
 This :name:`SingleColumn` page TypoScript template tells TYPO3 CMS the name of
 the Fluid template and where to find it, using a slightly different syntax than
 the :name:`Minimal design` page TypoScript template. Additionally, the
-:name:`SingleColumn` TypoScript creates a :ts:`contentNormal` variable that
+:name:`SingleColumn` TypoScript creates a :typoscript:`contentNormal` variable that
 obtains all available content from the TYPO3 backend :name:`SingleColumn` page
 Normal column.
 
@@ -145,9 +145,9 @@ Setup field, write the following lines::
    }
 
 This :name:`DoubleColumn` page TypoScript template tells TYPO3 CMS a different
-location to find the Fluid template, and adds a :ts:`contentRight`
+location to find the Fluid template, and adds a :typoscript:`contentRight`
 variable that obtains all available content from the TYPO3 backend
-:name:`DoubleColumn` page Right column. The :ts:`contentNormal` variable will
+:name:`DoubleColumn` page Right column. The :typoscript:`contentNormal` variable will
 obtain content from the :name:`DoubleColumn` page Normal column.
 
 Create a file named :file:`Basic2ColumnPage.html` in a
