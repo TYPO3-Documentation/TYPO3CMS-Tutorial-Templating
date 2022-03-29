@@ -37,7 +37,7 @@ In the TypoScript template Setup field, write the following lines::
       }
    }
 
-Notice the new :ts:`partialRootPath` instruction.
+Notice the new :typoscript:`partialRootPath` instruction.
 
 Create a file named :file:`Partial1Column.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
@@ -149,7 +149,7 @@ In the TypoScript template Setup field, write the following lines::
       }
    }
 
-Notice the lack of a :ts:`partialRootPath` instruction.
+Notice the lack of a :typoscript:`partialRootPath` instruction.
 
 Create a file named :file:`Section1Column.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
@@ -213,7 +213,7 @@ In the TypoScript template Setup field, write the following lines::
       }
    }
 
-Notice the new :ts:`layoutRootPath` instruction.
+Notice the new :typoscript:`layoutRootPath` instruction.
 
 Create a file named :file:`ForLayouts.html` in the
 :file:`fileadmin/sitedesign/Resources/Private/Templates` folder, and write
@@ -302,7 +302,7 @@ In the TypoScript template Setup field, write the following lines::
       }
    }
 
-Notice the additional :ts:`contentRight` element, which obtains content
+Notice the additional :typoscript:`contentRight` element, which obtains content
 elements from the default named “Right” column position (#2) in a TYPO3 CMS
 backend page. Also, notice that the Fluid template name has not changed.
 
@@ -349,7 +349,7 @@ backend. Replace or edit its Setup field content to become the following::
       settings.layout = Layout1ColumnPage
    }
 
-We only added a new :ts:`settings.layout` instruction.
+We only added a new :typoscript:`settings.layout` instruction.
 
 Edit the :name:`LayoutDoubleColumn` page TypoScript template in the TYPO3 CMS
 backend. Replace or edit its Setup field content to become the following::
@@ -368,22 +368,22 @@ backend. Replace or edit its Setup field content to become the following::
       settings.layout = Layout2ColumnPage
    }
 
-Here, too, we only added a new :ts:`settings.layout` instruction.
+Here, too, we only added a new :typoscript:`settings.layout` instruction.
 
 We now control which layout the :file:`ForLayouts.html` template uses through a
-:ts:`settings.layout` element in the applicable TypoScript templates.
+:typoscript:`settings.layout` element in the applicable TypoScript templates.
 
-Alternatively, we could remove the :ts:`settings.layout` instruction from
+Alternatively, we could remove the :typoscript:`settings.layout` instruction from
 the :name:`LayoutSingleColumn` and :name:`LayoutDoubleColumn` page TypoScript templates,
 and add the following lines to the :name:`Home` page TypoScript template Setup
-field. Keep the previously prepared library objects, :ts:`topNavigation`
-and :ts:`breadcrumbTrail`, in place::
+field. Keep the previously prepared library objects, :typoscript:`topNavigation`
+and :typoscript:`breadcrumbTrail`, in place::
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
    page.1.settings.layout = Layout1ColumnPage
 
-We now need change only this one :ts:`settings.layout` value in this one
+We now need change only this one :typoscript:`settings.layout` value in this one
 TypoScript template to affect all the subordinate pages.
 
 If we wanted one design for a few pages and the other design for the rest, we
@@ -411,8 +411,8 @@ is side content to show. To do so, modify both the :name:`Home` page TypoScript
 template and the :file:`Templates/ForLayouts.html` Fluid template.
 
 In the :name:`Home` page TypoScript template Setup field, keep the previously
-prepared library objects, :ts:`topNavigation` and
-:ts:`breadcrumbTrail`, in place. However, remove any other instructions
+prepared library objects, :typoscript:`topNavigation` and
+:typoscript:`breadcrumbTrail`, in place. However, remove any other instructions
 you may have added. Then, add the following lines at the bottom of the Setup
 field::
 
