@@ -61,7 +61,7 @@ These are the potentially useful manuals we will be referring to:
 Fluid
 
 * https://typo3buddy.com/typo3-template-tutorial/fluid/
-* :ref:`t3vhref:typo3-fluid-cobject` (ViewHelper Reference)
+* :ref:`t3viewhelper:typo3-fluid-cobject` (ViewHelper Reference)
 * :ref:`t3extbasebook:moving-repeating-snippets-to-partials` ("Developing TYPO3 Extensions with Extbase and Fluid")
 * :ref:`t3extbasebook:creating-a-consistent-look-and-feel-with-layouts` ("Developing TYPO3 Extensions with Extbase and Fluid")
 * `TYPO3/Fluid: doc <https://github.com/TYPO3/Fluid/tree/master/doc>`__, especially the :file:`FLUID_STRUCTURE.md` text file.
