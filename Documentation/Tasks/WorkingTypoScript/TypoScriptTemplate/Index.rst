@@ -16,7 +16,7 @@ the meta data in the header element of your website, the display of content insi
 even each single rendering instruction, which TYPO3 uses internally to display your content elements.
 
 For more information on the options available in TypoScript template records,
-see the :ref:`TypoScript reference, TSref <t3tsref:start>`.
+see the :doc:`TypoScript reference, TSref <t3tsref:Index>`.
 
 
 .. _create-ts-template:
