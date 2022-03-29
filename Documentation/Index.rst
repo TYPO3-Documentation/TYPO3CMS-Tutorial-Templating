@@ -1,79 +1,48 @@
-.. include:: Includes.txt
+.. include:: /Includes.txt
 
-
-.. _start:
-
-===========================
-Templating Tutorial: Basics
-===========================
-
-:Previous Key:
-      doc_tut_templating
+=============================
+Tutorial for Fluid Templating
+=============================
 
 :Version:
-      7 LTS
+   |release|
 
 :Language:
-      en
-
-:Description:
-      Step-by-step guide to templating in TYPO3 using TypoScript.
-
-:Keywords:
-      template, typoscript, beginner
-
-:Copyright:
-      2011-2016
+   en
 
 :Author:
-      Documentation Team
-
-:Email:
-      documentation@typo3.org
+   Andrew Murphy & TYPO3 contributors
 
 :License:
-      Open Publication License available from `www.opencontent.org/openpub/
-      <http://www.opencontent.org/openpub/>`_
+   This document is published under the
+   `Creative Commons BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__
+   license.
 
 :Rendered:
-      |today|
+   |today|
 
-The content of this document is related to TYPO3,
+----
 
-a GNU/GPL CMS/Framework available from `www.typo3.org
-<https://typo3.org/>`_
+In this tutorial you will create a TYPO3 website using the
+:ref:`Fluid <t3extbasebook:fluid>` templating engine.
 
+----
 
-**Official documentation**
-
-This document is included as part of the official TYPO3 documentation.
-It has been approved by the TYPO3 Documentation Team following a peer-
-review process. The reader should expect the information in this
-document to be accurate - please report discrepancies to the
-Documentation Team (documentation@typo3.org). Official documents are
-kept up-to-date to the best of the Documentation Team's abilities.
-
-
-**Tutorial**
-
-This document is a tutorial. Tutorials are designed to be step-by-step
-instructions specifically created to walk a beginner through a
-particular task from beginning to end. To facilitate effective
-learning, tutorials provide examples to illustrate the subjects they
-cover. In addition, tutorials provide guidance on how to avoid common
-pitfalls and highlight key concepts that should be remembered for
-future reference.
-
-
-**Table of Contents**
+**Table of Contents:**
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
    :titlesonly:
-   :glob:
 
    Introduction/Index
    Installation/Index
    Tasks/Index
    NextSteps/Index
-   Targets
+
+.. Meta Menu
+
+.. toctree::
+   :hidden:
+
+   Sitemap
+   genindex
