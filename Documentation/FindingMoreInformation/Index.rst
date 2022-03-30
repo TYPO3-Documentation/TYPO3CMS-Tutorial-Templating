@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _finding-more-information:
 
@@ -48,11 +48,11 @@ tutorials, guides, reference manuals and code snippets.
 
 These are the potentially useful manuals we will be referring to:
 
-* :ref:`t3ts45:start`: This is an introductory tutorial to TypoScript Templating
+* :doc:`t3ts45:Index`: This is an introductory tutorial to TypoScript Templating
 * :ref:`t3coreapi:typoscript-syntax-start` in the manual "TYPO3 Explained" walks you through
   everything you need to know about the TypoScript syntax
-* :ref:`t3tsref:start`
-* :ref:`t3extbasebook:start` This is a resource for developing extensions using
+* :doc:`t3tsref:Index`
+* :doc:`t3extbasebook:Index` This is a resource for developing extensions using
   Extbase and Fluid. The part about Extbase will not be relevant for you when
   creating a site template, but you might find useful information in the Fluid
   section :ref:`t3extbasebook:fluid`. Do note that this manual has a different scope,
@@ -61,7 +61,7 @@ These are the potentially useful manuals we will be referring to:
 Fluid
 
 * https://typo3buddy.com/typo3-template-tutorial/fluid/
-* :ref:`t3vhref:typo3-fluid-cobject` (ViewHelper Reference)
+* :ref:`t3viewhelper:typo3-fluid-cobject` (ViewHelper Reference)
 * :ref:`t3extbasebook:moving-repeating-snippets-to-partials` ("Developing TYPO3 Extensions with Extbase and Fluid")
 * :ref:`t3extbasebook:creating-a-consistent-look-and-feel-with-layouts` ("Developing TYPO3 Extensions with Extbase and Fluid")
 * `TYPO3/Fluid: doc <https://github.com/TYPO3/Fluid/tree/master/doc>`__, especially the :file:`FLUID_STRUCTURE.md` text file.
