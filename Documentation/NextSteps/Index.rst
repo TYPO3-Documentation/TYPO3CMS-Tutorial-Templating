@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _next-steps:
@@ -33,4 +33,4 @@ include TypoScript templates into one another, store your TypoScript
 in text-based files and much more.
 
 The reference for all objects, functions and data types is
-- as always - the :ref:`TypoScript Reference <t3tsref:start>`.
+- as always - the :doc:`TypoScript Reference <t3tsref:Index>`.

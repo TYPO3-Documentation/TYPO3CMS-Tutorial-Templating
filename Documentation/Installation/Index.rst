@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _installation:
@@ -10,7 +10,7 @@ Installation
 In this tutorial, we will mostly work with an HTML template, a CSS file and
 a basic page tree. All these resources are bundled into a distribution, in
 the same way as the Official Introduction Package, which you will be familiar
-with if you have been through the :ref:`Getting Started Tutorial <t3start:start>`.
+with if you have been through the :doc:`Getting Started Tutorial <t3start:Index>`.
 
 It is recommended to start with a blank site, but the distribution can be
 also loaded into an existing installation.

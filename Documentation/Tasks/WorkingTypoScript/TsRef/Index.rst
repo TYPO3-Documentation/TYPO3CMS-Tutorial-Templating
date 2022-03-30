@@ -1,4 +1,4 @@
-.. include:: ../../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _how-to-use:
@@ -17,10 +17,10 @@ is already there:
     page.10.value = HELLO WORLD!
 
 If this looks totally weird to you, please read the
-:ref:`TypoScript in 45 Minutes Tutorial <t3ts45:start>` and come back here.
+:doc:`TypoScript in 45 Minutes Tutorial <t3ts45:Index>` and come back here.
 The concepts will be briefly explained again here, but not in as much depth.
 
-Don't forget that the :ref:`TypoScript Reference <t3tsref:start>` (TSref) is the
+Don't forget that the :doc:`TypoScript Reference <t3tsref:Index>` (TSref) is the
 ultimate reference in all matters related to TypoScript.
 
 So what do we have by default in our new template:
