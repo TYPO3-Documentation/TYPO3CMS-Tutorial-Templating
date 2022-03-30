@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _introduction:
 
@@ -27,7 +27,7 @@ content available for the second column.
 This is a basic tutorial about templating with TYPO3 Fluid and TypoScript. We
 assume you have an installed and working TYPO3 CMS version 8 or higher. You
 should also be familiar with the general principles chapter in the typo3.org
-*Getting Started Tutorial* document, and the content elements and pages 
+*Getting Started Tutorial* document, and the content elements and pages
 chapters in *TYPO3 Tutorial for Editors*.
 
 This tutorial will have you create pages and templates; but after the minimal
